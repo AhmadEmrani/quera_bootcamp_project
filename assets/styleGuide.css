@@ -1,0 +1,44 @@
+
+:root {
+    /* colorPlate light */
+
+    /* رنگ اصلی */
+    --primary-color: #2C7EF8;
+    --primary-hover-light: #075CD9;
+    --on-primary-light: #FFFFFF;
+
+     /* رنگ زمینه و سطح */
+     --background-light: #FFFFFF;
+     --on-background-light: #191C1E;
+     --surface-light: #FFFFFF;
+
+     /* رنگ  های خنثی  */
+     
+    /* رنگ  های ارور و اوکی  */
+    --error: #E63946;
+    --success: #90F677;
+
+
+
+    /* colorPlate dark */
+
+    /* رنگ اصلی */
+    --primary-color: #3A86F8;
+    --primary-hover-dark: #6BA4FA;
+    --on-primary-dark: #FFFFFF;
+
+     /* رنگ زمینه و سطح */
+     --background-dark: #040810;
+     --on-background-dark: #E6E9EF;
+     --surface-dark: #E6E9EF;
+
+  }
+
+
+
+
+
+
+
+
+
