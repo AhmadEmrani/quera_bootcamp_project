@@ -1,44 +1,61 @@
+@font-face {
+  font-family: "Kalmeh-Regular";
+  src: url(../assets/fonts/kalameh/Kalameh-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Kalmeh-Bold";
+  src: url(../assets/fonts/kalameh/Kalameh-Bold.woff2);
+}
+
+@font-face {
+  font-family: "YekanBakh-Regular";
+  src: url(../assets/fonts/yekan-bakh/YekanBakh-Regular.woff2);
+}
+
+@font-face {
+  font-family: "YekanBakh-Black";
+  src: url(../assets/fonts/yekan-bakh/YekanBakh-Black.woff2);
+}
+
+@font-face {
+  font-family: "YekanBakh-SemiBold";
+  src: url(../assets/fonts/yekan-bakh/YekanBakh-SemiBold.woff2);
+}
+
+@font-face {
+  font-family: "YekanBakh-Bold";
+  src: url(../assets/fonts/yekan-bakh/YekanBakh-Bold.woff2);
+}
 
 :root {
-    /* colorPlate light */
+  /* colorPlate light */
 
-    /* رنگ اصلی */
-    --primary-color: #2C7EF8;
-    --primary-hover-light: #075CD9;
-    --on-primary-light: #FFFFFF;
+  /* رنگ اصلی */
+  --primary-color: #2c7ef8;
+  --primary-hover-light: #075cd9;
+  --on-primary-light: #ffffff;
 
-     /* رنگ زمینه و سطح */
-     --background-light: #FFFFFF;
-     --on-background-light: #191C1E;
-     --surface-light: #FFFFFF;
+  /* رنگ زمینه و سطح */
+  --background-light: #ffffff;
+  --on-background-light: #191c1e;
+  --surface-light: #ffffff;
 
-     /* رنگ  های خنثی  */
-     
-    /* رنگ  های ارور و اوکی  */
-    --error: #E63946;
-    --success: #90F677;
+  /* رنگ  های خنثی  */
 
+  /* رنگ  های ارور و اوکی  */
+  --error: #e63946;
+  --success: #90f677;
 
+  /* colorPlate dark */
 
-    /* colorPlate dark */
+  /* رنگ اصلی */
+  --primary-color: #3a86f8;
+  --primary-hover-dark: #6ba4fa;
+  --on-primary-dark: #ffffff;
 
-    /* رنگ اصلی */
-    --primary-color: #3A86F8;
-    --primary-hover-dark: #6BA4FA;
-    --on-primary-dark: #FFFFFF;
-
-     /* رنگ زمینه و سطح */
-     --background-dark: #040810;
-     --on-background-dark: #E6E9EF;
-     --surface-dark: #E6E9EF;
-
-  }
-
-
-
-
-
-
-
-
-
+  /* رنگ زمینه و سطح */
+  --background-dark: #040810;
+  --on-background-dark: #e6e9ef;
+  --surface-dark: #e6e9ef;
+}
