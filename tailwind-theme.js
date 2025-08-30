@@ -310,7 +310,7 @@ tailwind.config = {
         ],
 
         /* ---------------------------
-         *  KALMEH TYPOGRAPHY (BIG)
+         *  KALAMEH TYPOGRAPHY (BIG)
          * ---------------------------
          */
         "kalameh-80": [
@@ -432,6 +432,11 @@ tailwind.config = {
 
         success: "#90F677",
         errors: "#E63946",
+      },
+
+      boxShadow: {
+        cards: "0 4px 63px 0 rgba(0,0,0,0.03)",
+        "header-mobile": "0 4px 18px 0 rgba(24, 72, 144, 0.06)",
       },
     },
   },
