@@ -23,63 +23,63 @@ tailwind.config = {
           "20px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-18": [
           "18px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-16": [
           "16px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-15": [
           "15px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-14": [
           "14px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-13": [
           "13px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-12": [
           "12px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-11": [
           "11px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
         "reg-10": [
           "10px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Regular, sans-serif",
+            fontFamily: "YekanBakh-Regular",
           },
         ],
 
@@ -88,77 +88,77 @@ tailwind.config = {
           "28px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-24": [
           "24px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-20": [
           "20px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-18": [
           "18px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-16": [
           "16px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-15": [
           "15px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-14": [
           "14px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-13": [
           "13px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-12": [
           "12px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-11": [
           "11px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
         "med-10": [
           "10px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Black, sans-serif",
+            fontFamily: "YekanBakh-Black",
           },
         ],
 
@@ -221,91 +221,91 @@ tailwind.config = {
           "42px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-36": [
           "36px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-32": [
           "32px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-28": [
           "28px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-24": [
           "24px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-20": [
           "20px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-18": [
           "18px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-16": [
           "16px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-14": [
           "14px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-13": [
           "13px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-12": [
           "12px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-11": [
           "11px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
         "bold-10": [
           "10px",
           {
             lineHeight: "normal",
-            fontFamily: "YekanBakh-Bold, sans-serif",
+            fontFamily: "YekanBakh-Bold",
           },
         ],
 
