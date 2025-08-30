@@ -69,7 +69,9 @@
       <!-- Todo: Add header content -->
     </header>
 
-    <main class="grid grid-cols-1 gap-6">
+    <main
+      class="grid grid-cols-1 gap-6 md:grid-cols-2 md:px-36 md:columns-1 md:mb-[72px]"
+    >
       <div>
         <img
           src="../assets/images/about-us.png"
@@ -80,16 +82,26 @@
 
       <!-- About section -->
       <section
-        class="text-center flex flex-col gap-4 items-center justify-center"
+        class="text-center flex flex-col gap-4 items-center justify-center overflow-auto min-h-full md:gap-6 md:text-start md:max-h-[686px] md:-order-1 md:row-span-2 md:justify-start md:items-start md:border md:border-solid md:border-neutral-light-100 md:shadow-cards md:rounded-3xl md:pt-8 md:px-10 md:pb-32"
       >
         <div class="font-kalameh space-y-2">
-          <h2 class="text-2xl font-bold text-[#141414]">درباره من</h2>
-          <h3 class="text-[28px] font-bold text-[#575757]">محمد محمدی</h3>
+          <h2
+            class="text-2xl font-bold text-[#141414] md:text-[40px] md:text-[#070D31]"
+          >
+            درباره من
+          </h2>
+          <h3
+            class="text-[28px] font-bold text-[#575757] md:text-[32px] md:font-normal"
+          >
+            محمد محمدی
+          </h3>
         </div>
         <div
-          class="p-4 rounded-2xl border border-solid border-neutral-light-100 bg-background-light shadow-cards"
+          class="p-4 rounded-2xl border border-solid border-neutral-light-100 bg-background-light shadow-cards md:rounded-none md:border-none md:shadow-none md:px-0"
         >
-          <p class="font-yekan text-xs leading-[30px] text-[#444749]">
+          <p
+            class="font-yekan text-xs leading-[30px] text-[#444749] md:text-lg md:leading-[30px]"
+          >
             کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
             اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
             نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
@@ -105,36 +117,62 @@
       </section>
 
       <!-- Info cards -->
-      <section class="grid grid-cols-2 gap-4 mb-12">
+      <section
+        class="grid grid-cols-2 gap-4 mb-12 md:border md:border-solid md:border-neutral-light-100 md:shadow-cards md:rounded-3xl md:p-8 md:m-0"
+      >
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
         >
-          <p class="font-kalameh text-lg font-bold text-[#070D31]">۱۳۷۹</p>
-          <p class="font-yekan font-normal text-xs leading-4 text-[#444749]">
+          <p
+            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+          >
+            ۱۳۷۹
+          </p>
+          <p
+            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+          >
             سال تولد
           </p>
         </div>
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
         >
-          <p class="font-kalameh text-lg font-bold text-[#070D31]">تهران</p>
-          <p class="font-yekan font-normal text-xs leading-4 text-[#444749]">
+          <p
+            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+          >
+            تهران
+          </p>
+          <p
+            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+          >
             محل زندگی
           </p>
         </div>
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
         >
-          <p class="font-kalameh text-lg font-bold text-[#070D31]">۳.۵</p>
-          <p class="font-yekan font-normal text-xs leading-4 text-[#444749]">
+          <p
+            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+          >
+            ۳.۵
+          </p>
+          <p
+            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+          >
             سال تجربه کار
           </p>
         </div>
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
         >
-          <p class="text-kalameh text-lg font-bold text-[#070D31]">۱۰+</p>
-          <p class="font-yekan font-normal text-xs leading-4 text-[#444749]">
+          <p
+            class="text-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+          >
+            ۱۰+
+          </p>
+          <p
+            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+          >
             مشارکت در پروژه‌
           </p>
         </div>
