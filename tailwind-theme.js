@@ -318,7 +318,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-72": [
@@ -326,7 +325,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-64": [
@@ -334,7 +332,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-56": [
@@ -342,7 +339,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-48": [
@@ -350,7 +346,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-40": [
@@ -358,7 +353,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-36": [
@@ -366,7 +360,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-32": [
@@ -374,7 +367,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-28": [
@@ -382,7 +374,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
         "kalameh-24": [
@@ -390,7 +381,6 @@ tailwind.config = {
           {
             lineHeight: "normal",
             fontFamily: "Kalameh-Bold",
-            fontWeight: "bold",
           },
         ],
       },
