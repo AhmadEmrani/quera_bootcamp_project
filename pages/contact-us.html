@@ -65,21 +65,53 @@
     </style>
   </head>
   <body>
-    <main class="mx-auto flex flex-col gap-5">
-      <section class="flex flex-col gap-2 left-6">
-        <h1 class="text-center font-[Kalameh] text-[24px] font-[700]">
+    <main
+      class="mx-auto flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px]"
+    >
+      <section
+        class="relative flex flex-col gap-2 left-6 md:gap-3 md:max-w-[467px] md:h-auto"
+      >
+        <h1
+          class="text-center font-[Kalameh] text-[24px] font-[700] md:text-[40px] text-[#070D31] md:text-right"
+        >
           تماس با ما
         </h1>
-        <p class="text-center font-[YekanBakh] text-[14px] font-[400]">
+        <p
+          class="text-center font-[YekanBakh] text-[14px] font-[400] md:text-[20px] md:font-[400] md:text-right"
+        >
           چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
         </p>
+        <div class="hidden md:flex flex-col gap-4">
+          <div class="flex flex-row rounded-[6px] p-4 gap-2">
+            <img
+              class="w-6 h-6"
+              src="../assets/icons/calAboutusl.svg"
+              alt="call-icon"
+            />
+            <p>09121234567</p>
+          </div>
+          <div class="flex flex-row rounded-[6px] p-4 gap-2">
+            <img
+              class="w-6 h-6"
+              src="../assets/icons/email.svg"
+              alt="call-icon"
+            />
+            <p>09121234567</p>
+          </div>
+        </div>
+        <div class="hidden absolute right-0 bottom-0 md:flex flex-row gap-8">
+          <img class="w-8 h-8" src="../assets/icons/github.svg" alt="" />
+          <img class="w-8 h-8" src="../assets/icons/twitter.svg" alt="" />
+          <img class="w-8 h-8" src="../assets/icons/linkedin.svg" alt="" />
+        </div>
       </section>
+      <div class="hidden md:block w-[1px] bg-neutral-light-200 h-[606px]"></div>
       <form
         action=""
-        class="mx-auto flex flex-col p-[16px] rounded-2xl gap-6 border-solid border-[1px] border-neutral-light-100 left-4 max-w-[328px] shadow-cards font-[YekanBakh]"
+        class="mx-auto flex flex-col p-[16px] rounded-2xl gap-6 border-solid border-[1px] border-neutral-light-100 left-4 w-[328px] shadow-cards font-[YekanBakh] md:border-none md:shadow-none font-yekan font-[600] text-[12px] md:text-[16px] md:max-w-[471px]"
       >
         <div class="flex flex-row gap-4">
-          <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+          <div class="flex flex-col gap-2">
             <label class="" for="firstName">نام:</label>
             <input
               class="max-w-[140px] max-h-[40px] rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
@@ -89,7 +121,7 @@
               placeholder="نام شما"
             />
           </div>
-          <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+          <div class="flex flex-col gap-2">
             <label class="" for="lastName">نام خانوادگی:</label>
             <input
               class="max-w-[140px] max-h-[40px] rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
@@ -100,7 +132,7 @@
             />
           </div>
         </div>
-        <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+        <div class="flex flex-col gap-2">
           <label class="" for="email">ایمیل:</label>
           <input
             class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
@@ -110,25 +142,26 @@
             placeholder="ایمیل"
           />
         </div>
-        <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
-          <label class="" for="tel">شماره تماس:</label>
+        <div class="flex flex-col gap-2">
+          <label dir="rtl" class="" for="tel">شماره تماس:</label>
           <input
-            class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            class="text-right rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
             type="tel"
             name="tel"
             id=""
             placeholder="شماره تماس شما"
           />
         </div>
-        <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+        <div class="flex flex-col gap-2">
           <label class="" for="message">متن پیام شما:</label>
-          <input
-            class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
-            type="text"
+          <textarea
+            class="md:max-h-[136px] h-[128px] resize-none rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
             name="message"
             id=""
+            cols="30"
+            rows="10"
             placeholder="متن پیام شما:"
-          />
+          ></textarea>
         </div>
 
         <button
@@ -138,7 +171,7 @@
         </button>
       </form>
       <section
-        class="mx-auto flex flex-col gap-4 max-w-[328px] max-h-[128px] mb-30px"
+        class="mx-auto flex flex-col gap-4 max-w-[328px] max-h-[128px] mb-30px md:hidden"
       >
         <div class="flex flex-row gap-4 max-h-[56px]">
           <div
