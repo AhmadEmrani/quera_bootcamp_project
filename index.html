@@ -70,31 +70,31 @@
       <div
         class="container mx-auto flex items-center justify-between px-4 py-3"
       >
-        <!-- Logo Text Only -->
-        <div class="flex items-center gap-2">
-          <span class="font-[YekanBakh] text-[20px] font-[600]"
-            >کوئرا لیست</span
-          >
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-2">
+          <nav class="hidden md:flex gap-6 absolute items-center">
+            <span class="font-[YekanBakh] text-[20px] font-[600]"
+              >کوئرا لیست</span
+            >
+            <a
+              href="#"
+              class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+              >صفحه اصلی</a
+            >
+            <a
+              href="./pages/about-us.html"
+              class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              >درباره ما</a
+            >
+            <a
+              href="./pages/contact-us.html"
+              class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              >ارتباط با ما</a
+            >
+          </nav>
         </div>
 
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex items-center gap-6">
-          <a
-            href="#"
-            class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
-            >صفحه اصلی</a
-          >
-          <a
-            href="./pages/about-us.html"
-            class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
-            >درباره ما</a
-          >
-          <a
-            href="./pages/contact-us.html"
-            class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
-            >ارتباط با ما</a
-          >
-
+        <div class="hidden md:flex items-center gap-4">
           <button
             class="font-[YekanBakh] text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
           >
@@ -104,21 +104,23 @@
           <button class="rounded-lg bg-white p-2 shadow-md cursor-pointer">
             <img src="./assets/icons/toggle-theme.svg" />
           </button>
-        </nav>
+        </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden">
+        <div class="md:hidden items-center absolute">
           <button id="menu-btn" class="focus:outline-none">
             <img src="./assets/icons/menu.svg" />
           </button>
         </div>
+        <div class="md:hidden mx-auto">
+          <span class="text-center font-[YekanBakh] text-[20px] font-[600]"
+            >کوئرا لیست</span
+          >
+        </div>
       </div>
 
       <!-- Mobile Menu -hidden by default -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden flex flex-col gap-4 px-4 pb-4"
-      >
+      <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 px-4 pb-4">
         <a
           href="#"
           class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
@@ -604,6 +606,7 @@
 
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
       });
     </script>
   </body>
