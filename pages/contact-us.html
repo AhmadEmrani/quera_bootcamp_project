@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa-ir" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,5 +64,133 @@
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
   </head>
-  <body></body>
+  <body>
+    <main class="mx-auto flex flex-col gap-5">
+      <section class="flex flex-col gap-2 left-6">
+        <h1 class="text-center font-[Kalameh] text-[24px] font-[700]">
+          تماس با ما
+        </h1>
+        <p class="text-center font-[YekanBakh] text-[14px] font-[400]">
+          چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
+        </p>
+      </section>
+      <form
+        action=""
+        class="mx-auto flex flex-col p-[16px] rounded-2xl gap-6 border-solid border-[1px] border-neutral-light-100 left-4 max-w-[328px] shadow-cards font-[YekanBakh]"
+      >
+        <div class="flex flex-row gap-4">
+          <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+            <label class="" for="firstName">نام:</label>
+            <input
+              class="max-w-[140px] max-h-[40px] rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+              type="text"
+              name="firstName"
+              id=""
+              placeholder="نام شما"
+            />
+          </div>
+          <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+            <label class="" for="lastName">نام خانوادگی:</label>
+            <input
+              class="max-w-[140px] max-h-[40px] rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+              type="text"
+              name="lastName"
+              id=""
+              placeholder="نام خانوادگی شما"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+          <label class="" for="email">ایمیل:</label>
+          <input
+            class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            type="email"
+            name="email"
+            id=""
+            placeholder="ایمیل"
+          />
+        </div>
+        <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+          <label class="" for="tel">شماره تماس:</label>
+          <input
+            class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            type="tel"
+            name="tel"
+            id=""
+            placeholder="شماره تماس شما"
+          />
+        </div>
+        <div class="flex flex-col font-yekan font-[600] text-[12px] gap-2">
+          <label class="" for="message">متن پیام شما:</label>
+          <input
+            class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            type="text"
+            name="message"
+            id=""
+            placeholder="متن پیام شما:"
+          />
+        </div>
+
+        <button
+          class="rounded-[8px] py-[8px] px-[40px] bg-primary-light text-on-primary-light"
+        >
+          ارسال پیام
+        </button>
+      </form>
+      <section
+        class="mx-auto flex flex-col gap-4 max-w-[328px] max-h-[128px] mb-30px"
+      >
+        <div class="flex flex-row gap-4 max-h-[56px]">
+          <div
+            class="flex flex-row gap-2 px-[8px] py-[12px] border-solid border-[1px] border-neutral-light-100 shadow-cards rounded-xl w-[156px]"
+          >
+            <figure
+              class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
+            >
+              <img src="../assets/icons/email.svg" alt="email" />
+            </figure>
+            <div class="font-yekan text-[10px] leading-[160%]">
+              <h5 class="font-[700]">ایمیل</h5>
+              <p class="font-[400]">QueraList@gmail.com</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-row gap-2 px-[8px] py-[12px] border-solid border-[1px] border-neutral-light-100 shadow-cards rounded-xl w-[156px]"
+          >
+            <figure
+              class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
+            >
+              <img src="../assets/icons/call.svg" alt="email" />
+            </figure>
+            <div class="font-yekan text-[10px] leading-[160%]">
+              <h5 class="font-[700]">تلفن</h5>
+              <p class="font-[400]">09121234567</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-row gap-4 max-h-[56px] border-solid border-[1px] border-neutral-light-100 shadow-cards w-[328px] h-[56px] rounded-[12px] justify-center px-2 py-3"
+        >
+          <figure
+            class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
+          >
+            <img src="../assets/icons/github.svg" alt="email" />
+          </figure>
+          <figure
+            class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
+          >
+            <img src="../assets/icons/twitter.svg" alt="email" />
+          </figure>
+          <figure
+            class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
+          >
+            <img src="../assets/icons/linkedin.svg" alt="email" />
+          </figure>
+        </div>
+      </section>
+
+      <header></header>
+    </main>
+  </body>
 </html>
