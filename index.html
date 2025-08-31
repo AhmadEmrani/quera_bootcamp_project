@@ -136,74 +136,78 @@
       </div>
     </header>
 
-    <main class="space-y-12">
+    <main class="space-y-12 md:space-y-[124px]">
       <!-- Hero Section -->
       <section
-        class="text-center px-4 relative z-20 overflow-hidden bg-gradient-to-b from-[#EBF3FF] to-white"
+        class="text-center px-4 relative z-20 overflow-hidden bg-gradient-to-b from-[#EBF3FF] to-on-primary-light md:px-40"
       >
+        <!-- Left Circle -->
         <div
-          class="absolute top-[113px] left-[206px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10"
+          class="absolute top-28 left-[206px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10 md:h-[452px] md:w-[452px] md:left-8 md:top-16"
         ></div>
+        <!-- Right Circle -->
         <div
-          class="absolute top-[14px] right-[246px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10"
+          class="absolute top-3 right-[246px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10 md:h-[452px] md:w-[452px] md:-right-9 md:top-60"
         ></div>
 
-        <div class="mt-[72px] mb-16 px-[14px] relative">
+        <div class="mt-[72px] mb-16 px-[14px] relative md:mt-32 md:mb-24">
           <img
             src="./assets/icons/star.svg"
             alt="Star"
-            class="h-6 w-6 absolute right-6 -top-7"
+            class="h-6 w-6 absolute right-6 -top-7 md:h-8 md:w-8 md:-top-12 md:right-44"
           />
           <h2
-            class="font-kalameh font-normal text-2xl leading-normal mb-2 text-[#141414]"
+            class="font-kalameh font-normal text-2xl leading-normal mb-2 text-neutral-light-800 md:text-[46px]"
           >
             تمرکز رو وارد زندگیت کن
           </h2>
           <h1
-            class="font-kalameh font-bold text-[28px] leading-normal text-[#141414]"
+            class="font-kalameh font-bold text-[28px] leading-normal text-neutral-light-800 md:text-[64px]"
           >
             به سمت اهدافت اوج بگیر
           </h1>
           <img
             src="./assets/icons/line.svg"
             alt="Line"
-            class="w-[101px] h-[21px] absolute left-1/2 -translate-x-1/2 -bottom-6 rotate-2"
+            class="w-[101px] h-[21px] absolute left-1/2 -translate-x-1/2 -bottom-6 rotate-2 md:w-72 md:h-16 md:-rotate-[0.5deg] md:-bottom-16"
           />
           <img
             src="./assets/icons/star.svg"
             alt="Star"
-            class="h-6 w-6 absolute left-7 -bottom-11"
+            class="h-6 w-6 absolute left-7 -bottom-11 md:h-8 md:w-8 md:-bottom-16 md:left-12"
           />
         </div>
 
-        <p class="font-yekan font-normal leading-normal text-xs text-[#141414]">
+        <p
+          class="font-yekan font-normal leading-normal text-xs text-neutral-light-800 md:text-xl md:px-[104px]"
+        >
           زمان در یک روز برای ما محدود است، اما مهمترین کار این است که چگونه از
           آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست، زمان خود را با هدف و
           برنامه‌ریزی موثر سپری کنید."
         </p>
 
         <div
-          class="font-yekan font-semibold text-xs mt-8 mb-10 flex items-center justify-center gap-4"
+          class="font-yekan font-semibold text-xs mt-8 mb-10 mx-auto flex items-center justify-center gap-4 max-w-[395px] md:mt-10 md:mb-20 md:text-base"
         >
           <a
             href="#"
-            class="px-8 py-2 h-10 rounded-lg text-white bg-primary-light hover:bg-primary-hover-light w-full flex items-center justify-center"
+            class="px-8 py-2 min-h-10 rounded-lg text-on-primary-light bg-primary-light hover:bg-primary-hover-light w-full flex items-center justify-center md:py-3"
           >
             ورود به اپلیکیشن
           </a>
           <a
             href="#"
-            class="px-8 py-2 h-10 rounded-lg text-primary-light bg-[#EBF3FE] w-full flex items-center justify-center"
+            class="px-8 py-2 min-h-10 rounded-lg text-primary-light bg-[#EBF3FE] w-full flex items-center justify-center md:py-3"
           >
             درباره ما
           </a>
         </div>
 
-        <div class="h-[190px]">
+        <div class="shadow-cards md:shadow-[0_0_24px_0_rgba(0, 0, 0, 0.05)]">
           <img
             src="./assets/images/app-web-light.jpg"
             alt="Hero Image"
-            class="object-cover w-full h-full"
+            class="w-full min-h-[175px] object-cover rounded-t-[4px] md:rounded-t-xl"
           />
         </div>
       </section>
