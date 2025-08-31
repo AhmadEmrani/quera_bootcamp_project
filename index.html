@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fa-ir" dir="rtl">
+<html lang="fa-IR" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quera List</title>
-    <link rel="stylesheet" href="../styles/style.css" />
+    <title>کوئرا لیست</title>
+    <link rel="stylesheet" href="./styles/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
@@ -135,9 +135,77 @@
       </div>
     </header>
 
-    <main>
-      <!-- Section1 - Hananeh -->
-      <section></section>
+    <main class="space-y-12">
+      <!-- Hero Section -->
+      <section
+        class="text-center px-4 relative z-20 overflow-hidden bg-gradient-to-b from-[#EBF3FF] to-white"
+      >
+        <div
+          class="absolute top-[113px] left-[206px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10"
+        ></div>
+        <div
+          class="absolute top-[14px] right-[246px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10"
+        ></div>
+
+        <div class="mt-[72px] mb-16 px-[14px] relative">
+          <img
+            src="./assets/icons/star.svg"
+            alt="Star"
+            class="h-6 w-6 absolute right-6 -top-7"
+          />
+          <h2
+            class="font-kalameh font-normal text-2xl leading-normal mb-2 text-[#141414]"
+          >
+            تمرکز رو وارد زندگیت کن
+          </h2>
+          <h1
+            class="font-kalameh font-bold text-[28px] leading-normal text-[#141414]"
+          >
+            به سمت اهدافت اوج بگیر
+          </h1>
+          <img
+            src="./assets/icons/line.svg"
+            alt="Line"
+            class="w-[101px] h-[21px] absolute left-1/2 -translate-x-1/2 -bottom-6 rotate-2"
+          />
+          <img
+            src="./assets/icons/star.svg"
+            alt="Star"
+            class="h-6 w-6 absolute left-7 -bottom-11"
+          />
+        </div>
+
+        <p class="font-yekan font-normal leading-normal text-xs text-[#141414]">
+          زمان در یک روز برای ما محدود است، اما مهمترین کار این است که چگونه از
+          آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست، زمان خود را با هدف و
+          برنامه‌ریزی موثر سپری کنید."
+        </p>
+
+        <div
+          class="font-yekan font-semibold text-xs mt-8 mb-10 flex items-center justify-center gap-4"
+        >
+          <a
+            href="#"
+            class="px-8 py-2 h-10 rounded-lg text-white bg-primary-light hover:bg-primary-hover-light w-full flex items-center justify-center"
+          >
+            ورود به اپلیکیشن
+          </a>
+          <a
+            href="#"
+            class="px-8 py-2 h-10 rounded-lg text-primary-light bg-[#EBF3FE] w-full flex items-center justify-center"
+          >
+            درباره ما
+          </a>
+        </div>
+
+        <div class="h-[190px]">
+          <img
+            src="./assets/images/app-web-light.jpg"
+            alt="Hero Image"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </section>
 
       <!-- Section2 - Hamed -->
       <section class="container mx-auto p-6">
