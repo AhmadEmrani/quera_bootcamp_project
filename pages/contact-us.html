@@ -65,6 +65,88 @@
     </style>
   </head>
   <body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <!-- Logo Text Only -->
+        <div class="flex items-center gap-2">
+          <span class="font-[YekanBakh] text-[20px] font-[600]"
+            >کوئرا لیست</span
+          >
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-6">
+          <a
+            href="../index.html"
+            class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+            >صفحه اصلی</a
+          >
+
+          <a
+            href="./about-us.html"
+            class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+            >درباره ما</a
+          >
+          <a
+            href="#"
+            class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+            >ارتباط با ما</a
+          >
+
+          <button
+            class="font-[YekanBakh] text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+          >
+            ورود به اپلیکیشن
+          </button>
+
+          <button class="rounded-lg bg-white p-2 shadow-md cursor-pointer">
+            <img src="../assets/icons/toggle-theme.svg" />
+          </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <img src="../assets/icons/menu.svg" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -hidden by default -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col gap-4 px-4 pb-4"
+      >
+        <a
+          href="#"
+          class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+          >صفحه اصلی</a
+        >
+        <a
+          href="./about-us.html"
+          class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+          >درباره ما</a
+        >
+        <a
+          href="#"
+          class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+          >ارتباط با ما</a
+        >
+        <div class="flex w-fit gap-4">
+          <button
+            class="font-[YekanBakh] text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+          >
+            ورود به اپلیکیشن
+          </button>
+          <button class="rounded-lg bg-white p-2 shadow-md">
+            <img src="../assets/icons/toggle-theme.svg" />
+          </button>
+        </div>
+      </div>
+    </header>
     <main
       class="mx-auto flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px]"
     >
@@ -225,5 +307,15 @@
 
       <header></header>
     </main>
+    <!-- Script  -->
+    <script>
+      //menu button action
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
