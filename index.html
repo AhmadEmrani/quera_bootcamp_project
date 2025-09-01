@@ -64,8 +64,9 @@
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
   </head>
-  <body>
+  <body class="dark:bg-background-dark">
     <!-- Header - Hamed -->
+      <!-- Header - Hamed -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div
         class="container mx-auto flex items-center justify-between px-4 py-3"
@@ -149,34 +150,42 @@
         </div>
       </div>
     </header>
-
     <main class="space-y-12 md:space-y-[124px]">
       <!-- Hero Section -->
-      <section
-        class="text-center px-4 relative z-20 overflow-hidden bg-gradient-to-b from-[#EBF3FF] to-on-primary-light md:px-40"
-      >
+      <section class="text-center px-4 relative z-20 overflow-hidden md:px-40">
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-[#EBF3FF] to-on-primary-light -z-20 dark:hidden"
+        ></div>
+        <div
+          class="absolute inset-0 opacity-20 -z-20 hidden dark:block bg-[linear-gradient(to_bottom,#0267FF_0%,rgba(26,32,44,0)_70%)]"
+        ></div>
         <!-- Left Circle -->
         <div
-          class="absolute top-28 left-[206px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10 md:h-[452px] md:w-[452px] md:left-8 md:top-16"
+          class="absolute top-28 left-[206px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10 md:h-[452px] md:w-[452px] md:left-8 md:top-16 dark:hidden"
         ></div>
         <!-- Right Circle -->
         <div
-          class="absolute top-3 right-[246px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10 md:h-[452px] md:w-[452px] md:-right-9 md:top-60"
+          class="absolute top-3 right-[246px] w-[228px] h-[228px] rounded-full bg-gradient-to-t from-[rgba(239,235,255,0)] to-[#EBEBFB] opacity-50 -z-10 md:h-[452px] md:w-[452px] md:-right-9 md:top-60 dark:hidden"
         ></div>
 
         <div class="mt-[72px] mb-16 px-[14px] relative md:mt-32 md:mb-24">
           <img
             src="./assets/icons/star.svg"
             alt="Star"
-            class="h-6 w-6 absolute right-6 -top-7 md:h-8 md:w-8 md:-top-12 md:right-44"
+            class="h-6 w-6 absolute right-6 -top-7 md:h-8 md:w-8 md:-top-12 md:right-44 dark:hidden"
+          />
+          <img
+            src="./assets/icons/star-dark.svg"
+            alt="Star"
+            class="h-6 w-6 absolute right-6 -top-7 md:h-8 md:w-8 md:-top-12 md:right-44 hidden dark:block"
           />
           <h2
-            class="font-kalameh font-normal text-2xl leading-normal mb-2 text-neutral-light-800 md:text-[46px]"
+            class="font-kalameh font-normal text-2xl leading-normal mb-2 text-neutral-light-800 md:text-[46px] dark:text-on-primary-dark"
           >
             تمرکز رو وارد زندگیت کن
           </h2>
           <h1
-            class="font-kalameh font-bold text-[28px] leading-normal text-neutral-light-800 md:text-[64px]"
+            class="font-kalameh font-bold text-[28px] leading-normal text-neutral-light-800 md:text-[64px] dark:text-on-primary-dark"
           >
             به سمت اهدافت اوج بگیر
           </h1>
@@ -188,12 +197,17 @@
           <img
             src="./assets/icons/star.svg"
             alt="Star"
-            class="h-6 w-6 absolute left-7 -bottom-11 md:h-8 md:w-8 md:-bottom-16 md:left-12"
+            class="h-6 w-6 absolute left-7 -bottom-11 md:h-8 md:w-8 md:-bottom-16 md:left-12 dark:hidden"
+          />
+          <img
+            src="./assets/icons/star-dark.svg"
+            alt="Star"
+            class="h-6 w-6 absolute left-7 -bottom-11 md:h-8 md:w-8 md:-bottom-16 md:left-12 hidden dark:block"
           />
         </div>
 
         <p
-          class="font-yekan font-normal leading-normal text-xs text-neutral-light-800 md:text-xl md:px-[104px]"
+          class="font-yekan font-normal leading-normal text-xs text-neutral-light-800 md:text-xl md:px-[104px] dark:text-on-primary-dark"
         >
           زمان در یک روز برای ما محدود است، اما مهمترین کار این است که چگونه از
           آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست، زمان خود را با هدف و
@@ -205,21 +219,32 @@
         >
           <a
             href="#"
-            class="px-8 py-2 min-h-10 rounded-lg text-on-primary-light bg-primary-light hover:bg-primary-hover-light w-full flex items-center justify-center md:py-3"
+            class="px-8 py-2 min-h-10 rounded-lg text-on-primary-light bg-primary-light hover:bg-primary-hover-light w-full flex items-center justify-center md:py-3 dark:bg-primary-dark dark:hover:bg-primary-hover-dark"
           >
             ورود به اپلیکیشن
           </a>
           <a
             href="#"
-            class="px-8 py-2 min-h-10 rounded-lg text-primary-light bg-[#EBF3FE] w-full flex items-center justify-center md:py-3"
+            class="px-8 py-2 min-h-10 rounded-lg text-primary-light bg-[#EBF3FE] w-full flex items-center justify-center md:py-3 dark:bg-[#122549] dark:text-on-primary-dark"
           >
             درباره ما
           </a>
         </div>
 
-        <div class="shadow-cards md:shadow-[0_0_24px_0_rgba(0, 0, 0, 0.05)]">
+        <div
+          class="shadow-cards md:shadow-[0_0_24px_0_rgba(0, 0, 0, 0.05)] dark:hidden"
+        >
           <img
             src="./assets/images/app-web-light.jpg"
+            alt="Hero Image"
+            class="w-full min-h-[175px] object-cover rounded-t-[4px] md:rounded-t-xl"
+          />
+        </div>
+        <div
+          class="shadow-cards md:shadow-[0_0_24px_0_rgba(0, 0, 0, 0.05)] hidden dark:block"
+        >
+          <img
+            src="./assets/images/app-web-dark.jpg"
             alt="Hero Image"
             class="w-full min-h-[175px] object-cover rounded-t-[4px] md:rounded-t-xl"
           />
@@ -298,38 +323,87 @@
 
       <!-- Section3 - Saleh -->
       <section class="mx-auto max-w-[328px] flex flex-col gap-[19px] md:hidden">
-        <p class="font-yekan text-[10px] font-[400] text-center">اپلیکیشن اندروید و IOS</p>
-        <h4 class="font-kalameh text-[20px] font-[600] text-center text-neutral-light-800">دانلود اپلیکیشن</h4>
-        <figure class="flex  justify-center">
-          <img class="w-[190px] h-[202px]" src="./assets/images/app-mobile-small-light.png" alt="app-mobile">
-        </figure>       
-        <p class="font-yekan text-[10px] font-[400] text-center max-w-[312px]">کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
-          همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+        <p class="font-yekan text-[10px] font-[400] text-center">
+          اپلیکیشن اندروید و IOS
+        </p>
+        <h4
+          class="font-kalameh text-[20px] font-[600] text-center text-neutral-light-800"
+        >
+          دانلود اپلیکیشن
+        </h4>
+        <figure class="flex justify-center">
+          <img
+            class="w-[190px] h-[202px]"
+            src="./assets/images/app-mobile-small-light.png"
+            alt="app-mobile"
+          />
+        </figure>
+        <p class="font-yekan text-[10px] font-[400] text-center max-w-[312px]">
+          کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
+          اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
+          نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
+          نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از
+          اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
         </p>
         <div class="flex flex-row gap-4 mx-auto">
-          <button class="text-primary-light font-yekan font-[600] text-[12px]" >ورود به اپلیکیشن</button>
-          <img class="w-6 h-6" src="./assets/icons/arrow-right.svg" alt="">
-        </div> 
-        
+          <button class="text-primary-light font-yekan font-[600] text-[12px]">
+            ورود به اپلیکیشن
+          </button>
+          <img class="w-6 h-6" src="./assets/icons/arrow-right.svg" alt="" />
+        </div>
       </section>
-      
+
       <!-- desktop mode for download app -->
-      <section class="hidden md:flex flex-row justify-between max-w-[1120px] mx-auto">
+      <section
+        class="hidden md:flex flex-row justify-between max-w-[1120px] mx-auto"
+      >
         <div class="max-w-[540px] flex flex-col gap-10">
           <div class="flex flex-col">
-            <p class="font-yekan text-[18px] font-[400] leading-[30px] text-right">اپلیکیشن اندروید و IOS</p>
-            <h4 class="font-kalameh text-[40px] font-[700] text-right text-neutral-light-800">دانلود اپلیکیشن</h4>
-          </div>       
-          <p class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px]">کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.</p>
-          <p class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px]">همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.</p>
+            <p
+              class="font-yekan text-[18px] font-[400] leading-[30px] text-right"
+            >
+              اپلیکیشن اندروید و IOS
+            </p>
+            <h4
+              class="font-kalameh text-[40px] font-[700] text-right text-neutral-light-800"
+            >
+              دانلود اپلیکیشن
+            </h4>
+          </div>
+          <p
+            class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px]"
+          >
+            کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
+            اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
+            نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
+            نمایند.
+          </p>
+          <p
+            class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px]"
+          >
+            همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور
+            می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+          </p>
           <div class="flex flex-row gap-4 ml-auto">
-            <button class="text-primary-light font-yekan font-[700] text-[18px] text-right" >ورود به اپلیکیشن</button>
-            <img class="w-6 h-6" src="./assets/icons/arrow-right.svg" alt="">
-          </div> 
+            <button
+              class="text-primary-light font-yekan font-[700] text-[18px] text-right"
+            >
+              ورود به اپلیکیشن
+            </button>
+            <img class="w-6 h-6" src="./assets/icons/arrow-right.svg" alt="" />
+          </div>
         </div>
         <div class="relative max-w-[538px]">
-          <img class="w-[538px] h-[370px]" src="./assets//images/app-web-light.jpg" alt="">
-          <img class="w-[189px] h-[394px] absolute top-[33px] left-[288.15px]" src="./assets/images/app-mobile-light.png" alt="">
+          <img
+            class="w-[538px] h-[370px]"
+            src="./assets//images/app-web-light.jpg"
+            alt=""
+          />
+          <img
+            class="w-[189px] h-[394px] absolute top-[33px] left-[288.15px]"
+            src="./assets/images/app-mobile-light.png"
+            alt=""
+          />
         </div>
       </section>
 
@@ -337,7 +411,9 @@
       <section
         class="mx-auto max-w-screen-xl bg-background-light flex flex-col gap-[24px]"
       >
-        <div class="flex flex-col mx-auto w-[312px]  md:w-[540px] md:h-[148px] md:gap-4 gap-2">
+        <div
+          class="flex flex-col mx-auto w-[312px] md:w-[540px] md:h-[148px] md:gap-4 gap-2"
+        >
           <h2
             class="font-[Kalameh] text-[24px] leading-[72px] text-center font-semibold md:font-[Kalameh] md:font-[700] md:text-[36px]"
           >
@@ -351,40 +427,38 @@
           </p>
         </div>
         <div
-              class="md:w-[357px] md:hidden p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px]"
-            >
-              <div class="info-container flex flex-row gap-[10px]">
-                <img
-                  class="md:w-[68px] md:h-[68px] w-[48px] h-[48px]"
-                  src="./assets/images/user1.png"
-                  alt="profile-image"
-                />
-                <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
-                    علی ملکی
-                  </h4>
-                  <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 text-[12px]"
-                  >
-                    مهندس نرم افزار دیجی‌کالا
-                  </p>
-                </div>
-              </div>
+          class="md:w-[357px] md:hidden p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px]"
+        >
+          <div class="info-container flex flex-row gap-[10px]">
+            <img
+              class="md:w-[68px] md:h-[68px] w-[48px] h-[48px]"
+              src="./assets/images/user1.png"
+              alt="profile-image"
+            />
+            <div class="gap-1 flex flex-col justify-center">
+              <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                علی ملکی
+              </h4>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 text-[12px]"
               >
-                تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
-                اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
-                امکان رو می‌دهد که باهوش‌تر، سریع‌تر و سازمان دهی شده تر زندگی
-                کنیم و هم چینین همه چیز به گونه‌ای ساده تنظیم شده و میتونیم از
-                یکپارچگی اطلاعات و دیتاها لذت ببریم.
+                مهندس نرم افزار دیجی‌کالا
               </p>
             </div>
+          </div>
+          <p
+            class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+          >
+            تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
+            اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
+            امکان رو می‌دهد که باهوش‌تر، سریع‌تر و سازمان دهی شده تر زندگی کنیم
+            و هم چینین همه چیز به گونه‌ای ساده تنظیم شده و میتونیم از یکپارچگی
+            اطلاعات و دیتاها لذت ببریم.
+          </p>
+        </div>
 
         <!-- comments container -->
-        <div class="md:flex hidden flex-row mx-auto  md:justify-between gap-6">
+        <div class="md:flex hidden flex-row mx-auto md:justify-between gap-6">
           <div class="flex flex-col gap-6">
             <div
               class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px]"
@@ -396,9 +470,7 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
+                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
                     علی ملکی
                   </h4>
                   <p
@@ -428,9 +500,7 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
+                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
                     علی ملکی
                   </h4>
                   <p
@@ -460,9 +530,7 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
+                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
                     علی ملکی
                   </h4>
                   <p
@@ -490,9 +558,7 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
+                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
                     علی ملکی
                   </h4>
                   <p
@@ -522,9 +588,7 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
+                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
                     علی ملکی
                   </h4>
                   <p
@@ -552,9 +616,7 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4
-                    class="md:text-bold-16 font-yekan text-[14px] font-[700]"
-                  >
+                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
                     علی ملکی
                   </h4>
                   <p
@@ -674,6 +736,12 @@
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
         mobileMenu.classList.toggle("flex");
+      });
+
+      // Toggle mode
+      const toggleMode = document.getElementById("toggle-mode");
+      toggleMode.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
       });
     </script>
   </body>
