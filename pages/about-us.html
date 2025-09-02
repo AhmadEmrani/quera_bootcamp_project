@@ -64,7 +64,7 @@
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
   </head>
-  <body class="bg-background-light px-4">
+  <body class="bg-background-light px-4 dark:bg-background-dark">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div
@@ -101,7 +101,10 @@
             ورود به اپلیکیشن
           </button>
 
-          <button class="rounded-lg bg-white p-2 shadow-md cursor-pointer">
+          <button
+            class="rounded-lg bg-white p-2 shadow-md cursor-pointer"
+            id="toggle-mode"
+          >
             <img src="../assets/icons/toggle-theme.svg" />
           </button>
         </nav>
@@ -150,35 +153,35 @@
     <main
       class="grid grid-cols-1 gap-6 md:grid-cols-2 md:px-36 md:columns-1 md:mb-[72px]"
     >
-      <div>
+      <div class="min-w-80 h-[350px]">
         <img
           src="../assets/images/about-us.png"
-          alt="About Us"
-          class="h-[350px] w-full rounded-3xl object-cover"
+          alt="درباره ما"
+          class="w-full h-full rounded-3xl object-cover"
         />
       </div>
 
       <!-- About section -->
       <section
-        class="text-center flex flex-col gap-4 items-center justify-center overflow-auto min-h-full md:gap-6 md:text-start md:max-h-[686px] md:-order-1 md:row-span-2 md:justify-start md:items-start md:border md:border-solid md:border-neutral-light-100 md:shadow-cards md:rounded-3xl md:pt-8 md:px-10 md:pb-32"
+        class="text-center flex flex-col gap-4 items-center justify-center min-h-full w-full md:gap-6 md:text-start md:max-h-[686px] md:-order-1 md:row-span-2 md:justify-start md:items-start md:border md:border-solid md:border-neutral-light-100 md:shadow-cards md:rounded-3xl md:pt-8 md:px-10 md:pb-32 md:dark:bg-[#0B192D] dark:border-none"
       >
-        <div class="font-kalameh space-y-2">
+        <div class="font-kalameh font-bold space-y-2">
           <h2
-            class="text-2xl font-bold text-[#141414] md:text-[40px] md:text-[#070D31]"
+            class="text-2xl text-on-background-light md:text-[40px] dark:text-on-primary-dark md:dark:text-on-background-dark"
           >
             درباره من
           </h2>
           <h3
-            class="text-[28px] font-bold text-[#575757] md:text-[32px] md:font-normal"
+            class="text-[28px] text-neutral-light-600 md:text-[32px] md:font-normal dark:text-on-primary-dark md:dark:text-neutral-light-400"
           >
             محمد محمدی
           </h3>
         </div>
         <div
-          class="p-4 rounded-2xl border border-solid border-neutral-light-100 bg-background-light shadow-cards md:rounded-none md:border-none md:shadow-none md:px-0"
+          class="p-4 rounded-2xl border border-solid border-neutral-light-100 bg-background-light overflow-auto shadow-cards md:rounded-none md:border-none md:shadow-none md:px-0 dark:bg-[#0B192D] dark:border-none"
         >
           <p
-            class="font-yekan text-xs leading-[30px] text-[#444749] md:text-lg md:leading-[30px]"
+            class="font-yekan font-normal text-xs leading-[30px] text-neutral-light-700 md:text-lg md:leading-[30px] dark:text-on-primary-dark md:dark:text-on-background-dark"
           >
             کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
             اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
@@ -196,60 +199,60 @@
 
       <!-- Info cards -->
       <section
-        class="grid grid-cols-2 gap-4 mb-12 md:border md:border-solid md:border-neutral-light-100 md:shadow-cards md:rounded-3xl md:p-8 md:m-0"
+        class="grid grid-cols-2 gap-4 mb-12 min-w-80 w-full md:border md:border-solid md:border-neutral-light-100 md:shadow-cards md:rounded-3xl md:p-8 md:m-0 md:dark:bg-[#0B192D] dark:border-none"
       >
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-neutral-light-100 md:border-neutral-light-100 md:shadow-none md:px-8 md:gap-6 md:justify-between dark:bg-[#0E1E34] dark:border-none"
         >
           <p
-            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+            class="font-kalameh text-lg font-bold text-on-background-light md:text-[32px] md:font-bold md:leading-none dark:text-on-primary-dark md:dark:text-on-background-dark"
           >
             ۱۳۷۹
           </p>
           <p
-            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+            class="font-yekan font-normal text-xs leading-4 text-neutral-light-600 md:text-lg dark:text-on-primary-dark md:dark:text-neutral-light-400"
           >
             سال تولد
           </p>
         </div>
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-neutral-light-100 md:border-neutral-light-100 md:shadow-none md:px-8 md:gap-6 md:justify-between dark:bg-[#0E1E34] dark:border-none"
         >
           <p
-            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+            class="font-kalameh text-lg font-bold text-on-background-light md:text-[32px] md:font-bold md:leading-none dark:text-on-primary-dark md:dark:text-on-background-dark"
           >
             تهران
           </p>
           <p
-            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+            class="font-yekan font-normal text-xs leading-4 text-neutral-light-600 md:text-lg dark:text-on-primary-dark md:dark:text-neutral-light-400"
           >
             محل زندگی
           </p>
         </div>
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-neutral-light-100 md:border-neutral-light-100 md:shadow-none md:px-8 md:gap-6 md:justify-between dark:bg-[#0E1E34] dark:border-none"
         >
           <p
-            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+            class="font-kalameh text-lg font-bold text-on-background-light md:text-[32px] md:font-bold md:leading-none dark:text-on-primary-dark md:dark:text-on-background-dark"
           >
             ۳.۵
           </p>
           <p
-            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+            class="font-yekan font-normal text-xs leading-4 text-neutral-light-600 md:text-lg dark:text-on-primary-dark md:dark:text-neutral-light-400"
           >
             سال تجربه کار
           </p>
         </div>
         <div
-          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-[#F9FAFB] md:border-[#F5F5F5] md:shadow-none md:px-8 md:gap-6 md:justify-between"
+          class="py-4 px-3 flex flex-col gap-[10px] items-start border border-solid border-neutral-light-100 rounded-2xl shadow-cards md:bg-neutral-light-100 md:border-neutral-light-100 md:shadow-none md:px-8 md:gap-6 md:justify-between dark:bg-[#0E1E34] dark:border-none"
         >
           <p
-            class="font-kalameh text-lg font-bold text-[#070D31] md:text-[32px] md:font-bold md:leading-none"
+            class="font-kalameh text-lg font-bold text-on-background-light md:text-[32px] md:font-bold md:leading-none dark:text-on-primary-dark md:dark:text-on-background-dark"
           >
             ۱۰+
           </p>
           <p
-            class="font-yekan font-normal text-xs leading-4 text-[#444749] md:text-lg md:text-[#707070]"
+            class="font-yekan font-normal text-xs leading-4 text-neutral-light-600 md:text-lg dark:text-on-primary-dark md:dark:text-neutral-light-400"
           >
             مشارکت در پروژه‌
           </p>
@@ -269,6 +272,12 @@
 
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+      });
+
+      // Toggle mode
+      const toggleMode = document.getElementById("toggle-mode");
+      toggleMode.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
       });
     </script>
   </body>
