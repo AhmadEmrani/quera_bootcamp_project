@@ -65,82 +65,87 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
+    <!-- Header - Hamed -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div
         class="container mx-auto flex items-center justify-between px-4 py-3"
       >
-        <!-- Logo Text Only -->
-        <div class="flex items-center gap-2">
-          <span class="font-[YekanBakh] text-[20px] font-[600]"
-            >کوئرا لیست</span
-          >
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-2">
+          <nav class="hidden md:flex gap-6 absolute items-center">
+            <span class="font-[YekanBakh] text-[20px] font-[600]"
+              >کوئرا لیست</span
+            >
+            <a
+              href="../index.html"
+              class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              >صفحه اصلی</a
+            >
+            <a
+              href="./about-us.html"
+              class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              >درباره ما</a
+            >
+            <a
+              href="#"
+              class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+              >ارتباط با ما</a
+            >
+          </nav>
         </div>
 
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex items-center gap-6">
-          <a
-            href="../index.html"
-            class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
-            >صفحه اصلی</a
-          >
-
-          <a
-            href="./about-us.html"
-            class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
-            >درباره ما</a
-          >
-          <a
-            href="#"
-            class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
-            >ارتباط با ما</a
-          >
-
-          <button
-            class="font-[YekanBakh] text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
-          >
-            ورود به اپلیکیشن
-          </button>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="../app/dashboard.html" target="_blank">
+            <button
+              class="font-yekan text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+            >
+              ورود به اپلیکیشن
+            </button>
+          </a>
 
           <button class="rounded-lg bg-white p-2 shadow-md cursor-pointer">
             <img src="../assets/icons/toggle-theme.svg" />
           </button>
-        </nav>
+        </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden">
+        <div class="md:hidden items-center absolute">
           <button id="menu-btn" class="focus:outline-none">
             <img src="../assets/icons/menu.svg" />
           </button>
         </div>
+        <div class="md:hidden mx-auto">
+          <span class="text-center font-[YekanBakh] text-[20px] font-[600]"
+            >کوئرا لیست</span
+          >
+        </div>
       </div>
 
       <!-- Mobile Menu -hidden by default -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden flex flex-col gap-4 px-4 pb-4"
-      >
+      <div id="mobile-menu" class="hidden flex-col gap-4 px-4 pb-4 md:hidden">
         <a
-          href="#"
-          class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+          href="../index.html"
+          class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600"
           >صفحه اصلی</a
         >
         <a
           href="./about-us.html"
-          class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+          class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600"
           >درباره ما</a
         >
         <a
           href="#"
-          class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+          class="font-yekan text-[16px] font-[600] text-blue-600 hover:text-blue-600"
           >ارتباط با ما</a
         >
         <div class="flex w-fit gap-4">
-          <button
-            class="font-[YekanBakh] text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-          >
-            ورود به اپلیکیشن
-          </button>
+          <a href="../app/dashboard.html" target="_blank">
+            <button
+              class="font-yekan text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+            >
+              ورود به اپلیکیشن
+            </button>
+          </a>
           <button class="rounded-lg bg-white p-2 shadow-md">
             <img src="../assets/icons/toggle-theme.svg" />
           </button>
@@ -307,6 +312,150 @@
 
       <header></header>
     </main>
+
+    <!-- Footer - Hamed -->
+    <footer class="background-light container mx-auto mt-9">
+      <!-- top of footer -->
+      <div
+        class="flex container text-center py-4 file font-yekan font-semibold text-xl justify-center items-center"
+      >
+        <hr
+          class="w-23 md:w-56 h-0.5 bg-neutral-light-400 border-0 rounded-sm md:my-3 dark:bg-gray-700"
+        />
+        <p class="px-4 text-xl font-semibold">کوئرا لیست</p>
+        <hr
+          class="w-23 md:w-56 h-0.5 bg-neutral-light-400 border-0 rounded-sm md:my-3 dark:bg-gray-700"
+        />
+      </div>
+      <!-- footer desktop -->
+      <div class="hidden md:block">
+        <div
+          class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-neutral-light-800 pt-6"
+        >
+          <!-- contact information  -->
+          <div class="gap-9 px-9">
+            <!-- fax -->
+            <div class="flex gap-2">
+              <img src="../assets/icons/fax.svg" alt="شماره فکس" />
+              <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+            </div>
+            <!-- tell -->
+            <div class="flex gap-2">
+              <img src="../assets/icons/call.svg" alt="تلفن پشتیبانی" />
+              <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+            </div>
+            <!-- address -->
+            <div class="flex gap-2">
+              <img src="../assets/icons/map.svg" alt="آدرس دفتر" />
+              <p>
+                آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
+                بست شب بو
+              </p>
+            </div>
+          </div>
+          <!-- email section -->
+          <div class="gap-9 px-9">
+            <p class="font-bold text-base text-neutral-light-700">
+              با ما در ارتباط باش
+            </p>
+            <p>
+              اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر
+              بشی.
+            </p>
+            <form>
+              <div class="relative">
+                <input
+                  type="email"
+                  id="email"
+                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="ایمیل"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  ارسال
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- footer mobile -->
+      <div class="md:hidden">
+        <div class="mx-8 font-yekan text-sm font-normal text-neutral-light-800">
+          <p class="font-bold text-base text-neutral-light-700">
+            با ما در ارتباط باش
+          </p>
+          <p>
+            اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر بشی.
+          </p>
+          <form>
+            <div class="relative mt-6">
+              <input
+                type="email"
+                id="email"
+                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="ایمیل"
+                required
+              />
+              <button
+                type="submit"
+                class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                ارسال
+              </button>
+            </div>
+          </form>
+
+          <div class="grid grid-cols-2 grid-rows-2 mt-8">
+            <!-- address -->
+            <div
+              class="row-span-2 text-center gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 ml-2"
+            >
+              <img
+                class="mx-auto"
+                src="../assets/images/footer-map-mobile.png"
+                alt="آدرس دفتر"
+              />
+              <p>
+                آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
+                بست شب بو
+              </p>
+            </div>
+            <!-- tell -->
+            <div
+              class="row-span-1 flex gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 mr-2 mb-2"
+            >
+              <img
+                class="my-auto"
+                src="../assets/images/footer-call-mobile.png"
+                alt="تلفن پشتیبانی"
+              />
+              <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+            </div>
+            <!-- fax -->
+            <div
+              class="row-span-1 flex gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 mr-2 mt-2"
+            >
+              <img
+                class="my-auto"
+                src="../assets/images/footer-fax-mobile.png"
+                alt="شماره فکس"
+              />
+              <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- copyright -->
+      <div>
+        <p class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749]">
+          تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
+        </p>
+      </div>
+    </footer>
     <!-- Script  -->
     <script>
       //menu button action
