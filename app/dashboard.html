@@ -85,22 +85,77 @@
             افزودن وظیفه جدید
           </p>
         </div>
+
+        <!-- box for adding tasks -->
+        <div
+          class="flex flex-col gap-4 w-screen max-w-[328px] mx-auto top-[279px] py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] bg-on-primary-light shadow-cards font-yekan"
+        >
+          <div class="flex flex-col gap-6 px-4 border-b-[1px]  border-neutral-light-200 pb-6">
+            <div class="flex flex-col gap-2">
+              <h4 class="font-[600] text-[14px] text-neutral-light-500">
+                نام تسک
+              </h4>
+              <p class="font-[400] text-[12px] text-neutral-light-400">
+                توضیحات
+              </p>
+            </div>
+            <div
+              class="flex flex-row gap-2 py-1 px-2 rounded-[4px] border-solid border-neutral-light-200 border-[1px] w-fit"
+            >
+              <img class="w-4 h-4" src="../assets/icons/tagPriority.svg"
+              alt=tag-priority" />
+              <p class="font-[600] text-[12px] text-neutral-light-400">تگ‌ها</p>
+            </div>
+            <div
+              class="w-fit flex flex-row p-[10px] gap-4 rounded-[8px] shadow-cards border-solid border-neutral-light-200 border-[1px]"
+            >
+              <div
+                class="w-[43px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#C3FFF1] text-[#11A483]"
+              >
+                <p class="text-center">پایین</p>
+              </div>
+              <div class="w-0 h-5 border-l-solid border-neutral-light-200 border-[1px]">
+              </div>
+              <div
+                class="w-[54px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#FFEFD6] text-[#FFAF37]"
+              >
+                <p class="text-center">متوسط</p>
+              </div>
+              <div class="w-0 h-5 border-l-solid border-neutral-light-200 border-[1px]"></div>
+              <div
+                class="w-[31px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#FFE2DB] text-[#FF5F37]"
+              >
+                <p class="text-center">بالا</p>
+              </div>
+            </div>
+          </div>
+          <div class="px-4  flex flex-row-reverse justify-start gap-[6px]">
+            <button class="flex flex-row rounded-[6px] max-w-[121px] py-[6px] px-4 gap-[12px] opacity-60 bg-primary-light items-center">  
+              <p class="text-[12px] font-[600] text-on-primary-light">
+                اضافه کردن تسک
+              </p>
+            </button>
+            <figure class="w-[34px] h-[34px] rounded-md p-[6px] gap-3 bg-neutral-light-100">
+              <img src="../assets/icons/cancel.svg" alt="">
+            </figure>
+          </div>
+        </div>
         <!-- task cards 1-->
         <div
           class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
         >
-          <div class=" relative flex flex-row gap-4">
-            <div class=" w-1 h-[76px] rounded-l-[8px] bg-[#FF5F37] ">
-
-            </div>
+          <div class="relative flex flex-row gap-4">
+            <div class="w-1 h-auto rounded-l-[8px] bg-[#FF5F37]"></div>
             <div
               class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
             ></div>
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-1">
-                <h3 class="text-14 font-[600] text-neutral-light-700">جلسه با مدیران پروژه</h3>
+                <h3 class="text-14 font-[600] text-neutral-light-700">
+                  جلسه با مدیران پروژه
+                </h3>
                 <div
-                  class=" w-7 h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFE2DB] text-[#FF5F37]"
+                  class="w-7 h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFE2DB] text-[#FF5F37]"
                 >
                   <p class="text-center">بالا</p>
                 </div>
@@ -115,20 +170,20 @@
           </figure>
         </div>
 
-         <!-- task cards 2-->
+        <!-- task cards 2-->
         <div
           class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
         >
-          <div class=" relative flex flex-row gap-4">
-            <div class=" w-1 h-[76px] rounded-l-[8px] bg-[#FFAF37] ">
-
-            </div>
+          <div class="relative flex flex-row gap-4">
+            <div class="w-1 h-auto rounded-l-[8px] bg-[#FFAF37]"></div>
             <div
               class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
             ></div>
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-1">
-                <h3 class="text-14 font-[600] text-neutral-light-700">خرید میوه و سبزیجات و لبنیات برای خانه</h3>
+                <h3 class="text-14 font-[600] text-neutral-light-700">
+                  خرید میوه و سبزیجات و لبنیات برای خانه
+                </h3>
                 <div
                   class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFEFD6] text-[#FFAF37]"
                 >
@@ -149,16 +204,16 @@
         <div
           class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
         >
-          <div class=" relative flex flex-row gap-4">
-            <div class=" w-1 h-[76px] rounded-l-[8px] bg-[#11A483] ">
-
-            </div>
+          <div class="relative flex flex-row gap-4">
+            <div class="w-1 h-auto rounded-l-[8px] bg-[#11A483]"></div>
             <div
               class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
             ></div>
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-1">
-                <h3 class="text-14 font-[600] text-neutral-light-700">تماس با جمشید</h3>
+                <h3 class="text-14 font-[600] text-neutral-light-700">
+                  تماس با جمشید
+                </h3>
                 <div
                   class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#C3FFF1] text-[#11A483]"
                 >
