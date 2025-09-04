@@ -103,7 +103,10 @@
             </button>
           </a>
 
-          <button class="rounded-lg bg-white p-2 shadow-md cursor-pointer">
+          <button
+            class="rounded-lg bg-white p-2 shadow-md cursor-pointer"
+            id="toggle-mode"
+          >
             <img src="./assets/icons/toggle-theme.svg" />
           </button>
         </div>
@@ -329,22 +332,31 @@
 
       <!-- Section3 - Saleh -->
       <section class="mx-auto max-w-[328px] flex flex-col gap-[19px] md:hidden">
-        <p class="font-yekan text-[10px] font-[400] text-center">
+        <p
+          class="font-yekan text-[10px] font-[400] text-center dark:text-on-primary-dark"
+        >
           اپلیکیشن اندروید و IOS
         </p>
         <h4
-          class="font-kalameh text-[20px] font-[600] text-center text-neutral-light-800"
+          class="font-kalameh text-[20px] font-[600] text-center text-neutral-light-800 dark:text-on-primary-dark"
         >
           دانلود اپلیکیشن
         </h4>
         <figure class="flex justify-center">
           <img
-            class="w-[190px] h-[202px]"
+            class="w-[190px] h-[202px] dark:hidden"
             src="./assets/images/app-mobile-small-light.png"
             alt="app-mobile"
           />
+          <img
+            class="w-[190px] h-[202px] hidden dark:block"
+            src="./assets/images/app-mobile-small-dark.png"
+            alt="app-mobile"
+          />
         </figure>
-        <p class="font-yekan text-[10px] font-[400] text-center max-w-[312px]">
+        <p
+          class="font-yekan text-[10px] font-[400] text-center max-w-[312px] dark:text-on-primary-dark"
+        >
           کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
           اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
           نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده
@@ -366,18 +378,18 @@
         <div class="max-w-[540px] flex flex-col gap-10">
           <div class="flex flex-col">
             <p
-              class="font-yekan text-[18px] font-[400] leading-[30px] text-right"
+              class="font-yekan text-[18px] font-[400] leading-[30px] text-right dark:text-on-primary-dark"
             >
               اپلیکیشن اندروید و IOS
             </p>
             <h4
-              class="font-kalameh text-[40px] font-[700] text-right text-neutral-light-800"
+              class="font-kalameh text-[40px] font-[700] text-right text-neutral-light-800 dark:text-on-primary-dark"
             >
               دانلود اپلیکیشن
             </h4>
           </div>
           <p
-            class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px]"
+            class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px] dark:text-on-background-dark"
           >
             کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر
             اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود
@@ -385,7 +397,7 @@
             نمایند.
           </p>
           <p
-            class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px]"
+            class="font-yekan text-[18px] leading-[30px] font-[400] text-right max-w-[472px] dark:text-on-background-dark"
           >
             همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور
             می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
@@ -401,13 +413,23 @@
         </div>
         <div class="relative max-w-[538px]">
           <img
-            class="w-[538px] h-[370px]"
+            class="w-[538px] h-[370px] dark:hidden"
             src="./assets//images/app-web-light.jpg"
             alt=""
           />
           <img
-            class="w-[189px] h-[394px] absolute top-[33px] left-[288.15px]"
+            class="w-[538px] h-[370px] hidden dark:block"
+            src="./assets//images/app-web-dark.jpg"
+            alt=""
+          />
+          <img
+            class="w-[189px] h-[394px] absolute top-[33px] left-[288.15px] dark:hidden"
             src="./assets/images/app-mobile-light.png"
+            alt=""
+          />
+          <img
+            class="w-[189px] h-[394px] absolute top-[33px] left-[288.15px] hidden dark:block"
+            src="./assets/images/app-mobile-dark.png"
             alt=""
           />
         </div>
@@ -415,25 +437,25 @@
 
       <!-- Section4 - Ahmad -->
       <section
-        class="mx-auto max-w-screen-xl bg-background-light flex flex-col gap-[24px]"
+        class="mx-auto max-w-screen-xl bg-background-light flex flex-col gap-[24px] dark:bg-background-dark"
       >
         <div
           class="flex flex-col mx-auto w-[312px] md:w-[540px] md:h-[148px] md:gap-4 gap-2"
         >
           <h2
-            class="font-[Kalameh] text-[24px] leading-[72px] text-center font-semibold md:font-[Kalameh] md:font-[700] md:text-[36px]"
+            class="font-[Kalameh] text-[24px] leading-[72px] text-center font-semibold md:font-[Kalameh] md:font-[700] md:text-[36px] dark:text-on-primary-dark"
           >
             نظرات کاربران
           </h2>
           <p
-            class="text-[10px] font-yekan leading-[100%] max-h-8 md:leading[30px] md:text-[18px] text-center text font-normal"
+            class="text-[10px] font-yekan leading-[100%] max-h-8 md:leading[30px] md:text-[18px] text-center text font-normal dark:text-on-primary-dark"
           >
             بیش از یک دهه است که کوئرا لیست به مردم در سراسر جهان کمک می‌کند تا
             سازماندهی شوند و به اهداف خود برسند.
           </p>
         </div>
         <div
-          class="md:w-[357px] md:hidden p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px]"
+          class="md:w-[357px] md:hidden p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] dark:bg-[#0B192D]"
         >
           <div class="info-container flex flex-row gap-[10px]">
             <img
@@ -442,18 +464,20 @@
               alt="profile-image"
             />
             <div class="gap-1 flex flex-col justify-center">
-              <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+              <h4
+                class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+              >
                 علی ملکی
               </h4>
               <p
-                class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 text-[12px]"
+                class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 text-[12px] dark:text-on-primary-dark"
               >
                 مهندس نرم افزار دیجی‌کالا
               </p>
             </div>
           </div>
           <p
-            class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+            class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-primary-dark"
           >
             تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
             اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -467,7 +491,7 @@
         <div class="md:flex hidden flex-row mx-auto md:justify-between gap-6">
           <div class="flex flex-col gap-6">
             <div
-              class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px]"
+              class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] dark:bg-[#0B192D]"
             >
               <div class="info-container flex flex-row gap-[10px]">
                 <img
@@ -476,18 +500,20 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                  <h4
+                    class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+                  >
                     علی ملکی
                   </h4>
                   <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 text-[12px]"
+                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 text-[12px] dark:text-on-background-dark"
                   >
                     مهندس نرم افزار دیجی‌کالا
                   </p>
                 </div>
               </div>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-background-dark"
               >
                 تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
                 اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -497,7 +523,7 @@
               </p>
             </div>
             <div
-              class="md:w-[357px] p-[24px] h-[272px] md:h-[240px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex"
+              class="md:w-[357px] p-[24px] h-[272px] md:h-[240px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex dark:bg-[#0B192D] dark:border-neutral-dark-800"
             >
               <div class="info-container flex flex-row gap-[10px]">
                 <img
@@ -506,18 +532,20 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                  <h4
+                    class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+                  >
                     علی ملکی
                   </h4>
                   <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700"
+                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 dark:text-on-background-dark"
                   >
                     مهندس نرم افزار دیجی‌کالا
                   </p>
                 </div>
               </div>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-background-dark"
               >
                 تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
                 اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -527,7 +555,7 @@
           </div>
           <div class="flex flex-col gap-6">
             <div
-              class="md:w-[357px] p-[24px] h-[272px] md:h-[240px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex"
+              class="md:w-[357px] p-[24px] h-[272px] md:h-[240px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex dark:bg-[#0B192D]"
             >
               <div class="info-container flex flex-row gap-[10px]">
                 <img
@@ -536,18 +564,20 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                  <h4
+                    class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+                  >
                     علی ملکی
                   </h4>
                   <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700"
+                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 dark:text-on-background-dark"
                   >
                     مهندس نرم افزار دیجی‌کالا
                   </p>
                 </div>
               </div>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-background-dark"
               >
                 تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
                 اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -555,7 +585,7 @@
               </p>
             </div>
             <div
-              class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex"
+              class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex dark:bg-[#0B192D] dark:border-neutral-dark-800"
             >
               <div class="info-container flex flex-row gap-[10px]">
                 <img
@@ -564,18 +594,20 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                  <h4
+                    class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+                  >
                     علی ملکی
                   </h4>
                   <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700"
+                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 dark:text-on-background-dark"
                   >
                     مهندس نرم افزار دیجی‌کالا
                   </p>
                 </div>
               </div>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-background-dark"
               >
                 تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
                 اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -585,7 +617,7 @@
           </div>
           <div class="flex flex-col gap-6">
             <div
-              class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex"
+              class="md:w-[357px] p-[24px] h-[272px] md:h-[340px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex dark:bg-[#0B192D]"
             >
               <div class="info-container flex flex-row gap-[10px]">
                 <img
@@ -594,18 +626,20 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                  <h4
+                    class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+                  >
                     علی ملکی
                   </h4>
                   <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700"
+                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 dark:text-on-background-dark"
                   >
                     مهندس نرم افزار دیجی‌کالا
                   </p>
                 </div>
               </div>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-background-dark"
               >
                 تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
                 اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -613,7 +647,7 @@
               </p>
             </div>
             <div
-              class="md:w-[357px] p-[24px] h-[272px] md:h-[240px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex"
+              class="md:w-[357px] p-[24px] h-[272px] md:h-[240px] rounded-[16px] card mx-auto flex-col gap-2 shadow-cards bg-on-primary-light w-[258px] hidden md:flex dark:bg-[#0B192D] dark:border-neutral-dark-800"
             >
               <div class="info-container flex flex-row gap-[10px]">
                 <img
@@ -622,18 +656,20 @@
                   alt="profile-image"
                 />
                 <div class="gap-1 flex flex-col justify-center">
-                  <h4 class="md:text-bold-16 font-yekan text-[14px] font-[700]">
+                  <h4
+                    class="md:text-bold-16 font-yekan text-[14px] font-[700] dark:text-on-primary-dark"
+                  >
                     علی ملکی
                   </h4>
                   <p
-                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700"
+                    class="font-yekan md:text-[14px] font-[400] text-neutral-light-700 dark:text-on-background-dark"
                   >
                     مهندس نرم افزار دیجی‌کالا
                   </p>
                 </div>
               </div>
               <p
-                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600"
+                class="md:text-[15px] text-[10px] font-yekan text-neutral-light-600 dark:text-on-background-dark"
               >
                 تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از دنیایی
                 اومدم که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این
@@ -645,18 +681,32 @@
 
         <div class="w-[80px] h-8 mx-auto flex flex-row justify-between">
           <button
-            class="w-8 h-8 border-solid border-neutral-light-100 border-[1px] rounded-md"
+            class="w-8 h-8 border-solid border-neutral-light-100 border-[1px] rounded-md dark:bg-[#0B192D] dark:border-neutral-dark-800"
           >
             <img
-              class="mx-auto"
+              class="mx-auto dark:hidden"
               src="./assets/icons/chevron-right.svg"
+              alt=""
+            />
+            <img
+              class="mx-auto hidden dark:block"
+              src="./assets/icons/chevron-right-dark.svg"
               alt=""
             />
           </button>
           <button
-            class="w-8 h-8 border-solid border-neutral-light-100 border-[1px] rounded-md"
+            class="w-8 h-8 border-solid border-neutral-light-100 border-[1px] rounded-md dark:bg-[#0B192D] dark:border-neutral-dark-800"
           >
-            <img class="mx-auto" src="./assets/icons/chevron-left.svg" alt="" />
+            <img
+              class="mx-auto dark:hidden"
+              src="./assets/icons/chevron-left.svg"
+              alt=""
+            />
+            <img
+              class="mx-auto hidden dark:block"
+              src="./assets/icons/chevron-left-dark.svg"
+              alt=""
+            />
           </button>
         </div>
       </section>
