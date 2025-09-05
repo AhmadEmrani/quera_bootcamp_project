@@ -63,7 +63,7 @@
         /* Shadow */
         --shadow-cards: 0 4px 63px 0 rgba(0, 0, 0, 0.03);
         --shadow-header-mobile: 0 4px 18px 0 rgba(24, 72, 144, 0.06);
-        --shadow-app-header: 0 4px 58.5px 0 rgba(0, 0, 0, 0.06);
+        --shadow-app: 0 4px 58.5px 0 rgba(0, 0, 0, 0.06);
       }
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
@@ -71,7 +71,7 @@
   <body class="px-4 pt-4 bg-background-light">
     <!-- Header -->
     <header
-      class="flex items-center justify-between p-3 rounded-lg shadow-app-header md:hidden"
+      class="flex items-center justify-between p-3 rounded-lg shadow-app md:hidden"
     >
       <button id="menu-toggle" class="cursor-pointer">
         <img src="../assets/icons/menu.svg" alt="منو" class="w-6 h-6" />
@@ -91,7 +91,7 @@
     <!-- Sidebar -->
     <aside
       id="sidebar"
-      class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500 md:translate-x-0 md:top-5 md:right-5 md:rounded-2xl md:shadow-app-header"
+      class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500 md:translate-x-0 md:top-5 md:right-5 md:rounded-2xl md:shadow-app"
     >
       <div
         class="font-yekan pr-2 pt-12 pb-10 hidden md:flex items-center justify-start gap-3"
