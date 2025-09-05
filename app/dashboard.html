@@ -71,7 +71,7 @@
   <body class="px-4 pt-4 bg-background-light">
     <!-- Header -->
     <header
-      class="flex items-center justify-between p-3 rounded-lg shadow-app-header"
+      class="flex items-center justify-between p-3 rounded-lg shadow-app-header md:hidden"
     >
       <button id="menu-toggle" class="cursor-pointer">
         <img src="../assets/icons/menu.svg" alt="منو" class="w-6 h-6" />
@@ -91,9 +91,26 @@
     <!-- Sidebar -->
     <aside
       id="sidebar"
-      class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500"
+      class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500 md:translate-x-0 md:top-5 md:right-5 md:rounded-2xl md:shadow-app-header"
     >
-      <div class="flex items-center justify-between py-3">
+      <div
+        class="font-yekan pr-2 pt-12 pb-10 hidden md:flex items-center justify-start gap-3"
+      >
+        <div class="rounded-full">
+          <img
+            src="../assets/images/user2.png"
+            alt="تصویر کاربر"
+            class="object-cover w-full max-w-14"
+          />
+        </div>
+        <div class="flex flex-col items-start gap-1">
+          <h2 class="font-black text-lg text-neutral-light-800">سلام، رویا</h2>
+          <span class="font-semibold text-sm text-neutral-light-500"
+            >سه‌شنبه، ۵ بهمن ۱۴۰۲</span
+          >
+        </div>
+      </div>
+      <div class="flex items-center justify-between py-3 md:hidden">
         <h2 class="font-yekan font-bold text-base text-neutral-light-800 pr-3">
           کوئرا لیست
         </h2>
