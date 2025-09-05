@@ -81,6 +81,148 @@
       </h1>
       <div class="w-6 h-6"></div>
     </header>
+
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="hidden fixed inset-0 bg-neutral-light-900 opacity-40 z-10"
+    ></div>
+
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500"
+    >
+      <div class="flex items-center justify-between py-3">
+        <h2 class="font-yekan font-bold text-base text-neutral-light-800 pr-3">
+          کوئرا لیست
+        </h2>
+        <button
+          id="close-toggle"
+          class="cursor-pointer rounded-full hover:bg-neutral-light-100"
+        >
+          <img src="../assets/icons/close.svg" alt="بستن" class="w-6 h-6" />
+        </button>
+      </div>
+      <nav class="mb-28">
+        <ul class="font-yekan flex flex-col justify-center gap-6">
+          <li
+            class="px-5 py-3 flex items-center justify-start cursor-pointer bg-app-primary-hover-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-bold text-base text-app-primary-light"
+            >
+              <img
+                src="../assets/icons/home-2.svg"
+                alt="آیکن خانه"
+                class="w-5 h-5"
+              />
+              خانه
+            </a>
+          </li>
+          <li
+            class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+            >
+              <img src="../assets/icons/task-square.svg" alt="آیکن تسک‌ها" />
+              تسک‌ها
+            </a>
+          </li>
+          <li
+            class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+            >
+              <img src="../assets/icons/calendar.svg" alt="آیکن تقویم" />
+              تقویم
+            </a>
+          </li>
+          <li
+            class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+            >
+              <img
+                2
+                src="../assets/icons/arrange-square-2.svg"
+                alt="آیکن گزارشات"
+              />
+              گزارشات
+            </a>
+          </li>
+          <li
+            class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+            >
+              <img src="../assets/icons/setting.svg" alt="آیکن تنظیمات" />
+              تنظیمات
+            </a>
+          </li>
+          <li
+            class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+            >
+              <img src="../assets/icons/24-support.svg" alt="آیکن پشتیبانی" />
+              پشتیبانی
+            </a>
+          </li>
+          <li
+            class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+            >
+              <img src="../assets/icons/profile.svg" alt="آیکن پروفایل" />
+              پروفایل
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col items-center gap-6 px-4 mb-9">
+        <div
+          class="self-start w-full flex items-center gap-1 font-yekan p-1 bg-neutral-light-100 rounded-lg"
+        >
+          <button
+            class="w-full flex items-center gap-3 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 bg-background-light rounded-md"
+          >
+            <img src="../assets/icons/sun.svg" alt="خورشید" class="w-4 h-4" />
+            روشن
+          </button>
+          <button
+            class="w-full flex items-center gap-4 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 rounded-md"
+          >
+            <img src="../assets/icons/moon.svg" alt="ماه" class="w-4 h-4" />
+            تاریک
+          </button>
+        </div>
+        <div class="w-full h-[1px] bg-neutral-light-200"></div>
+        <div class="self-start w-full px-1 py-2">
+          <a
+            href=""
+            class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+          >
+            <img src="../assets/icons/logout.svg" alt="آیکن خروج" />
+            خروج
+          </a>
+        </div>
+      </div>
+    </aside>
+
     <!-- todays task Ahmad-->
     <section
       class="relative max-w-[328px] mx-auto flex flex-col gap-4 top-[204px]"
@@ -374,5 +516,28 @@
         </div>
       </div>
     </section>
+
+    <script>
+      // Sidebar - Mobile
+      const menuOpen = document.getElementById("menu-toggle");
+      const menuClose = document.getElementById("close-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+
+      menuOpen.addEventListener("click", () => {
+        sidebar.classList.remove("translate-x-full");
+        overlay.classList.remove("hidden");
+      });
+
+      menuClose.addEventListener("click", () => {
+        sidebar.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+      });
+
+      overlay.addEventListener("click", () => {
+        sidebar.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
