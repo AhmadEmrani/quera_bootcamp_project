@@ -63,7 +63,9 @@
         /* Shadow */
         --shadow-cards: 0 4px 63px 0 rgba(0, 0, 0, 0.03);
         --shadow-header-mobile: 0 4px 18px 0 rgba(24, 72, 144, 0.06);
+
         --shadow-app: 0 4px 58.5px 0 rgba(0, 0, 0, 0.06);
+        --shadow-edit-buttons: 0 12px 24px -6px rgba(20, 20, 25, 0.06);
       }
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
@@ -327,8 +329,29 @@
 
         <!-- task cards 1-->
         <div
-          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
+          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] relative"
         >
+          <!-- Edit/Delete buttons -->
+          <div
+            class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+          >
+            <button>
+              <img
+                src="../assets/icons/trash-light.svg"
+                alt="حذف"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+            <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+            <button>
+              <img
+                src="../assets/icons/edit-light.svg"
+                alt="ویرایش"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+          </div>
+
           <div class="relative flex flex-row gap-4">
             <div class="w-1 h-auto rounded-l-[8px] bg-[#FF5F37]"></div>
             <div
@@ -357,8 +380,29 @@
 
         <!-- task cards 2-->
         <div
-          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
+          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] relative"
         >
+          <!-- Edit/Delete buttons -->
+          <div
+            class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+          >
+            <button>
+              <img
+                src="../assets/icons/trash-light.svg"
+                alt="حذف"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+            <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+            <button>
+              <img
+                src="../assets/icons/edit-light.svg"
+                alt="ویرایش"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+          </div>
+
           <div class="relative flex flex-row gap-4">
             <div class="w-1 h-auto rounded-l-[8px] bg-[#FFAF37]"></div>
             <div
@@ -387,8 +431,29 @@
 
         <!-- task cards 3-->
         <div
-          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
+          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] relative"
         >
+          <!-- Edit/Delete buttons -->
+          <div
+            class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+          >
+            <button>
+              <img
+                src="../assets/icons/trash-light.svg"
+                alt="حذف"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+            <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+            <button>
+              <img
+                src="../assets/icons/edit-light.svg"
+                alt="ویرایش"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+          </div>
+
           <div class="relative flex flex-row gap-4">
             <div class="w-1 h-auto rounded-l-[8px] bg-[#11A483]"></div>
             <div
