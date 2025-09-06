@@ -63,7 +63,9 @@
         /* Shadow */
         --shadow-cards: 0 4px 63px 0 rgba(0, 0, 0, 0.03);
         --shadow-header-mobile: 0 4px 18px 0 rgba(24, 72, 144, 0.06);
+
         --shadow-app: 0 4px 58.5px 0 rgba(0, 0, 0, 0.06);
+        --shadow-edit-buttons: 0 12px 24px -6px rgba(20, 20, 25, 0.06);
       }
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
@@ -327,8 +329,29 @@
 
         <!-- task cards 1-->
         <div
-          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
+          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] relative"
         >
+          <!-- Edit/Delete buttons -->
+          <div
+            class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+          >
+            <button>
+              <img
+                src="../assets/icons/trash-light.svg"
+                alt="حذف"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+            <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+            <button>
+              <img
+                src="../assets/icons/edit-light.svg"
+                alt="ویرایش"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+          </div>
+
           <div class="relative flex flex-row gap-4">
             <div class="w-1 h-auto rounded-l-[8px] bg-[#FF5F37]"></div>
             <div
@@ -357,8 +380,29 @@
 
         <!-- task cards 2-->
         <div
-          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
+          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] relative"
         >
+          <!-- Edit/Delete buttons -->
+          <div
+            class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+          >
+            <button>
+              <img
+                src="../assets/icons/trash-light.svg"
+                alt="حذف"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+            <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+            <button>
+              <img
+                src="../assets/icons/edit-light.svg"
+                alt="ویرایش"
+                class="w-4 h-4 md:w-5 md:h-5"
+              />
+            </button>
+          </div>
+
           <div class="relative flex flex-row gap-4">
             <div class="w-1 h-auto rounded-l-[8px] bg-[#FFAF37]"></div>
             <div
@@ -386,33 +430,120 @@
         </div>
 
         <!-- task cards 3-->
-        <div
-          class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]"
-        >
-          <div class="relative flex flex-row gap-4">
-            <div class="w-1 h-auto rounded-l-[8px] bg-[#11A483]"></div>
+        <div class="grid grid-rows-2 gap-2.5">
+          <div
+            class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] relative"
+          >
+            <!-- Edit/Delete buttons -->
             <div
-              class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
-            ></div>
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-14 font-[600] text-neutral-light-700">
+              class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+            >
+              <button>
+                <img
+                  src="../assets/icons/trash-light.svg"
+                  alt="حذف"
+                  class="w-4 h-4 md:w-5 md:h-5"
+                />
+              </button>
+              <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+              <button>
+                <img
+                  src="../assets/icons/edit-light.svg"
+                  alt="ویرایش"
+                  class="w-4 h-4 md:w-5 md:h-5"
+                />
+              </button>
+            </div>
+
+            <div class="relative flex flex-row gap-4">
+              <div class="w-1 h-auto rounded-l-[8px] bg-[#11A483]"></div>
+              <div
+                class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
+              ></div>
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-14 font-[600] text-neutral-light-700">
+                    تماس با جمشید
+                  </h3>
+                  <div
+                    class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#C3FFF1] text-[#11A483]"
+                  >
+                    <p class="text-center">پایین</p>
+                  </div>
+                </div>
+                <p class="text-[12px] font-[400] text-neutral-light-500">
+                  باید در مورد کارهای باقیمانده از پروژه قبلی صحبت کنیم.
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../assets/icons/3dotIcon.svg" alt="" />
+            </figure>
+          </div>
+
+          <div
+            class="font-yekan bg-background-light border border-solid border-neutral-light-200 rounded-xl shadow-app"
+          >
+            <div
+              class="flex flex-col items-start gap-6 p-4 pb-6 border-b border-b-neutral-light-200"
+            >
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="font-semibold text-sm text-neutral-light-800 md:font-bold md:text-base"
+                >
                   تماس با جمشید
                 </h3>
-                <div
-                  class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#C3FFF1] text-[#11A483]"
+                <p
+                  class="font-normal text-xs text-neutral-light-600 md:text-sm"
                 >
-                  <p class="text-center">پایین</p>
-                </div>
+                  باید در مورد کارهای باقیمانده از پروژه قبلی صحبت کنیم.
+                </p>
               </div>
-              <p class="text-[12px] font-[400] text-neutral-light-500">
-                باید در مورد کارهای باقیمانده از پروژه قبلی صحبت کنیم.
-              </p>
+              <div class="">
+                <button
+                  class="font-semibold text-xs text-[#11A483] bg-[#C3FFF1] px-2 py-1.5 flex items-center gap-1.5 rounded-[4px] md:text-sm"
+                >
+                  <img
+                    src="../assets/icons/close.svg"
+                    alt="حذف"
+                    class="w-4 h-4 md:w-5 md:h-5"
+                  />
+                  پایین
+                </button>
+              </div>
+              <div class="hidden">
+                <button
+                  class="font-semibold text-xs text-[#FFAF37] bg-[#FFEFD6] px-2 py-1.5 flex items-center gap-1.5 rounded-[4px] md:text-sm"
+                >
+                  <img
+                    src="../assets/icons/close.svg"
+                    alt="حذف"
+                    class="w-4 h-4 md:w-5 md:h-5"
+                  />
+                  متوسط
+                </button>
+              </div>
+              <div class="hidden">
+                <button
+                  class="font-semibold text-xs text-[#FF5F37] bg-[#FFE2DB] px-2 py-1.5 flex items-center gap-1.5 rounded-[4px] md:text-sm"
+                >
+                  <img
+                    src="../assets/icons/close.svg"
+                    alt="حذف"
+                    class="w-4 h-4 md:w-5 md:h-5"
+                  />
+                  بالا
+                </button>
+              </div>
+            </div>
+            <div class="p-4 flex justify-end md:pt-5">
+              <button
+                class="font-semibold text-xs text-on-primary-light bg-app-primary-light flex items-center justify-center px-4 py-1.5 rounded-md md:text-sm"
+              >
+                ویرایش تسک
+              </button>
             </div>
           </div>
-          <figure>
-            <img src="../assets/icons/3dotIcon.svg" alt="" />
-          </figure>
         </div>
       </div>
     </section>
