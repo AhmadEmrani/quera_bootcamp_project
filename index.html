@@ -713,66 +713,70 @@
     </main>
 
     <!-- Footer - Hamed -->
-    <footer class="background-light container mx-auto mt-9">
+    <footer
+      class="background-primary-light container mx-auto mt-9 max-w-screen-xl"
+    >
       <!-- top of footer -->
       <div
         class="flex container text-center py-4 file font-yekan font-semibold text-xl justify-center items-center"
       >
         <hr
-          class="w-23 md:w-56 h-0.5 bg-neutral-light-400 border-0 rounded-sm md:my-3 dark:bg-gray-700"
+          class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-4 dark:bg-gray-700"
         />
-        <p class="px-4 text-xl font-semibold">کوئرا لیست</p>
+        <p class="px-4 text-xl font-semibold text-[#141414]">کوئرا لیست</p>
         <hr
-          class="w-23 md:w-56 h-0.5 bg-neutral-light-400 border-0 rounded-sm md:my-3 dark:bg-gray-700"
+          class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-3 dark:bg-gray-700"
         />
       </div>
       <!-- footer desktop -->
-      <div class="hidden md:block">
+      <div class="hidden md:block px-10">
         <div
-          class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-neutral-light-800 pt-6"
+          class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-[#242424] pt-6"
         >
           <!-- contact information  -->
           <div class="gap-9 px-9">
             <!-- fax -->
-            <div class="flex gap-2">
+            <div class="flex gap-4 py-2 items-start">
               <img src="./assets/icons/fax.svg" alt="شماره فکس" />
               <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
             </div>
             <!-- tell -->
-            <div class="flex gap-2">
+            <div class="flex gap-4 py-2 items-start">
               <img src="./assets/icons/call.svg" alt="تلفن پشتیبانی" />
               <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
             </div>
             <!-- address -->
-            <div class="flex gap-2">
+            <div class="flex gap-4 py-2 items-start">
               <img src="./assets/icons/map.svg" alt="آدرس دفتر" />
               <p>
-                آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
-                بست شب بو
+                آدرس دفتر مرکزی: پونک - خیابان اشرفی
+                <br />
+                اصفهانی - خیابان صبحدل- بن بست شب بو
               </p>
             </div>
           </div>
           <!-- email section -->
-          <div class="gap-9 px-9">
-            <p class="font-bold text-base text-neutral-light-700">
+          <div class="gap-9 pl-35 pr-35">
+            <p class="font-bold text-base text-[#242424]">
               با ما در ارتباط باش
             </p>
-            <p>
-              اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر
-              بشی.
+            <p class="mt-2">
+              اگه میخوای اولین نفری باشی که از فیچرهای جدید
+              <br />
+              و تخفیفات با خبر بشی.
             </p>
-            <form>
+            <form class="mt-4">
               <div class="relative">
                 <input
                   type="email"
                   id="email"
-                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="block w-full p-4 ps-10 text-sm text-[#BCBCBC] border border-gray-300 rounded-lg bg-on-primary-light h-12"
                   placeholder="ایمیل"
                   required
                 />
                 <button
                   type="submit"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-white absolute end-2.5 bottom-2.5 bg-[#037FFF] hover:bg-primary-hover-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
                 >
                   ارسال
                 </button>
@@ -783,16 +787,16 @@
       </div>
       <!-- footer mobile -->
       <div class="md:hidden">
-        <div class="mx-8 font-yekan text-sm font-normal text-neutral-light-800">
-          <p class="font-bold text-base text-neutral-light-700">
+        <div class="mx-5 font-yekan text-sm font-normal text-neutral-light-800">
+          <p class="font-bold text-base text-[#242424] mt-3">
             با ما در ارتباط باش
           </p>
-          <p>
+          <p class="font-normal text-xs mt-2">
             اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر بشی.
           </p>
           <form>
             <div class="relative mt-6">
-              <input
+              <!-- <input
                 type="email"
                 id="email"
                 class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -804,17 +808,31 @@
                 class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 ارسال
+              </button> -->
+
+              <input
+                type="email"
+                id="email"
+                class="block w-full p-4 ps-10 text-sm text-[#BCBCBC] border border-gray-300 rounded-lg bg-on-primary-light h-12"
+                placeholder="ایمیل"
+                required
+              />
+              <button
+                type="submit"
+                class="text-white absolute end-2.5 bottom-2.5 bg-[#2C7EF8] hover:bg-primary-hover-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
+              >
+                ارسال
               </button>
             </div>
           </form>
 
-          <div class="grid grid-cols-2 grid-rows-2 mt-8">
+          <div class="grid grid-cols-2 grid-rows-2 mt-8 text-[10px]">
             <!-- address -->
             <div
-              class="row-span-2 text-center gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 ml-2"
+              class="row-span-2 text-center border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-1 ml-2 justify-items-center"
             >
               <img
-                class="mx-auto"
+                class="mx-auto h-10 w-10"
                 src="./assets/images/footer-map-mobile.png"
                 alt="آدرس دفتر"
               />
@@ -825,32 +843,42 @@
             </div>
             <!-- tell -->
             <div
-              class="row-span-1 flex gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 mr-2 mb-2"
+              class="row-span-1 flex justify-center items-center border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-1 mr-2 mb-2"
             >
               <img
-                class="my-auto"
+                class="my-auto h-10 w-10"
                 src="./assets/images/footer-call-mobile.png"
                 alt="تلفن پشتیبانی"
               />
-              <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+              <p>
+                تلفن پشتیبانی:
+                <br />
+                ۴۴۴۴۵۵۶۶ - ۰۲۱
+              </p>
             </div>
             <!-- fax -->
             <div
-              class="row-span-1 flex gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 mr-2 mt-2"
+              class="row-span-1 flex items-center justify-center border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-1 mr-1 mt-2"
             >
               <img
-                class="my-auto"
+                class="my-auto h-10 w-10"
                 src="./assets/images/footer-fax-mobile.png"
                 alt="شماره فکس"
               />
-              <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+              <p>
+                فکس:
+                <br />
+                ۴۴۴۴۵۵۶۶ - ۰۲۱
+              </p>
             </div>
           </div>
         </div>
       </div>
       <!-- copyright -->
       <div>
-        <p class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749]">
+        <p
+          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text[14px]"
+        >
           تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
         </p>
       </div>
