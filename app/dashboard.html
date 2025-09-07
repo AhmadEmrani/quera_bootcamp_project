@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>داشبورد | کوئرالیست</title>
+    <title>کوئرالیست | داشبورد</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -107,9 +107,9 @@
         </div>
         <div class="flex flex-col items-start gap-1">
           <h2 class="font-black text-lg text-neutral-light-800">سلام، رویا</h2>
-          <span class="font-semibold text-sm text-neutral-light-500"
-            >سه‌شنبه، ۵ بهمن ۱۴۰۲</span
-          >
+          <span
+            class="date font-semibold text-sm text-neutral-light-500"
+          ></span>
         </div>
       </div>
       <div class="flex items-center justify-between py-3 md:hidden">
@@ -217,13 +217,15 @@
           class="self-start w-full flex items-center gap-1 font-yekan p-1 bg-neutral-light-100 rounded-lg"
         >
           <button
-            class="w-full flex items-center gap-3 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 bg-background-light rounded-md"
+            id="sun-btn"
+            class="cursor-pointer w-full flex items-center gap-3 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 bg-background-light rounded-md"
           >
             <img src="../assets/icons/sun.svg" alt="خورشید" class="w-4 h-4" />
             روشن
           </button>
           <button
-            class="w-full flex items-center gap-4 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 rounded-md"
+            id="moon-btn"
+            class="cursor-pointer w-full flex items-center gap-4 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 rounded-md"
           >
             <img src="../assets/icons/moon.svg" alt="ماه" class="w-4 h-4" />
             تاریک
@@ -255,9 +257,9 @@
         </div>
         <div class="flex flex-col items-start gap-1">
           <h2 class="font-black text-lg text-neutral-light-800">سلام، رویا</h2>
-          <span class="font-semibold text-sm text-neutral-light-500"
-            >امروز، سه‌شنبه، ۵ بهمن ۱۴۰۲</span
-          >
+          <span class="date font-semibold text-sm text-neutral-light-500"
+            >امروز،
+          </span>
         </div>
       </section>
       <!-- todays task Ahmad-->
