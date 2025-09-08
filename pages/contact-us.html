@@ -160,10 +160,10 @@
       </div>
     </header>
     <main
-      class="mx-auto  md:mt-[140px] flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px] md:dark:border-none md:dark:bg-[#0B192D]"
+      class="mx-auto md:mt-[140px] flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px] md:dark:border-none md:dark:bg-[#0B192D]"
     >
       <section
-        class="relative flex flex-col gap-2  md:gap-3 md:max-w-[467px] md:h-auto"
+        class="relative flex flex-col gap-2 md:gap-3 md:max-w-[467px] md:h-auto"
       >
         <h1
           class="text-center font-[Kalameh] text-[24px] font-[700] md:text-[40px] text-[#070D31] md:text-right dark:text-on-background-dark"
@@ -227,7 +227,8 @@
           <img
             class="w-8 h-8 dark:hidden"
             src="../assets/icons/linkedin.svg"
-            alt=""ظ
+            alt=""
+            ظ
           />
           <img
             class="w-8 h-8 hidden dark:block"
@@ -236,16 +237,20 @@
           />
         </div>
       </section>
-      <img class="hidden md:block" src="../assets/icons/Rectangle-contac-us.svg" alt="rectangle-seperation">
+      <img
+        class="hidden md:block"
+        src="../assets/icons/Rectangle-contac-us.svg"
+        alt="rectangle-seperation"
+      />
       <form
         action=""
-        class="mx-auto flex flex-col md:justify-between p-[16px] rounded-2xl gap-6 md:gap-0 p border-solid border-[1px] border-neutral-light-100  w-[328px] shadow-cards font-yekan md:border-none md:shadow-none  font-[600] text-[12px] md:text-[16px] md:w-[471px] dark:bg-[#0B192D] dark:border-none dark:text-on-background-dark md:bg-inherit"
+        class="mx-auto flex flex-col md:justify-between p-[16px] rounded-2xl gap-6 md:gap-0 p border-solid border-[1px] border-neutral-light-100 w-[328px] shadow-cards font-yekan md:border-none md:shadow-none font-[600] text-[12px] md:text-[16px] md:w-[471px] dark:bg-[#0B192D] dark:border-none dark:text-on-background-dark md:bg-inherit"
       >
         <div class="flex flex-row gap-4 md:justify-between max-w-[471px]">
           <div class="flex flex-col gap-2">
             <label class="" for="firstName">نام:</label>
             <input
-              class="w-full  md:max-w-[223px] max-h-[40px] md:h-full rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800 md:p-4"
+              class="w-full md:max-w-[223px] max-h-[40px] md:h-full rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800 md:p-4"
               type="text"
               name="firstName"
               id=""
@@ -296,7 +301,7 @@
         </div>
 
         <button
-          class="rounded-[8px] py-[8px] px-[40px] bg-primary-light text-on-primary-light md:max-h-[56px] "
+          class="rounded-[8px] py-[8px] px-[40px] bg-primary-light text-on-primary-light md:max-h-[56px]"
         >
           ارسال پیام
         </button>
@@ -358,9 +363,7 @@
     </main>
 
     <!-- Footer - Hamed -->
-    <footer
-      class="background-primary-light container mx-auto mt-9 max-w-screen-xl"
-    >
+    <footer class="container mx-auto mt-9 max-w-screen-xl">
       <!-- top of footer -->
       <div
         class="flex container text-center py-4 file font-yekan font-semibold text-xl justify-center items-center"
@@ -415,13 +418,13 @@
                 <input
                   type="email"
                   id="email"
-                  class="block w-full p-4 ps-10 text-sm text-[#BCBCBC] border border-gray-300 rounded-lg bg-on-primary-light h-12"
+                  class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12"
                   placeholder="ایمیل"
                   required
                 />
                 <button
                   type="submit"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-[#037FFF] hover:bg-primary-hover-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
+                  class="text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
                 >
                   ارسال
                 </button>
@@ -441,77 +444,79 @@
           </p>
           <form>
             <div class="relative mt-6">
-              <!-- <input
-                type="email"
-                id="email"
-                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="ایمیل"
-                required
-              />
-              <button
-                type="submit"
-                class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                ارسال
-              </button> -->
-
               <input
                 type="email"
                 id="email"
-                class="block w-full p-4 ps-10 text-sm text-[#BCBCBC] border border-gray-300 rounded-lg bg-on-primary-light h-12"
+                class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12"
                 placeholder="ایمیل"
                 required
               />
               <button
                 type="submit"
-                class="text-white absolute end-2.5 bottom-2.5 bg-[#2C7EF8] hover:bg-primary-hover-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
+                class="text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
               >
                 ارسال
               </button>
             </div>
           </form>
 
-          <div class="grid grid-cols-2 grid-rows-2 mt-8 text-[10px]">
+          <div class="grid grid-cols-2 grid-rows-2 mt-8 gap-1">
             <!-- address -->
             <div
-              class="row-span-2 text-center border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-1 ml-2 justify-items-center"
+              class="flex flex-col row-span-2 text-center border border-neutral-light-100 rounded-2xl shadow-cards gap-4 justify-center items-center px-2 h-[172px]"
             >
-              <img
-                class="mx-auto h-10 w-10"
-                src="./assets/images/footer-map-mobile.png"
-                alt="آدرس دفتر"
-              />
-              <p>
+              <!-- circle -->
+              <div
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] p-3"
+              >
+                <img
+                  class="h-4 w-4"
+                  src="./assets/icons/map-mobile.svg"
+                  alt="آدرس دفتر"
+                />
+              </div>
+
+              <p class="text-[10px]">
                 آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
                 بست شب بو
               </p>
             </div>
             <!-- tell -->
             <div
-              class="row-span-1 flex justify-center items-center border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-1 mr-2 mb-2"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1"
             >
-              <img
-                class="my-auto h-10 w-10"
-                src="./assets/images/footer-call-mobile.png"
-                alt="تلفن پشتیبانی"
-              />
-              <p>
-                تلفن پشتیبانی:
+              <!-- circle -->
+              <div
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF]"
+              >
+                <img
+                  class="h-4 w-4"
+                  src="./assets/icons/call-mobile.svg"
+                  alt="تلفن پشتیبانی"
+                />
+              </div>
+              <p class="text-[10px]">
+                تلفن پشتیبانی
                 <br />
                 ۴۴۴۴۵۵۶۶ - ۰۲۱
               </p>
             </div>
             <!-- fax -->
             <div
-              class="row-span-1 flex items-center justify-center border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-1 mr-1 mt-2"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1"
             >
-              <img
-                class="my-auto h-10 w-10"
-                src="./assets/images/footer-fax-mobile.png"
-                alt="شماره فکس"
-              />
-              <p>
-                فکس:
+              <!-- circle -->
+              <div
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF]"
+              >
+                <img
+                  class="h-4 w-4"
+                  src="./assets/icons/fax-mobile.svg"
+                  alt="شماره فکس"
+                />
+              </div>
+              <p class="text-[10px]">
+                فکس
                 <br />
                 ۴۴۴۴۵۵۶۶ - ۰۲۱
               </p>
@@ -522,7 +527,7 @@
       <!-- copyright -->
       <div>
         <p
-          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text[14px]"
+          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text-[14px]"
         >
           تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
         </p>
