@@ -276,6 +276,7 @@
         <!-- todays task Ahmad-->
 
         <section
+          
           class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[900px] items-start"
         >
           <div class="flex flex-col gap-1 font-yekan ml-auto">
@@ -294,7 +295,8 @@
           <div class="flex gap-4 flex-col font-yekan">
             <!-- add task card -->
             <div
-              class="flex flex-row gap-2 md:gap-[10px] p-4 border-dashed border-neutral-light-400 border-[1px] rounded-[10px] md:max-w-[744px]"
+              id="add-task-oppener"
+              class="flex flex-row gap-2 md:gap-[10px] md:w-[744px] p-4 border-dashed border-neutral-light-400 border-[1px] rounded-[10px] md:max-w-[744px] cursor-pointer"
             >
               <img src="../assets/icons/add.svg" alt="add-button" />
               <p class="text-[14px] font-[600] text-primary-light">
@@ -304,28 +306,36 @@
 
             <!-- box for adding tasks -->
             <div
-              class="flex flex-col gap-4 w-screen max-w-[328px] md:max-w-[744px] mx-auto top-[279px] py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] bg-on-primary-light shadow-cards font-yekan"
+              id="add-task-main"
+              class="flex flex-col gap-4 w-full max-w-[328px] md:max-w-[744px] mx-auto top-[279px] py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] bg-on-primary-light shadow-cards font-yekan"
             >
               <div
                 class="flex flex-col gap-6 px-4 border-b-[1px] border-neutral-light-200 pb-6"
               >
                 <div class="flex flex-col gap-2">
-                  <h4
-                    class="font-bold text-[14px] text-neutral-light-500 md:text-[16px]"
-                  >
-                    نام تسک
-                  </h4>
-                  <p
-                    class="font-[400] text-[12px] text-neutral-light-400 md:text-[14px] md:text-[16px]"
-                  >
-                    توضیحات
-                  </p>
+                  <input
+                    class="font-bold text-[14px] placeholder:text-neutral-light-500 text-neutral-light-900 md:text-[16px] focus:outline-none focus:ring-0"
+                    type="text"
+                    name=""
+                    id="taskName"
+                    placeholder=" نام تسک"
+                  />
+
+                  <input
+                    class="font-[400] text-[12px] placeholder:text-neutral-light-400 text-neutral-light-800 md:text-[16px] focus:outline-none focus:ring-0"
+                    type="text"
+                    name=""
+                    id="description"
+                    placeholder="توضیحات"
+                  />
                 </div>
                 <div
-                  class="flex flex-row gap-2 py-1 px-2 rounded-[4px] border-solid border-neutral-light-200 border-[1px] w-fit"
+                  id="tag-oppener"
+                  class="flex flex-row gap-2 py-1 px-2 rounded-[4px] border-solid border-neutral-light-200 border-[1px] w-fit cursor-pointer"
                 >
                   <img
-                    class="w-4 h-4"
+                    id="tag-oppener-img"
+                    class="w-4 h-4 transition-transform duration-300"
                     src="../assets/icons/tagPriority.svg"
                     alt="tag-priority"
                   />
@@ -333,33 +343,62 @@
                     تگ‌ها
                   </p>
                 </div>
+               
                 <div
-                  class="w-fit flex flex-row p-[10px] gap-4 rounded-[8px] shadow-cards border-solid border-neutral-light-200 border-[1px]"
+                  id="tags-container"
+                  class="w-fit flex flex-row p-[10px] gap-4 rounded-[8px] shadow-cards border border-neutral-light-200"
                 >
-                  <div
-                    class="w-[43px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#C3FFF1] text-[#11A483]"
-                  >
-                    <p class="text-center">پایین</p>
-                  </div>
-                  <div
-                    class="w-0 h-5 border-l-solid border-neutral-light-200 border-[1px]"
-                  ></div>
-                  <div
-                    class="w-[54px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#FFEFD6] text-[#FFAF37]"
-                  >
-                    <p class="text-center">متوسط</p>
-                  </div>
-                  <div
-                    class="w-0 h-5 border-l-solid border-neutral-light-200 border-[1px]"
-                  ></div>
-                  <div
-                    class="w-[31px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#FFE2DB] text-[#FF5F37]"
-                  >
-                    <p class="text-center">بالا</p>
-                  </div>
+                  <!-- پایین -->
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="priority"
+                      value="low"
+                      class="hidden"
+                    />
+                    <div
+                      class="w-[43px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#C3FFF1] text-[#11A483] hover:opacity-80 transition-opacity"
+                    >
+                      <p class="text-center">پایین</p>
+                    </div>
+                  </label>
+
+                  <div class="w-0 h-5 border-l border-neutral-light-200"></div>
+
+                  <!-- متوسط -->
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="priority"
+                      value="medium"
+                      class="hidden"
+                    />
+                    <div
+                      class="w-[54px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#FFEFD6] text-[#FFAF37] hover:opacity-80 transition-opacity"
+                    >
+                      <p class="text-center">متوسط</p>
+                    </div>
+                  </label>
+
+                  <div class="w-0 h-5 border-l border-neutral-light-200"></div>
+
+                  <!-- بالا -->
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="priority"
+                      value="important"
+                      class="hidden"
+                    />
+                    <div
+                      class="w-[31px] h-[23px] rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[12px] bg-[#FFE2DB] text-[#FF5F37] hover:opacity-80 transition-opacity"
+                    >
+                      <p class="text-center">بالا</p>
+                    </div>
+                  </label>
                 </div>
               </div>
-              <div class="px-4 flex flex-row-reverse justify-start gap-[6px]">
+              <div id="addTodoBtn" class="px-4 flex flex-row-reverse justify-start gap-[6px]">
                 <button
                   class="flex flex-row rounded-[6px] max-w-[121px] md:max-w-[136px] py-[6px] px-4 gap-[12px] opacity-60 bg-[#007BFF] hover:opacity-100 hover:cursor-pointer items-center transition-all"
                 >
@@ -376,171 +415,173 @@
                 </figure>
               </div>
             </div>
-
-            <!-- task cards 1-->
-            <div
-              class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
-            >
-              <!-- Edit/Delete buttons -->
-              <div
-                class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+            <ul id="tasks-container" class="max-w-[328px] flex flex-col gap-4 md:max-w-[900px]">
+              
+              <!-- task cards 1-->
+              <li
+                class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
               >
-                <button>
-                  <img
-                    src="../assets/icons/trash-light.svg"
-                    alt="حذف"
-                    class="w-4 h-4 md:w-5 md:h-5"
-                  />
-                </button>
-                <div class="h-5 w-[1px] bg-neutral-light-200"></div>
-                <button>
-                  <img
-                    src="../assets/icons/edit-light.svg"
-                    alt="ویرایش"
-                    class="w-4 h-4 md:w-5 md:h-5"
-                  />
-                </button>
-              </div>
-
-              <div class="relative flex flex-row gap-4">
-                <div class="w-1 h-auto rounded-l-[8px] bg-[#FF5F37]"></div>
+                <!-- Edit/Delete buttons -->
                 <div
-                  class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
-                ></div>
-                <div class="flex flex-col gap-4">
-                  <div class="flex flex-col gap-1 md:flex-row">
-                    <h3
-                      class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
-                    >
-                      جلسه با مدیران پروژه
-                    </h3>
-                    <div
-                      class="w-7 h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFE2DB] text-[#FF5F37]"
-                    >
-                      <p class="text-center">بالا</p>
-                    </div>
-                  </div>
-                  <p
-                    class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]"
-                  >
-                    جلسه با محسن یگانه و مریم جلالی
-                  </p>
+                  class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+                >
+                  <button>
+                    <img
+                      src="../assets/icons/trash-light.svg"
+                      alt="حذف"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                    />
+                  </button>
+                  <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+                  <button>
+                    <img
+                      src="../assets/icons/edit-light.svg"
+                      alt="ویرایش"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                    />
+                  </button>
                 </div>
-              </div>
-              <figure>
-                <img src="../assets/icons/3dotIcon.svg" alt="" />
-              </figure>
-            </div>
-
-            <!-- task cards 2-->
-            <div
-              class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
-            >
-              <!-- Edit/Delete buttons -->
-              <div
-                class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+  
+                <div class="relative flex flex-row gap-4">
+                  <div class="w-1 h-auto rounded-l-[8px] bg-[#FF5F37]"></div>
+                  <div
+                    class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
+                  ></div>
+                  <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1 md:flex-row">
+                      <h3
+                        class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
+                      >
+                        جلسه با مدیران پروژه
+                      </h3>
+                      <div
+                        class="w-7 h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFE2DB] text-[#FF5F37]"
+                      >
+                        <p class="text-center">بالا</p>
+                      </div>
+                    </div>
+                    <p
+                      class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]"
+                    >
+                      جلسه با محسن یگانه و مریم جلالی
+                    </p>
+                  </div>
+                </div>
+                <figure>
+                  <img src="../assets/icons/3dotIcon.svg" alt="" />
+                </figure>
+              </li>
+  
+              <!-- task cards 2-->
+              <li
+                class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
               >
-                <button>
-                  <img
-                    src="../assets/icons/trash-light.svg"
-                    alt="حذف"
-                    class="w-4 h-4 md:w-5 md:h-5"
-                  />
-                </button>
-                <div class="h-5 w-[1px] bg-neutral-light-200"></div>
-                <button>
-                  <img
-                    src="../assets/icons/edit-light.svg"
-                    alt="ویرایش"
-                    class="w-4 h-4 md:w-5 md:h-5"
-                  />
-                </button>
-              </div>
-
-              <div class="relative flex flex-row gap-4">
-                <div class="w-1 h-auto rounded-l-[8px] bg-[#FFAF37]"></div>
+                <!-- Edit/Delete buttons -->
                 <div
-                  class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
-                ></div>
-                <div class="flex flex-col gap-4">
-                  <div class="flex flex-col gap-1 md:flex-row">
-                    <h3
-                      class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
-                    >
-                      خرید میوه و سبزیجات و لبنیات برای خانه
-                    </h3>
-                    <div
-                      class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFEFD6] text-[#FFAF37]"
-                    >
-                      <p class="text-center">متوسط</p>
-                    </div>
-                  </div>
-                  <p
-                    class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]"
-                  >
-                    سوپرمارکت یاران دریایی
-                  </p>
+                  class="flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+                >
+                  <button>
+                    <img
+                      src="../assets/icons/trash-light.svg"
+                      alt="حذف"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                    />
+                  </button>
+                  <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+                  <button>
+                    <img
+                      src="../assets/icons/edit-light.svg"
+                      alt="ویرایش"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                    />
+                  </button>
                 </div>
-              </div>
-              <figure>
-                <img src="../assets/icons/3dotIcon.svg" alt="" />
-              </figure>
-            </div>
-
-            <!-- task cards 3-->
-            <div
-              class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
-            >
-              <!-- Edit/Delete buttons -->
-              <div
-                class="edit-delete-container hidden flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+  
+                <div class="relative flex flex-row gap-4">
+                  <div class="w-1 h-auto rounded-l-[8px] bg-[#FFAF37]"></div>
+                  <div
+                    class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
+                  ></div>
+                  <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1 md:flex-row">
+                      <h3
+                        class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
+                      >
+                        خرید میوه و سبزیجات و لبنیات برای خانه
+                      </h3>
+                      <div
+                        class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#FFEFD6] text-[#FFAF37]"
+                      >
+                        <p class="text-center">متوسط</p>
+                      </div>
+                    </div>
+                    <p
+                      class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]"
+                    >
+                      سوپرمارکت یاران دریایی
+                    </p>
+                  </div>
+                </div>
+                <figure>
+                  <img src="../assets/icons/3dotIcon.svg" alt="" />
+                </figure>
+              </li>
+  
+              <!-- task cards 3-->
+              <li
+                class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
               >
-                <button class="delete-btn">
-                  <img
-                    src="../assets/icons/trash-light.svg"
-                    alt="حذف"
-                    class="w-4 h-4 md:w-5 md:h-5"
-                  />
-                </button>
-                <div class="h-5 w-[1px] bg-neutral-light-200"></div>
-                <button class="edit-btn">
-                  <img
-                    src="../assets/icons/edit-light.svg"
-                    alt="ویرایش"
-                    class="w-4 h-4 md:w-5 md:h-5"
-                  />
-                </button>
-              </div>
-
-              <div class="relative flex flex-row gap-4">
-                <div class="w-1 h-auto rounded-l-[8px] bg-[#11A483]"></div>
+                <!-- Edit/Delete buttons -->
                 <div
-                  class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
-                ></div>
-                <div class="flex flex-col gap-4">
-                  <div class="flex flex-col gap-1 md:flex-row">
-                    <h3
-                      class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
-                    >
-                      خرید میوه و سبزیجات و لبنیات برای خانه
-                    </h3>
-                    <div
-                      class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#C3FFF1] text-[#11A483]"
-                    >
-                      <p class="text-center">پایین</p>
-                    </div>
-                  </div>
-                  <p
-                    class="text-[12px] font-[400] text-neutral-light-500 md:text-[16px]"
-                  >
-                    سوپرمارکت یاران دریایی
-                  </p>
+                  class="edit-delete-container hidden flex items-center gap-1.5 px-1.5 py-1 border border-solid border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5"
+                >
+                  <button class="delete-btn">
+                    <img
+                      src="../assets/icons/trash-light.svg"
+                      alt="حذف"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                    />
+                  </button>
+                  <div class="h-5 w-[1px] bg-neutral-light-200"></div>
+                  <button class="edit-btn">
+                    <img
+                      src="../assets/icons/edit-light.svg"
+                      alt="ویرایش"
+                      class="w-4 h-4 md:w-5 md:h-5"
+                    />
+                  </button>
                 </div>
-              </div>
-              <button class="more-btn">
-                <img src="../assets/icons/3dotIcon.svg" alt="" />
-              </button>
-            </div>
+  
+                <div class="relative flex flex-row gap-4">
+                  <div class="w-1 h-auto rounded-l-[8px] bg-[#11A483]"></div>
+                  <div
+                    class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border-solid border-neutral-light-300 border-[1px]"
+                  ></div>
+                  <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1 md:flex-row">
+                      <h3
+                        class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
+                      >
+                        خرید میوه و سبزیجات و لبنیات برای خانه
+                      </h3>
+                      <div
+                        class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[#C3FFF1] text-[#11A483]"
+                      >
+                        <p class="text-center">پایین</p>
+                      </div>
+                    </div>
+                    <p
+                      class="text-[12px] font-[400] text-neutral-light-500 md:text-[16px]"
+                    >
+                      سوپرمارکت یاران دریایی
+                    </p>
+                  </div>
+                </div>
+                <button class="more-btn">
+                  <img src="../assets/icons/3dotIcon.svg" alt="" />
+                </button>
+              </li>
+            </ul>
 
             <!-- Edit Card -->
             <div
