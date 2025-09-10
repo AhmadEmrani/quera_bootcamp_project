@@ -6,23 +6,22 @@ export function renderAllTasks() {
   tasksContainer.innerHTML = "";
 
   tasks.forEach((todo) => {
-
-    let priorityColor, priorityText ,textColor;
+    let priorityColor, priorityText, textColor;
     switch (todo.priority) {
       case "important":
         priorityColor = "#FFE2DB";
         priorityText = "بالا";
-        textColor ="#FF5F37";
+        textColor = "#FF5F37";
         break;
       case "medium":
         priorityColor = "#FFEFD6";
         priorityText = "متوسط";
-        textColor ="#FFAF37";
+        textColor = "#FFAF37";
         break;
       case "low":
         priorityColor = "#C3FFF1";
         priorityText = "پایین";
-        textColor ="#11A483";
+        textColor = "#11A483";
         break;
       default:
         priorityColor = "#CCCCCC";
@@ -30,11 +29,12 @@ export function renderAllTasks() {
     }
 
     const li = document.createElement("li");
-    li.className = "flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative mb-4";
+    li.className =
+      "flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative mb-4";
 
     li.innerHTML = `
       <!-- Edit/Delete buttons -->
-      <div class="flex items-center gap-1.5 px-1.5 py-1 border border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5">
+      <div class="flex items-center gap-1.5 px-1.5 py-1 border border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5 md:max-w-[724px]">
         <button class="delete-btn">
           <img src="../assets/icons/trash-light.svg" alt="حذف" class="w-4 h-4 md:w-5 md:h-5"/>
         </button>
@@ -50,21 +50,18 @@ export function renderAllTasks() {
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1 md:flex-row">
             <h3 class="text-14 font-[600] text-neutral-light-700 md:text-[16px]">${todo.title}</h3>
-            <div class="w-fit h-5 rounded-[4px] px-[2px] py-2 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] bg-[${priorityColor}] text-[${textColor}]">
+            <div class="w-fit h-5 rounded-[4px] px-[8px] py-1 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] md:text-[12px] bg-[${priorityColor}] text-[${textColor}]">
               <p class="text-center">${priorityText}</p>
             </div>
           </div>
           <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]">${todo.description}</p>
         </div>
       </div>
-      <figure>
-        <img src="../assets/icons/3dotIcon.svg" alt=""/>
-      </figure>
+      <button class="more-btn">
+        <img src="../assets/icons/3dotIcon.svg" alt="" />
+      </button>
     `;
 
     tasksContainer.appendChild(li);
-
-   
-  
   });
 }

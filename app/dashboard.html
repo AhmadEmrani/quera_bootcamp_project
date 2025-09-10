@@ -276,9 +276,9 @@
         <!-- todays task Ahmad-->
 
         <section
-          class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[900px] items-start"
+          class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[744px] items-start"
         >
-          <div class="flex flex-col gap-1 font-yekan ml-auto">
+          <div class="flex flex-col gap-1 font-yekan ml-auto md:max-w-[744px]">
             <h2
               class="font-[800] text-[16px] text-right md:font-extrabold md:text-[20px]"
             >
@@ -291,7 +291,7 @@
               را باید انجام دهید.
             </p>
           </div>
-          <div class="flex gap-4 flex-col font-yekan">
+          <div class="flex gap-4 flex-col font-yekan md:max-w-[744px]">
             <!-- add task card -->
             <div
               id="add-task-oppener"
@@ -303,35 +303,10 @@
               </p>
             </div>
 
-            <!-- hamed- empety tasks -->
-            <div
-              class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[744px] my-8"
-            >
-              <div class="flex flex-col gap-1 font-yekan mx-auto">
-                <div class="flex flex-col justify-center items-center gap-2">
-                  <img
-                    class="max-h-[172px] max-w-[211px] md:max-h-[232px] md:max-w-[283px] opacity-50"
-                    src="../assets/images/empty-task.svg"
-                  />
-
-                  <p
-                    class="text-center font-extrabold text-base text-neutral-light-500"
-                  >
-                    چه کارهایی امروز برای انجام داری؟
-                  </p>
-                  <p
-                    class="text-center font-semibold text-sm text-neutral-light-500"
-                  >
-                    میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!
-                  </p>
-                </div>
-              </div>
-            </div>
-
             <!-- box for adding tasks -->
             <div
               id="add-task-main"
-              class="flex flex-col gap-4 w-full max-w-[328px] md:max-w-[744px] mx-auto top-[279px] py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] bg-on-primary-light shadow-cards font-yekan"
+              class="hidden flex md:w-[744px] flex-col gap-4 w-full max-w-[328px] md:max-w-[744px] mx-auto top-[279px] py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] bg-on-primary-light shadow-cards font-yekan"
             >
               <div
                 id=""
@@ -432,11 +407,9 @@
                   </label>
                 </div>
               </div>
-              <div
-                id="addTodoBtn"
-                class="px-4 flex flex-row-reverse justify-start gap-[6px]"
-              >
+              <div class="px-4 flex flex-row-reverse justify-start gap-[6px]">
                 <button
+                  id="addTodoBtn"
                   class="flex flex-row rounded-[6px] max-w-[121px] md:max-w-[136px] py-[6px] px-4 gap-[12px] opacity-60 bg-[#007BFF] hover:opacity-100 hover:cursor-pointer items-center transition-all"
                 >
                   <p
@@ -446,15 +419,43 @@
                   </p>
                 </button>
                 <figure
+                  id="cancel-adding-task-main"
                   class="w-[34px] h-[34px] rounded-md p-[6px] gap-3 bg-neutral-light-100"
                 >
-                  <img src="../assets/icons/cancel.svg" alt="" />
+                  <img id="cancel-adding-task-main" src="../assets/icons/cancel.svg" alt="" />
                 </figure>
               </div>
             </div>
+
+            <!-- hamed- empety tasks -->
+            <div
+              id="image-no-tasks"
+              class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[744px] my-8"
+            >
+              <div class="flex flex-col gap-1 font-yekan mx-auto">
+                <div class="flex flex-col justify-center items-center gap-2">
+                  <img
+                    class="max-h-[172px] max-w-[211px] md:max-h-[232px] md:max-w-[283px] opacity-50"
+                    src="../assets/images/empty-task.svg"
+                  />
+
+                  <p
+                    class="text-center font-extrabold text-base text-neutral-light-500"
+                  >
+                    چه کارهایی امروز برای انجام داری؟
+                  </p>
+                  <p
+                    class="text-center font-semibold text-sm text-neutral-light-500"
+                  >
+                    میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <ul
               id="tasks-container"
-              class="max-w-[328px] flex flex-col gap-4 md:max-w-[900px]"
+              class="max-w-[328px] flex flex-col gap-4 md:max-w-[744px]"
             >
               <!-- task cards 1-->
               <li
