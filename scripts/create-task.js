@@ -1,9 +1,30 @@
 export function createTask() {
   let add_task_oppener = document.querySelector("#add-task-oppener");
+  const empty_image = document.querySelector("#image-no-tasks");
 
+  if (tasks.length > 0) {
+    empty_image.classList.add("hidden");
+    console.log("enter this section");
+  } else {
+    empty_image.classList.remove("hidden");
+    console.log("enter this section 2");
+  }
+  const observer = new MutationObserver(() => {
+    console.log("DOM changed!");
+    if (tasks.length > 0) {
+      empty_image.classList.add("hidden");
+      console.log("enter this section");
+    } else {
+      empty_image.classList.remove("hidden");
+      console.log("enter this section 2");
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+  let add_task_main = document.querySelector("#add-task-main");
   add_task_oppener.addEventListener("click", () => {
-    let add_task_main = document.querySelector("#add-task-main");
     add_task_main.classList.toggle("hidden");
+    add_task_oppener.classList.add("hidden");
   });
 
   let tag_oppener = document.querySelector("#tag-oppener");
@@ -22,6 +43,12 @@ export function createTask() {
     input.addEventListener("change", () => {
       priorityInput_Value = input.value;
     });
+  });
+
+  const cancel_adding_task_main = document.querySelector("#cancel-adding-task-main");
+  cancel_adding_task_main.addEventListener("click", () => {
+    add_task_main.classList.toggle("hidden");
+    add_task_oppener.classList.remove("hidden");
   });
 
   const task_info_container = document.querySelector(
@@ -55,7 +82,9 @@ export function createTask() {
           priorityColor = "#CCCCCC";
           priorityText = "";
       }
-      task_info_container.insertAdjacentHTML("beforeend", `
+      task_info_container.insertAdjacentHTML(
+        "beforeend",
+        `
       <div class="priority-tag w-fit flex flex-row gap-2 rounded-[4px] bg-[${priorityColor}] px-2 py-1">
         <img class="cancel-priority-btn w-5 h-5 cursor-pointer" 
              src="../assets/icons/cancel-priority.svg" alt="close">
@@ -63,7 +92,8 @@ export function createTask() {
           ${priorityText}
         </p>
       </div>
-    `);
+    `
+      );
 
       tags_container.classList.toggle("hidden");
       tag_oppener.classList.toggle("hidden");
@@ -77,11 +107,7 @@ export function createTask() {
     }
   });
 
-  cancelBtn.addEventListener("click", () => {
-    newTag.remove();
-    tags_container.classList.toggle("hidden");
-    tag_oppener.classList.toggle("hidden");
-  });
+  
 
   function addtodo() {
     const titleInput = document.querySelector("#taskName");
@@ -95,6 +121,8 @@ export function createTask() {
       isending: false,
       isCompleted: false,
     };
+    add_task_main.classList.toggle("hidden");
+    add_task_oppener.classList.remove("hidden");
     tasks.push(todo);
     titleInput.value = "";
     descriptionInput.value = "";
