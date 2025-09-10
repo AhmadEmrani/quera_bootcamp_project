@@ -4,6 +4,7 @@ import { toggleTheme } from "./utils.js";
 import { editTask } from "./edit-task.js";
 import { createTask } from "./create-task.js";
 import { renderAllTasks } from "./render-tasks.js";
+import { deleteTask } from "./delete-task.js";
 
 // export let tasks = [];
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,15 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAllTasks();
   // TODO: Create Task
   createTask();
-  // TODO: Delete Task
+  
   // Set Date
   const setDates = document.querySelectorAll(".date");
   setDates.forEach((date) => {
     date.textContent += setDate();
   });
- 
- 
-  // Sidebar  
+
+  // Sidebar
   initializeSidebar();
 
   // Toggle mode
@@ -27,5 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Edit Task
   editTask();
+
+  // Delete Task
+  deleteTask();
 });
 export let tasks = [];
