@@ -67,31 +67,31 @@
   <body class="dark:bg-background-dark">
     <!-- Header - Hamed -->
     <header
-      class="bg-white shadow-sm sticky top-0 z-50 dark:bg-background-dark"
+      class="bg-background-light shadow-sm sticky top-0 z-50 dark:bg-background-dark dark:text-on-primary-dark"
     >
       <div
         class="container mx-auto flex items-center justify-between px-4 py-3"
       >
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-2">
-          <nav class="hidden md:flex gap-6 absolute items-center">
+          <nav class="hidden md:flex gap-18 absolute items-center">
             <span
-              class="font-yekan text-[20px] font-[600] dark:text-on-background-dark"
+              class="font-[YekanBakh] text-xl font-semibold text-[#141414] dark:text-on-primary-dark"
               >کوئرا لیست</span
             >
             <a
               href="../index.html"
-              class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              class="font-[YekanBakh] text-base font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
               >صفحه اصلی</a
             >
             <a
-              href="./about-us.html"
-              class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              href="about-us.html"
+              class="font-[YekanBakh] text-base font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
               >درباره ما</a
             >
             <a
               href="#"
-              class="font-yekan text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+              class="font-[YekanBakh] text-base font-semibold text-primary-light hover:text-primary-hover-light dark:text-primary-dark"
               >ارتباط با ما</a
             >
           </nav>
@@ -100,61 +100,91 @@
         <div class="hidden md:flex items-center gap-4">
           <a href="../app/dashboard.html" target="_blank">
             <button
-              class="font-yekan text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+              class="font-yekan text-base font-semibold bg-primary-light hover:bg-primary-hover-light text-on-primary-light px-6 h-10 rounded-md cursor-pointer dark:bg-primary-dark"
             >
               ورود به اپلیکیشن
             </button>
           </a>
 
           <button
-            class="rounded-lg bg-white p-2 shadow-md cursor-pointer"
+            class="rounded-md bg-background-light p-2 border border-[#e3e3e3] cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-[#2F3132]"
             id="toggle-mode"
           >
-            <img src="../assets/icons/toggle-theme.svg" />
+            <!-- light image -->
+            <img
+              class="h-6 w-6 block dark:hidden"
+              src="../assets/icons/toggle-theme.svg"
+            />
+            <!-- dark image -->
+            <img
+              class="h-6 w-6 hidden dark:block"
+              src="../assets/icons/moon.svg"
+            />
           </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden items-center absolute">
+        <div class="md:hidden items-center absolute h-6 w-6">
           <button id="menu-btn" class="focus:outline-none">
-            <img src="../assets/icons/menu.svg" />
+            <!-- ligh image -->
+            <img class="block dark:hidden" src="../assets/icons/menu.svg" />
+            <!-- dark image -->
+            <img
+              class="hidden dark:block"
+              src="../assets/icons/menu-dark.svg"
+            />
           </button>
         </div>
         <div class="md:hidden mx-auto">
           <span
-            class="text-center font-yekan text-[20px] font-[600] dark:text-on-background-dark"
+            class="text-center font-[YekanBakh] text-base font-semibold text-[#141414] dark:text-on-primary-dark"
             >کوئرا لیست</span
           >
         </div>
       </div>
 
       <!-- Mobile Menu -hidden by default -->
-      <div id="mobile-menu" class="hidden flex-col gap-4 px-4 pb-4 md:hidden">
+      <div
+        id="mobile-menu"
+        class="hidden grid md:hidden flex-col gap-4 px-4 pb-4"
+      >
         <a
           href="../index.html"
-          class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600 dark:text-on-background-dark"
+          class="font-[YekanBakh] text-sm font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
           >صفحه اصلی</a
         >
         <a
-          href="./about-us.html"
-          class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600 dark:text-on-background-dark"
+          href="about-us.html"
+          class="font-[YekanBakh] text-sm font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
           >درباره ما</a
         >
         <a
           href="#"
-          class="font-yekan text-[16px] font-[600] text-blue-600 hover:text-blue-600 dark:text-on-background-dark"
+          class="font-[YekanBakh] text-sm font-semibold text-primary-light hover:text-primary-hover-light dark:text-primary-dark"
           >ارتباط با ما</a
         >
         <div class="flex w-fit gap-4">
           <a href="../app/dashboard.html" target="_blank">
             <button
-              class="font-yekan text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+              class="font-yekan text-base font-semibold bg-primary-light hover:bg-primary-hover-light text-on-primary-light px-6 h-10 rounded-md cursor-pointer"
             >
               ورود به اپلیکیشن
             </button>
           </a>
-          <button class="rounded-lg bg-white p-2 shadow-md">
-            <img src="../assets/icons/toggle-theme.svg" />
+          <button
+            class="rounded-md bg-background-light p-2 border border-[#e3e3e3] cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-[#2F3132]"
+            id="toggle-mode-mobile"
+          >
+            <!-- light image -->
+            <img
+              class="h-6 w-6 block dark:hidden"
+              src="../assets/icons/toggle-theme.svg"
+            />
+            <!-- dark image -->
+            <img
+              class="h-6 w-6 hidden dark:block"
+              src="../assets/icons/moon.svg"
+            />
           </button>
         </div>
       </div>
@@ -363,7 +393,9 @@
     </main>
 
     <!-- Footer - Hamed -->
-    <footer class="container mx-auto mt-9 max-w-screen-xl">
+    <footer
+      class="container mx-auto mt-9 max-w-screen-xl bg-background-light dark:bg-background-dark"
+    >
       <!-- top of footer -->
       <div
         class="flex container text-center py-4 file font-yekan font-semibold text-xl justify-center items-center"
@@ -371,7 +403,11 @@
         <hr
           class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-4 dark:bg-gray-700"
         />
-        <p class="px-4 text-xl font-semibold text-[#141414]">کوئرا لیست</p>
+        <p
+          class="px-4 text-xl font-semibold text-[#141414] dark:text-on-primary-dark"
+        >
+          کوئرا لیست
+        </p>
         <hr
           class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-3 dark:bg-gray-700"
         />
@@ -382,20 +418,51 @@
           class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-[#242424] pt-6"
         >
           <!-- contact information  -->
-          <div class="gap-9 px-9">
+          <div class="gap-9 px-9 dark:text-on-primary-dark">
             <!-- fax -->
             <div class="flex gap-4 py-2 items-start">
-              <img src="./assets/icons/fax.svg" alt="شماره فکس" />
+              <!-- light image-->
+              <img
+                src="../assets/icons/fax.svg"
+                alt="شماره فکس"
+                class="block dark:hidden"
+              />
+              <!-- dark image -->
+              <img
+                src="../assets/icons/fax-desktop-dark.svg"
+                class="hidden dark:block"
+              />
               <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
             </div>
             <!-- tell -->
             <div class="flex gap-4 py-2 items-start">
-              <img src="./assets/icons/call.svg" alt="تلفن پشتیبانی" />
+              <!-- light image-->
+              <img
+                src="../assets/icons/call.svg"
+                alt="تلفن پشتیبانی"
+                class="block dark:hidden"
+              />
+              <!-- dark image -->
+              <img
+                src="../assets/icons/call-desktop-dark.svg"
+                class="hidden dark:block"
+              />
+
               <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
             </div>
             <!-- address -->
             <div class="flex gap-4 py-2 items-start">
-              <img src="./assets/icons/map.svg" alt="آدرس دفتر" />
+              <!-- light image-->
+              <img
+                src="../assets/icons/map.svg"
+                alt="آدرس دفتر"
+                class="block dark:hidden"
+              />
+              <!-- dark image -->
+              <img
+                src="../assets/icons/map-desktop-dark.svg"
+                class="hidden dark:block"
+              />
               <p>
                 آدرس دفتر مرکزی: پونک - خیابان اشرفی
                 <br />
@@ -404,8 +471,10 @@
             </div>
           </div>
           <!-- email section -->
-          <div class="gap-9 pl-35 pr-35">
-            <p class="font-bold text-base text-[#242424]">
+          <div class="gap-9 pl-35 pr-35 dark:text-on-primary-dark">
+            <p
+              class="font-bold text-base text-[#242424] dark:text-on-primary-dark"
+            >
               با ما در ارتباط باش
             </p>
             <p class="mt-2">
@@ -418,7 +487,7 @@
                 <input
                   type="email"
                   id="email"
-                  class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12"
+                  class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12 dark:bg-background-dark"
                   placeholder="ایمیل"
                   required
                 />
@@ -436,10 +505,12 @@
       <!-- footer mobile -->
       <div class="md:hidden">
         <div class="mx-5 font-yekan text-sm font-normal text-neutral-light-800">
-          <p class="font-bold text-base text-[#242424] mt-3">
+          <p
+            class="font-bold text-base text-[#242424] mt-3 dark:text-on-primary-dark"
+          >
             با ما در ارتباط باش
           </p>
-          <p class="font-normal text-xs mt-2">
+          <p class="font-normal text-xs mt-2 dark:text-on-primary-dark">
             اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر بشی.
           </p>
           <form>
@@ -447,7 +518,7 @@
               <input
                 type="email"
                 id="email"
-                class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12"
+                class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12 dark:bg-background-dark"
                 placeholder="ایمیل"
                 required
               />
@@ -463,39 +534,51 @@
           <div class="grid grid-cols-2 grid-rows-2 mt-8 gap-1">
             <!-- address -->
             <div
-              class="flex flex-col row-span-2 text-center border border-neutral-light-100 rounded-2xl shadow-cards gap-4 justify-center items-center px-2 h-[172px]"
+              class="flex flex-col row-span-2 text-center border border-neutral-light-100 rounded-2xl shadow-cards gap-4 justify-center items-center px-2 h-[172px] dark:border-0 dark:bg-[#0B192D]"
             >
               <!-- circle -->
               <div
-                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] p-3"
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] p-3 dark:bg-[#1B293C]"
               >
+                <!-- ligh image -->
                 <img
-                  class="h-4 w-4"
-                  src="./assets/icons/map-mobile.svg"
+                  class="h-4 w-4 block dark:hidden"
+                  src="../assets/icons/map-mobile.svg"
                   alt="آدرس دفتر"
+                />
+                <!-- dark image -->
+                <img
+                  class="h-4 w-4 hidden dark:block"
+                  src="../assets/icons/map-mobile-dark.svg"
                 />
               </div>
 
-              <p class="text-[10px]">
+              <p class="text-[10px] dark:text-on-primary-dark">
                 آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
                 بست شب بو
               </p>
             </div>
             <!-- tell -->
             <div
-              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1 dark:border-0 dark:bg-[#0B192D]"
             >
               <!-- circle -->
               <div
-                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF]"
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] dark:bg-[#1B293C]"
               >
+                <!-- light image -->
                 <img
-                  class="h-4 w-4"
-                  src="./assets/icons/call-mobile.svg"
+                  class="h-4 w-4 dark:text-on-primary-dark block dark:hidden"
+                  src="../assets/icons/call-mobile.svg"
                   alt="تلفن پشتیبانی"
                 />
+                <!-- dark image -->
+                <img
+                  class="h-4 w-4 dark:text-on-primary-dark hidden dark:block"
+                  src="../assets/icons/call-mobile-dark.svg"
+                />
               </div>
-              <p class="text-[10px]">
+              <p class="text-[10px] dark:text-on-primary-dark">
                 تلفن پشتیبانی
                 <br />
                 ۴۴۴۴۵۵۶۶ - ۰۲۱
@@ -503,19 +586,25 @@
             </div>
             <!-- fax -->
             <div
-              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1 dark:border-0 dark:bg-[#0B192D]"
             >
               <!-- circle -->
               <div
-                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF]"
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] dark:bg-[#1B293C]"
               >
+                <!-- light image -->
                 <img
-                  class="h-4 w-4"
-                  src="./assets/icons/fax-mobile.svg"
+                  class="h-4 w-4 block dark:hidden"
+                  src="../assets/icons/fax-mobile.svg"
                   alt="شماره فکس"
                 />
+                <!-- dark image -->
+                <img
+                  class="h-4 w-4 hidden dark:block"
+                  src="../assets/icons/fax-mobile-dark.svg"
+                />
               </div>
-              <p class="text-[10px]">
+              <p class="text-[10px] dark:text-on-primary-dark">
                 فکس
                 <br />
                 ۴۴۴۴۵۵۶۶ - ۰۲۱
@@ -527,7 +616,7 @@
       <!-- copyright -->
       <div>
         <p
-          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text-[14px]"
+          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text-[14px] dark:text-on-primary-dark"
         >
           تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
         </p>
@@ -544,9 +633,15 @@
         mobileMenu.classList.toggle("hidden");
       });
 
-      // Toggle mode
+      // Toggle mode desktop
       const toggleMode = document.getElementById("toggle-mode");
       toggleMode.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+
+      // Toggle mode mobile
+      const toggleModeMobile = document.getElementById("toggle-mode-mobile");
+      toggleModeMobile.addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
       });
     </script>
