@@ -296,7 +296,7 @@
             <!-- add task card -->
             <div
               id="add-task-oppener"
-              class="flex flex-row gap-2 md:gap-[10px] md:w-[744px] p-4 border-dashed border-neutral-light-400 border-[1px] rounded-[10px] md:max-w-[744px] cursor-pointer"
+              class=" flex flex-row gap-2 md:gap-[10px] md:w-[744px] p-4 border-dashed border-neutral-light-400 border-[1px] rounded-[10px] md:max-w-[744px] cursor-pointer"
             >
               <img src="../assets/icons/add.svg" alt="add-button" />
               <p class="text-[14px] font-[600] text-primary-light">
@@ -310,9 +310,10 @@
               class="flex flex-col gap-4 w-full max-w-[328px] md:max-w-[744px] mx-auto top-[279px] py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] bg-on-primary-light shadow-cards font-yekan"
             >
               <div
+                id=""
                 class="flex flex-col gap-6 px-4 border-b-[1px] border-neutral-light-200 pb-6"
               >
-                <div class="flex flex-col gap-2">
+                <div id="task-information-container" class="flex flex-col gap-2">
                   <input
                     class="font-bold text-[14px] placeholder:text-neutral-light-500 text-neutral-light-900 md:text-[16px] focus:outline-none focus:ring-0"
                     type="text"
@@ -328,6 +329,12 @@
                     id="description"
                     placeholder="توضیحات"
                   />
+                  <!-- <div class="w-fit flex flex-row gap-2 rounded-[4px] bg-[#FFE2DB] px-2 py-1">
+                    <img class="w-5 h-5" src="../assets/icons/cancel-priority.svg" alt="close">
+                    <p class="text-[#FF5F37] font-yekan font-semibold text-[14px]">
+                    بالا
+                    </p>
+                  </div> -->
                 </div>
                 <div
                   id="tag-oppener"
