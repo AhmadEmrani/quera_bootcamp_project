@@ -6,12 +6,13 @@ import { createTask } from "./create-task.js";
 import { renderAllTasks } from "./render-tasks.js";
 import { deleteTask } from "./delete-task.js";
 
-// export let tasks = [];
+
+let tasks = [];
 document.addEventListener("DOMContentLoaded", () => {
   // TODO: Render Tasks
-  renderAllTasks();
+  renderAllTasks(tasks);
   // TODO: Create Task
-  createTask();
+  createTask(tasks);
   
   // Set Date
   const setDates = document.querySelectorAll(".date");
@@ -31,4 +32,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Delete Task
   deleteTask();
 });
-export let tasks = [];
+

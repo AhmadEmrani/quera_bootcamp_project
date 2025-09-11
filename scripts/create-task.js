@@ -1,4 +1,5 @@
-export function createTask() {
+export function createTask(tasks) {
+  console.log(tasks);
   let add_task_oppener = document.querySelector("#add-task-oppener");
   const empty_image = document.querySelector("#image-no-tasks");
 
@@ -118,7 +119,7 @@ export function createTask() {
       title: titleInput.value,
       description: descriptionInput.value,
       priority: priorityInput_Value,
-      isending: false,
+      isediting: false,
       isCompleted: false,
     };
     add_task_main.classList.toggle("hidden");
@@ -127,8 +128,8 @@ export function createTask() {
     titleInput.value = "";
     descriptionInput.value = "";
     console.log(tasks);
-    renderAllTasks();
+    renderAllTasks(tasks);
   }
 }
-import { tasks } from "./main.js";
+// import { tasks } from "./main.js";
 import { renderAllTasks } from "./render-tasks.js";
