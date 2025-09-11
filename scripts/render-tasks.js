@@ -6,6 +6,7 @@ const completedTasks = document.querySelector(".completed-tasks");
 export function renderAllTasks(tasks) {
   console.log(tasks);
   tasksContainer.innerHTML = "";
+  completedTasks.innerHTML = "";
 
   tasks.forEach((todo) => {
     let priorityColor, priorityText, textColor;
