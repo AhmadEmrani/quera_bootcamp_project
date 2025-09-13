@@ -46,7 +46,9 @@ export function createTask(tasks) {
     });
   });
 
-  const cancel_adding_task_main = document.querySelector("#cancel-adding-task-main");
+  const cancel_adding_task_main = document.querySelector(
+    "#cancel-adding-task-main"
+  );
   cancel_adding_task_main.addEventListener("click", () => {
     add_task_main.classList.toggle("hidden");
     add_task_oppener.classList.remove("hidden");
@@ -108,8 +110,8 @@ export function createTask(tasks) {
     }
   });
 
-  
-
+  const todoCount = document.getElementById("todo-tasks-counter");
+  todoCount.textContent = parseInt(0);
   function addtodo() {
     const titleInput = document.querySelector("#taskName");
     const descriptionInput = document.querySelector("#description");
@@ -129,6 +131,7 @@ export function createTask(tasks) {
     descriptionInput.value = "";
     console.log(tasks);
     renderAllTasks(tasks);
+    todoCount.textContent = parseInt(todoCount.textContent) + 1;
   }
 }
 // import { tasks } from "./main.js";
