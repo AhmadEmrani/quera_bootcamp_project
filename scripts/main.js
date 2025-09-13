@@ -6,13 +6,14 @@ import { createTask } from "./create-task.js";
 import { renderAllTasks, renderEditTask } from "./render-tasks.js";
 import { deleteTask } from "./delete-task.js";
 
-// export let tasks = [];
+
+let tasks = [];
 document.addEventListener("DOMContentLoaded", () => {
   // TODO: Render Tasks
-  renderAllTasks();
+  renderAllTasks(tasks);
   // TODO: Create Task
-  createTask();
-
+  createTask(tasks);
+  
   // Set Date
   const setDates = document.querySelectorAll(".date");
   setDates.forEach((date) => {
@@ -33,4 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Delete Task
   deleteTask();
 });
-export let tasks = [];
+
