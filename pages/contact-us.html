@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa-ir" dir="rtl">
+<html lang="fa-IR" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ارتباط با ما</title>
+    <title>کوئرا لیست | ارتباط با ما</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
@@ -65,9 +65,9 @@
     </style>
   </head>
   <body class="dark:bg-background-dark">
-    <!-- Header - Hamed -->
+    <!-- Header -->
     <header
-      class="bg-background-light shadow-sm sticky top-0 z-50 dark:bg-background-dark dark:text-on-primary-dark"
+      class="bg-background-light shadow-header-mobile md:shadow-none sticky top-0 z-50 dark:bg-background-dark dark:text-on-primary-dark"
     >
       <div
         class="container mx-auto flex items-center justify-between px-4 py-3"
@@ -114,11 +114,13 @@
             <img
               class="h-6 w-6 block dark:hidden"
               src="../assets/icons/toggle-theme.svg"
+              alt="حالت سیستم"
             />
             <!-- dark image -->
             <img
               class="h-6 w-6 hidden dark:block"
               src="../assets/icons/moon.svg"
+              alt="حالت تاریک"
             />
           </button>
         </div>
@@ -126,12 +128,17 @@
         <!-- Mobile Menu -->
         <div class="md:hidden items-center absolute h-6 w-6">
           <button id="menu-btn" class="focus:outline-none">
-            <!-- ligh image -->
-            <img class="block dark:hidden" src="../assets/icons/menu.svg" />
+            <!-- light image -->
+            <img
+              class="block dark:hidden"
+              src="../assets/icons/menu.svg"
+              alt="منو - روشن"
+            />
             <!-- dark image -->
             <img
               class="hidden dark:block"
               src="../assets/icons/menu-dark.svg"
+              alt="منو - تاریک"
             />
           </button>
         </div>
@@ -144,10 +151,7 @@
       </div>
 
       <!-- Mobile Menu -hidden by default -->
-      <div
-        id="mobile-menu"
-        class="hidden grid md:hidden flex-col gap-4 px-4 pb-4"
-      >
+      <div id="mobile-menu" class="grid md:hidden flex-col gap-4 px-4 pb-4">
         <a
           href="../index.html"
           class="font-[YekanBakh] text-sm font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
@@ -179,36 +183,38 @@
             <img
               class="h-6 w-6 block dark:hidden"
               src="../assets/icons/toggle-theme.svg"
+              alt="حالت سیستم"
             />
             <!-- dark image -->
             <img
               class="h-6 w-6 hidden dark:block"
               src="../assets/icons/moon.svg"
+              alt="حالت تاریک"
             />
           </button>
         </div>
       </div>
     </header>
     <main
-      class="mx-auto md:mt-[140px] flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px] md:dark:border-none md:dark:bg-[#0B192D]"
+      class="mx-auto md:mt-[116px] flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px] md:dark:border-none md:dark:bg-[#0B192D]"
     >
       <section
-        class="relative flex flex-col gap-2 md:gap-3 md:max-w-[467px] md:h-auto "
+        class="relative flex flex-col gap-2 md:gap-3 md:max-w-[467px] md:h-auto"
       >
-      <div class="mx-auto mt-[24px] md:mt-0 flex flex-col gap-2 max-w-[312px]">
-
-        <h1
-          class="text-center font-yekan text-[24px] font-[700] md:text-[40px] text-[#070D31] md:text-right dark:text-on-background-dark"
+        <div
+          class="mx-auto mt-[24px] md:mt-0 flex flex-col gap-2 max-w-[312px]"
         >
-          تماس با ما
-        </h1>
-        <p
-          class="text-center font-yekan text-[14px] font-[400] md:text-[20px] md:font-[400] md:text-right dark:text-on-background-dark"
-        >
-          چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
-        </p>
-
-      </div>
+          <h1
+            class="text-center font-yekan text-[24px] font-[700] md:text-[40px] text-[#070D31] md:text-right dark:text-on-background-dark"
+          >
+            تماس با ما
+          </h1>
+          <p
+            class="text-center font-yekan text-[14px] font-[400] md:text-[20px] md:font-[400] md:text-right dark:text-on-background-dark"
+          >
+            چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
+          </p>
+        </div>
         <div class="hidden md:flex flex-col gap-4">
           <div class="flex flex-row rounded-[6px] p-4 gap-2">
             <img
@@ -234,7 +240,7 @@
               src="../assets/icons/email-dark.svg"
               alt="call-icon"
             />
-            <p class="dark:text-neutral-dark-300">09121234567</p>
+            <p class="dark:text-neutral-dark-300">QueraList@gmail.com</p>
           </div>
         </div>
         <div class="hidden absolute right-0 bottom-0 md:flex flex-row gap-8">
@@ -278,7 +284,7 @@
       />
       <form
         action=""
-        class="mx-auto flex flex-col md:justify-between p-[16px] rounded-2xl gap-6 md:gap-0 p border-solid border-[1px] border-neutral-light-100 w-[328px] shadow-cards font-yekan md:border-none md:shadow-none font-[600] text-[12px] md:text-[16px] md:w-[471px] dark:bg-[#0B192D] dark:border-none dark:text-on-background-dark md:bg-inherit"
+        class="mx-auto flex flex-col md:justify-between p-[16px] rounded-2xl gap-6 md:gap-0 border-solid border-[1px] border-neutral-light-100 w-[328px] shadow-cards font-yekan md:border-none md:shadow-none font-[600] text-[12px] md:text-[16px] md:w-[471px] dark:bg-[#0B192D] dark:border-none dark:text-on-background-dark md:bg-inherit"
       >
         <div class="flex flex-row gap-4 md:justify-between max-w-[471px]">
           <div class="flex flex-col gap-2">
@@ -319,7 +325,7 @@
             type="tel"
             name="tel"
             id=""
-            placeholder="شماره تماس شما"
+            placeholder="شماره تماس "
           />
         </div>
         <div class="flex flex-col gap-2">
@@ -330,7 +336,7 @@
             id=""
             cols="30"
             rows="10"
-            placeholder="متن پیام شما:"
+            placeholder="اینجا بنویسید..."
           ></textarea>
         </div>
 
@@ -363,7 +369,7 @@
             <figure
               class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
             >
-              <img src="../assets/icons/call.svg" alt="email" />
+              <img src="../assets/icons/call-contact-desktop.svg" alt="email" />
             </figure>
             <div class="font-yekan text-[10px] leading-[160%]">
               <h5 class="font-[700]">تلفن</h5>
@@ -392,32 +398,30 @@
           </figure>
         </div>
       </section>
-
-      <header></header>
     </main>
 
-    <!-- Footer - Hamed -->
+    <!-- Footer -->
     <footer
-      class="container mx-auto mt-9 max-w-screen-xl bg-background-light dark:bg-background-dark"
+      class="container mx-auto mt-9 max-w-screen-xl bg-background-light dark:bg-background-dark px-4"
     >
       <!-- top of footer -->
       <div
         class="flex container text-center py-4 file font-yekan font-semibold text-xl justify-center items-center"
       >
         <hr
-          class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-4 dark:bg-gray-700"
+          class="w-[110px] md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-4 dark:bg-gray-700"
         />
         <p
-          class="px-4 text-xl font-semibold text-[#141414] dark:text-on-primary-dark"
+          class="px-4 text-base font-semibold text-[#141414] md:text-xl dark:text-on-primary-dark"
         >
           کوئرا لیست
         </p>
         <hr
-          class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-3 dark:bg-gray-700"
+          class="w-[110px] md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-3 dark:bg-gray-700"
         />
       </div>
       <!-- footer desktop -->
-      <div class="hidden md:block px-10">
+      <div class="hidden md:block">
         <div
           class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-[#242424] pt-6"
         >
@@ -497,7 +501,7 @@
                 />
                 <button
                   type="submit"
-                  class="text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
+                  class="flex items-center text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
                 >
                   ارسال
                 </button>
@@ -508,7 +512,7 @@
       </div>
       <!-- footer mobile -->
       <div class="md:hidden">
-        <div class="mx-5 font-yekan text-sm font-normal text-neutral-light-800">
+        <div class="font-yekan text-sm font-normal text-neutral-light-800">
           <p
             class="font-bold text-base text-[#242424] mt-3 dark:text-on-primary-dark"
           >
@@ -528,14 +532,14 @@
               />
               <button
                 type="submit"
-                class="text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
+                class="flex items-center font-yekan text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
               >
                 ارسال
               </button>
             </div>
           </form>
 
-          <div class="grid grid-cols-2 grid-rows-2 mt-8 gap-1">
+          <div class="grid grid-cols-2 grid-rows-2 mt-8 gap-4">
             <!-- address -->
             <div
               class="flex flex-col row-span-2 text-center border border-neutral-light-100 rounded-2xl shadow-cards gap-4 justify-center items-center px-2 h-[172px] dark:border-0 dark:bg-[#0B192D]"
@@ -564,7 +568,7 @@
             </div>
             <!-- tell -->
             <div
-              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1 dark:border-0 dark:bg-[#0B192D]"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-2 dark:border-0 dark:bg-[#0B192D]"
             >
               <!-- circle -->
               <div
@@ -590,7 +594,7 @@
             </div>
             <!-- fax -->
             <div
-              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1 dark:border-0 dark:bg-[#0B192D]"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-2 dark:border-0 dark:bg-[#0B192D]"
             >
               <!-- circle -->
               <div
@@ -620,14 +624,13 @@
       <!-- copyright -->
       <div>
         <p
-          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text-[14px] dark:text-on-primary-dark"
+          class="text-center pt-12 pb-4 font-yekan text-[#444749] text-[12px] md:text-[14px] dark:text-on-primary-dark"
         >
           تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
         </p>
       </div>
     </footer>
 
-    <!-- Script  -->
     <script>
       //menu button action
       const menuBtn = document.getElementById("menu-btn");
