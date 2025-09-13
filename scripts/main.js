@@ -6,14 +6,26 @@ import { createTask } from "./create-task.js";
 import { renderAllTasks, renderEditTask } from "./render-tasks.js";
 import { deleteTask } from "./delete-task.js";
 
-
 let tasks = [];
 document.addEventListener("DOMContentLoaded", () => {
-  // TODO: Render Tasks
+  // Render Tasks
   renderAllTasks(tasks);
-  // TODO: Create Task
+
+  // Create Task
   createTask(tasks);
-  
+
+  // Edit Task
+  editTask((index) => {
+    renderEditTask(tasks[index], index);
+  });
+
+  // Delete Task
+  deleteTask((taskId) => {
+    const index = tasks.findIndex((task) => task.id === taskId);
+    if (index > -1) tasks.splice(index, 1);
+    renderAllTasks(tasks);
+  });
+
   // Set Date
   const setDates = document.querySelectorAll(".date");
   setDates.forEach((date) => {
@@ -25,13 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Toggle mode
   toggleTheme();
-
-  // Edit Task
-  editTask((index) => {
-    renderEditTask(tasks[index], index);
-  });
-
-  // Delete Task
-  deleteTask();
 });
-
