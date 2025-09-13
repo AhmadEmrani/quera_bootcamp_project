@@ -66,7 +66,7 @@ export function renderAllTasks(tasks) {
     if (!todo.isCompleted) {
       const li = document.createElement("li");
       li.className =
-        "task-card flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative mb-4";
+        "task-card flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative";
 
       li.innerHTML = `
         <!-- Edit/Delete buttons -->
@@ -93,9 +93,9 @@ export function renderAllTasks(tasks) {
             <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]">${todo.description}</p>
           </div>
         </div>
-        <figure class="more-btn cursor-pointer">
-          <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر" />
-        </figure>
+        <button class="more-btn cursor-pointer h-[18px] w-2 ">
+          <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر" class="w-full"/>
+        </button>
       `;
 
       li.dataset.id = todo.id;
@@ -125,10 +125,9 @@ export function renderAllTasks(tasks) {
         </div>
       </div>
     </div>
-    <figure>
-      <img src="../assets/icons/3dotIcon.svg" alt="" />
-    </figure>
-      
+    <button class="more-btn cursor-pointer h-[18px] w-2 ">
+      <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر" class="w-full"/>
+    </button>
       `;
       li.dataset.id = todo.id;
       completedTasks.appendChild(li);
@@ -136,7 +135,10 @@ export function renderAllTasks(tasks) {
   });
 }
 
-export function renderEditTask(task, index) {
+export function renderEditTask(taskId, tasks) {
+  const task = tasks.find((task) => task.id === taskId);
+  if (!task) return;
+
   const tasksList = document.getElementById("tasks-container");
   let selectedPriority = task.priority;
 
@@ -231,7 +233,10 @@ export function renderEditTask(task, index) {
     </div>
   `;
 
-  tasksList.insertBefore(editCard, tasksList.children[index + 1]);
+  tasksList.insertBefore(
+    editCard,
+    tasksList.querySelector(`.task-card[data-id="${task.id}"]`).nextSibling
+  );
 
   const tagsContainer = editCard.querySelector(".tags-container");
   const tagsOpener = editCard.querySelector(".tags-opener");
@@ -240,11 +245,11 @@ export function renderEditTask(task, index) {
 
   tagsOpener.classList.add("hidden");
   tagsOpener.addEventListener("click", () => {
-    tagsContainer.classList.remove("hidden");
-    tagsContainer.classList.add("flex");
-    tagsIconRight.classList.add("rotate-90");
-    tagsIconRight.classList.add("hidden");
-    tagsIconDown.classList.remove("hidden");
+    tagsContainer.classList.toggle("hidden");
+    tagsContainer.classList.toggle("flex");
+    tagsIconRight.classList.toggle("rotate-90");
+    tagsIconRight.classList.toggle("hidden");
+    tagsIconDown.classList.toggle("hidden");
   });
 
   let priorityDisplay = editCard.querySelector(".priority-display");
@@ -294,7 +299,7 @@ export function renderEditTask(task, index) {
       (task.description = editCard.querySelector("#task-description").value),
       (task.priority = selectedPriority),
       editCard.remove();
-    renderAllTasks();
+    renderAllTasks(tasks);
   });
 
   editCard.querySelector("#cancel-edit").addEventListener("click", () => {

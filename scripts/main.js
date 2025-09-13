@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   createTask(tasks);
 
   // Edit Task
-  editTask((index) => {
-    renderEditTask(tasks[index], index);
+  editTask((taskId) => {
+    renderEditTask(taskId, tasks);
   });
 
   // Delete Task
