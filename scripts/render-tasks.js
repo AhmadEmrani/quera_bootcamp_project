@@ -82,7 +82,7 @@ export function renderAllTasks(tasks) {
           </button>
         </div>
   
-        <div class="relative flex flex-row gap-4">
+        <div class="relative flex flex-row gap-4 w-screen">
           <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]"></div>
           <div class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border border-neutral-light-300"></div>
           <div class="flex flex-col gap-4">

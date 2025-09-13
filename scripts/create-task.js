@@ -86,7 +86,7 @@ export function createTask(tasks) {
       task_info_container.insertAdjacentHTML(
         "beforeend",
         `
-      <div class="priority-tag w-fit flex flex-row gap-2 rounded-[4px] bg-[${priorityColor}] px-2 py-1">
+      <div class="priority-tag w-fit flex flex-row gap-2 rounded-[4px] bg-[${priorityColor}] px-2 py-1 ">
         <img class="cancel-priority-btn w-5 h-5 cursor-pointer" 
              src="../assets/icons/cancel-priority.svg" alt="close">
         <p class="text-[${textColor}] font-yekan font-semibold text-[14px]">
