@@ -64,31 +64,34 @@
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
   </head>
-  <body>
+  <body class="dark:bg-background-dark">
     <!-- Header - Hamed -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header
+      class="bg-background-light shadow-sm sticky top-0 z-50 dark:bg-background-dark dark:text-on-primary-dark"
+    >
       <div
         class="container mx-auto flex items-center justify-between px-4 py-3"
       >
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-2">
-          <nav class="hidden md:flex gap-6 absolute items-center">
-            <span class="font-[YekanBakh] text-[20px] font-[600]"
+          <nav class="hidden md:flex gap-18 absolute items-center">
+            <span
+              class="font-[YekanBakh] text-xl font-semibold text-[#141414] dark:text-on-primary-dark"
               >کوئرا لیست</span
             >
             <a
               href="../index.html"
-              class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              class="font-[YekanBakh] text-base font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
               >صفحه اصلی</a
             >
             <a
-              href="./about-us.html"
-              class="font-[YekanBakh] text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+              href="about-us.html"
+              class="font-[YekanBakh] text-base font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
               >درباره ما</a
             >
             <a
               href="#"
-              class="font-[YekanBakh] text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+              class="font-[YekanBakh] text-base font-semibold text-primary-light hover:text-primary-hover-light dark:text-primary-dark"
               >ارتباط با ما</a
             >
           </nav>
@@ -97,111 +100,187 @@
         <div class="hidden md:flex items-center gap-4">
           <a href="../app/dashboard.html" target="_blank">
             <button
-              class="font-yekan text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+              class="font-yekan text-base font-semibold bg-primary-light hover:bg-primary-hover-light text-on-primary-light px-6 h-10 rounded-md cursor-pointer dark:bg-primary-dark"
             >
               ورود به اپلیکیشن
             </button>
           </a>
 
-          <button class="rounded-lg bg-white p-2 shadow-md cursor-pointer">
-            <img src="../assets/icons/toggle-theme.svg" />
+          <button
+            class="rounded-md bg-background-light p-2 border border-[#e3e3e3] cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-[#2F3132]"
+            id="toggle-mode"
+          >
+            <!-- light image -->
+            <img
+              class="h-6 w-6 block dark:hidden"
+              src="../assets/icons/toggle-theme.svg"
+            />
+            <!-- dark image -->
+            <img
+              class="h-6 w-6 hidden dark:block"
+              src="../assets/icons/moon.svg"
+            />
           </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden items-center absolute">
+        <div class="md:hidden items-center absolute h-6 w-6">
           <button id="menu-btn" class="focus:outline-none">
-            <img src="../assets/icons/menu.svg" />
+            <!-- ligh image -->
+            <img class="block dark:hidden" src="../assets/icons/menu.svg" />
+            <!-- dark image -->
+            <img
+              class="hidden dark:block"
+              src="../assets/icons/menu-dark.svg"
+            />
           </button>
         </div>
         <div class="md:hidden mx-auto">
-          <span class="text-center font-[YekanBakh] text-[20px] font-[600]"
+          <span
+            class="text-center font-[YekanBakh] text-base font-semibold text-[#141414] dark:text-on-primary-dark"
             >کوئرا لیست</span
           >
         </div>
       </div>
 
       <!-- Mobile Menu -hidden by default -->
-      <div id="mobile-menu" class="hidden flex-col gap-4 px-4 pb-4 md:hidden">
+      <div
+        id="mobile-menu"
+        class="hidden grid md:hidden flex-col gap-4 px-4 pb-4"
+      >
         <a
           href="../index.html"
-          class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+          class="font-[YekanBakh] text-sm font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
           >صفحه اصلی</a
         >
         <a
-          href="./about-us.html"
-          class="font-yekan text-[16px] font-[600] text-gray-700 hover:text-blue-600"
+          href="about-us.html"
+          class="font-[YekanBakh] text-sm font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
           >درباره ما</a
         >
         <a
           href="#"
-          class="font-yekan text-[16px] font-[600] text-blue-600 hover:text-blue-600"
+          class="font-[YekanBakh] text-sm font-semibold text-primary-light hover:text-primary-hover-light dark:text-primary-dark"
           >ارتباط با ما</a
         >
         <div class="flex w-fit gap-4">
           <a href="../app/dashboard.html" target="_blank">
             <button
-              class="font-yekan text-[16px] font-[600] bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+              class="font-yekan text-base font-semibold bg-primary-light hover:bg-primary-hover-light text-on-primary-light px-6 h-10 rounded-md cursor-pointer"
             >
               ورود به اپلیکیشن
             </button>
           </a>
-          <button class="rounded-lg bg-white p-2 shadow-md">
-            <img src="../assets/icons/toggle-theme.svg" />
+          <button
+            class="rounded-md bg-background-light p-2 border border-[#e3e3e3] cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-[#2F3132]"
+            id="toggle-mode-mobile"
+          >
+            <!-- light image -->
+            <img
+              class="h-6 w-6 block dark:hidden"
+              src="../assets/icons/toggle-theme.svg"
+            />
+            <!-- dark image -->
+            <img
+              class="h-6 w-6 hidden dark:block"
+              src="../assets/icons/moon.svg"
+            />
           </button>
         </div>
       </div>
     </header>
     <main
-      class="mx-auto flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px]"
+      class="mx-auto md:mt-[140px] flex flex-col gap-5 md:flex-row md:gap-8 md:px-8 md:py-10 md:border-solid md:border-[1px] md:border-neutral-light-100 md:rounded-[24px] md:left-8 md:shadow-cards md:max-w-[1070px] md:max-h-[680px] md:dark:border-none md:dark:bg-[#0B192D]"
     >
       <section
-        class="relative flex flex-col gap-2 left-6 md:gap-3 md:max-w-[467px] md:h-auto"
+        class="relative flex flex-col gap-2 md:gap-3 md:max-w-[467px] md:h-auto"
       >
         <h1
-          class="text-center font-[Kalameh] text-[24px] font-[700] md:text-[40px] text-[#070D31] md:text-right"
+          class="text-center font-[Kalameh] text-[24px] font-[700] md:text-[40px] text-[#070D31] md:text-right dark:text-on-background-dark"
         >
           تماس با ما
         </h1>
         <p
-          class="text-center font-[YekanBakh] text-[14px] font-[400] md:text-[20px] md:font-[400] md:text-right"
+          class="text-center font-yekan text-[14px] font-[400] md:text-[20px] md:font-[400] md:text-right dark:text-on-background-dark"
         >
           چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
         </p>
         <div class="hidden md:flex flex-col gap-4">
           <div class="flex flex-row rounded-[6px] p-4 gap-2">
             <img
-              class="w-6 h-6"
-              src="../assets/icons/calAboutusl.svg"
+              class="w-6 h-6 dark:hidden"
+              src="../assets/icons/call-contact-desktop.svg"
               alt="call-icon"
             />
-            <p>09121234567</p>
+            <img
+              class="w-6 h-6 hidden dark:block"
+              src="../assets/icons/call-contact-desktop-dark.svg"
+              alt="call-icon"
+            />
+            <p class="dark:text-neutral-dark-300">09121234567</p>
           </div>
           <div class="flex flex-row rounded-[6px] p-4 gap-2">
             <img
-              class="w-6 h-6"
+              class="w-6 h-6 dark:hidden"
               src="../assets/icons/email.svg"
               alt="call-icon"
             />
-            <p>09121234567</p>
+            <img
+              class="w-6 h-6 hidden dark:block"
+              src="../assets/icons/email-dark.svg"
+              alt="call-icon"
+            />
+            <p class="dark:text-neutral-dark-300">09121234567</p>
           </div>
         </div>
         <div class="hidden absolute right-0 bottom-0 md:flex flex-row gap-8">
-          <img class="w-8 h-8" src="../assets/icons/github.svg" alt="" />
-          <img class="w-8 h-8" src="../assets/icons/twitter.svg" alt="" />
-          <img class="w-8 h-8" src="../assets/icons/linkedin.svg" alt="" />
+          <img
+            class="w-8 h-8 dark:hidden"
+            src="../assets/icons/github.svg"
+            alt=""
+          />
+          <img
+            class="w-8 h-8 hidden dark:block"
+            src="../assets/icons/github-dark.svg"
+            alt=""
+          />
+          <img
+            class="w-8 h-8 dark:hidden"
+            src="../assets/icons/twitter.svg"
+            alt=""
+          />
+          <img
+            class="w-8 h-8 hidden dark:block"
+            src="../assets/icons/twitter-dark.svg"
+            alt=""
+          />
+          <img
+            class="w-8 h-8 dark:hidden"
+            src="../assets/icons/linkedin.svg"
+            alt=""
+            ظ
+          />
+          <img
+            class="w-8 h-8 hidden dark:block"
+            src="../assets/icons/linkedin-dark.svg"
+            alt=""
+          />
         </div>
       </section>
-      <div class="hidden md:block w-[1px] bg-neutral-light-200 h-[606px]"></div>
+      <img
+        class="hidden md:block"
+        src="../assets/icons/Rectangle-contac-us.svg"
+        alt="rectangle-seperation"
+      />
       <form
         action=""
-        class="mx-auto flex flex-col p-[16px] rounded-2xl gap-6 border-solid border-[1px] border-neutral-light-100 left-4 w-[328px] shadow-cards font-[YekanBakh] md:border-none md:shadow-none font-yekan font-[600] text-[12px] md:text-[16px] md:max-w-[471px]"
+        class="mx-auto flex flex-col md:justify-between p-[16px] rounded-2xl gap-6 md:gap-0 p border-solid border-[1px] border-neutral-light-100 w-[328px] shadow-cards font-yekan md:border-none md:shadow-none font-[600] text-[12px] md:text-[16px] md:w-[471px] dark:bg-[#0B192D] dark:border-none dark:text-on-background-dark md:bg-inherit"
       >
-        <div class="flex flex-row gap-4">
+        <div class="flex flex-row gap-4 md:justify-between max-w-[471px]">
           <div class="flex flex-col gap-2">
             <label class="" for="firstName">نام:</label>
             <input
-              class="max-w-[140px] max-h-[40px] rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+              class="w-full md:max-w-[223px] max-h-[40px] md:h-full rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800 md:p-4"
               type="text"
               name="firstName"
               id=""
@@ -211,7 +290,7 @@
           <div class="flex flex-col gap-2">
             <label class="" for="lastName">نام خانوادگی:</label>
             <input
-              class="max-w-[140px] max-h-[40px] rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+              class="w-full md:max-w-[223px] max-h-[40px] rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800"
               type="text"
               name="lastName"
               id=""
@@ -222,7 +301,7 @@
         <div class="flex flex-col gap-2">
           <label class="" for="email">ایمیل:</label>
           <input
-            class="rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            class="rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800"
             type="email"
             name="email"
             id=""
@@ -232,7 +311,7 @@
         <div class="flex flex-col gap-2">
           <label dir="rtl" class="" for="tel">شماره تماس:</label>
           <input
-            class="text-right rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            class="text-right rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800"
             type="tel"
             name="tel"
             id=""
@@ -242,7 +321,7 @@
         <div class="flex flex-col gap-2">
           <label class="" for="message">متن پیام شما:</label>
           <textarea
-            class="md:max-h-[136px] h-[128px] resize-none rounded-[6px] border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px]"
+            class="md:max-h-[136px] h-[128px] resize-none rounded-[6px] text-neutral-light-500 border-solid border-[1px] border-neutral-light-200 px-[8px] py-[11px] dark:text-neutral-dark-500 dark:border-neutral-dark-800"
             name="message"
             id=""
             cols="30"
@@ -252,7 +331,7 @@
         </div>
 
         <button
-          class="rounded-[8px] py-[8px] px-[40px] bg-primary-light text-on-primary-light"
+          class="rounded-[8px] py-[8px] px-[40px] bg-primary-light text-on-primary-light md:max-h-[56px]"
         >
           ارسال پیام
         </button>
@@ -262,7 +341,7 @@
       >
         <div class="flex flex-row gap-4 max-h-[56px]">
           <div
-            class="flex flex-row gap-2 px-[8px] py-[12px] border-solid border-[1px] border-neutral-light-100 shadow-cards rounded-xl w-[156px]"
+            class="flex flex-row gap-2 px-[8px] py-[12px] border-solid border-[1px] border-neutral-light-100 shadow-cards rounded-xl w-[156px] dark:bg-[#0B192D] dark:text-on-background-dark dark:border-none"
           >
             <figure
               class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
@@ -275,7 +354,7 @@
             </div>
           </div>
           <div
-            class="flex flex-row gap-2 px-[8px] py-[12px] border-solid border-[1px] border-neutral-light-100 shadow-cards rounded-xl w-[156px]"
+            class="flex flex-row gap-2 px-[8px] py-[12px] border-solid border-[1px] border-neutral-light-100 shadow-cards rounded-xl w-[156px] dark:bg-[#0B192D] dark:text-on-background-dark dark:border-none"
           >
             <figure
               class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
@@ -290,7 +369,7 @@
         </div>
 
         <div
-          class="flex flex-row gap-4 max-h-[56px] border-solid border-[1px] border-neutral-light-100 shadow-cards w-[328px] h-[56px] rounded-[12px] justify-center px-2 py-3"
+          class="flex flex-row gap-4 max-h-[56px] border-solid border-[1px] border-neutral-light-100 shadow-cards w-[328px] h-[56px] rounded-[12px] justify-center px-2 py-3 dark:bg-[#0B192D] dark:text-on-background-dark dark:border-none"
         >
           <figure
             class="rounded-full p-[8px] gap-2 w-[32px] h-[32px] bg-[#F5FBFF]"
@@ -314,66 +393,107 @@
     </main>
 
     <!-- Footer - Hamed -->
-    <footer class="background-light container mx-auto mt-9">
+    <footer
+      class="container mx-auto mt-9 max-w-screen-xl bg-background-light dark:bg-background-dark"
+    >
       <!-- top of footer -->
       <div
         class="flex container text-center py-4 file font-yekan font-semibold text-xl justify-center items-center"
       >
         <hr
-          class="w-23 md:w-56 h-0.5 bg-neutral-light-400 border-0 rounded-sm md:my-3 dark:bg-gray-700"
+          class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-4 dark:bg-gray-700"
         />
-        <p class="px-4 text-xl font-semibold">کوئرا لیست</p>
+        <p
+          class="px-4 text-xl font-semibold text-[#141414] dark:text-on-primary-dark"
+        >
+          کوئرا لیست
+        </p>
         <hr
-          class="w-23 md:w-56 h-0.5 bg-neutral-light-400 border-0 rounded-sm md:my-3 dark:bg-gray-700"
+          class="w-20 md:w-56 border-0.0625 border-[#AFAFAF] rounded-sm md:my-3 dark:bg-gray-700"
         />
       </div>
       <!-- footer desktop -->
-      <div class="hidden md:block">
+      <div class="hidden md:block px-10">
         <div
-          class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-neutral-light-800 pt-6"
+          class="grid grid-cols-2 gap-10 font-yekan text-sm font-normal text-[#242424] pt-6"
         >
           <!-- contact information  -->
-          <div class="gap-9 px-9">
+          <div class="gap-9 px-9 dark:text-on-primary-dark">
             <!-- fax -->
-            <div class="flex gap-2">
-              <img src="../assets/icons/fax.svg" alt="شماره فکس" />
+            <div class="flex gap-4 py-2 items-start">
+              <!-- light image-->
+              <img
+                src="../assets/icons/fax.svg"
+                alt="شماره فکس"
+                class="block dark:hidden"
+              />
+              <!-- dark image -->
+              <img
+                src="../assets/icons/fax-desktop-dark.svg"
+                class="hidden dark:block"
+              />
               <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
             </div>
             <!-- tell -->
-            <div class="flex gap-2">
-              <img src="../assets/icons/call.svg" alt="تلفن پشتیبانی" />
+            <div class="flex gap-4 py-2 items-start">
+              <!-- light image-->
+              <img
+                src="../assets/icons/call.svg"
+                alt="تلفن پشتیبانی"
+                class="block dark:hidden"
+              />
+              <!-- dark image -->
+              <img
+                src="../assets/icons/call-desktop-dark.svg"
+                class="hidden dark:block"
+              />
+
               <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
             </div>
             <!-- address -->
-            <div class="flex gap-2">
-              <img src="../assets/icons/map.svg" alt="آدرس دفتر" />
+            <div class="flex gap-4 py-2 items-start">
+              <!-- light image-->
+              <img
+                src="../assets/icons/map.svg"
+                alt="آدرس دفتر"
+                class="block dark:hidden"
+              />
+              <!-- dark image -->
+              <img
+                src="../assets/icons/map-desktop-dark.svg"
+                class="hidden dark:block"
+              />
               <p>
-                آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
-                بست شب بو
+                آدرس دفتر مرکزی: پونک - خیابان اشرفی
+                <br />
+                اصفهانی - خیابان صبحدل- بن بست شب بو
               </p>
             </div>
           </div>
           <!-- email section -->
-          <div class="gap-9 px-9">
-            <p class="font-bold text-base text-neutral-light-700">
+          <div class="gap-9 pl-35 pr-35 dark:text-on-primary-dark">
+            <p
+              class="font-bold text-base text-[#242424] dark:text-on-primary-dark"
+            >
               با ما در ارتباط باش
             </p>
-            <p>
-              اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر
-              بشی.
+            <p class="mt-2">
+              اگه میخوای اولین نفری باشی که از فیچرهای جدید
+              <br />
+              و تخفیفات با خبر بشی.
             </p>
-            <form>
+            <form class="mt-4">
               <div class="relative">
                 <input
                   type="email"
                   id="email"
-                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12 dark:bg-background-dark"
                   placeholder="ایمیل"
                   required
                 />
                 <button
                   type="submit"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
                 >
                   ارسال
                 </button>
@@ -384,11 +504,13 @@
       </div>
       <!-- footer mobile -->
       <div class="md:hidden">
-        <div class="mx-8 font-yekan text-sm font-normal text-neutral-light-800">
-          <p class="font-bold text-base text-neutral-light-700">
+        <div class="mx-5 font-yekan text-sm font-normal text-neutral-light-800">
+          <p
+            class="font-bold text-base text-[#242424] mt-3 dark:text-on-primary-dark"
+          >
             با ما در ارتباط باش
           </p>
-          <p>
+          <p class="font-normal text-xs mt-2 dark:text-on-primary-dark">
             اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر بشی.
           </p>
           <form>
@@ -396,66 +518,111 @@
               <input
                 type="email"
                 id="email"
-                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="block w-full p-4 ps-5 text-sm text-[#BCBCBC] border border-[#AFAEB2] rounded-lg bg-on-primary-light h-12 dark:bg-background-dark"
                 placeholder="ایمیل"
                 required
               />
               <button
                 type="submit"
-                class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="text-background-light absolute end-2.5 bottom-2 bg-primary-light hover:bg-primary-hover-light text-on-primary-light focus:ring-4 focus:outline-none font-black rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 h-8 cursor-pointer"
               >
                 ارسال
               </button>
             </div>
           </form>
 
-          <div class="grid grid-cols-2 grid-rows-2 mt-8">
+          <div class="grid grid-cols-2 grid-rows-2 mt-8 gap-1">
             <!-- address -->
             <div
-              class="row-span-2 text-center gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 ml-2"
+              class="flex flex-col row-span-2 text-center border border-neutral-light-100 rounded-2xl shadow-cards gap-4 justify-center items-center px-2 h-[172px] dark:border-0 dark:bg-[#0B192D]"
             >
-              <img
-                class="mx-auto"
-                src="../assets/images/footer-map-mobile.png"
-                alt="آدرس دفتر"
-              />
-              <p>
+              <!-- circle -->
+              <div
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] p-3 dark:bg-[#1B293C]"
+              >
+                <!-- ligh image -->
+                <img
+                  class="h-4 w-4 block dark:hidden"
+                  src="../assets/icons/map-mobile.svg"
+                  alt="آدرس دفتر"
+                />
+                <!-- dark image -->
+                <img
+                  class="h-4 w-4 hidden dark:block"
+                  src="../assets/icons/map-mobile-dark.svg"
+                />
+              </div>
+
+              <p class="text-[10px] dark:text-on-primary-dark">
                 آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
                 بست شب بو
               </p>
             </div>
             <!-- tell -->
             <div
-              class="row-span-1 flex gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 mr-2 mb-2"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1 dark:border-0 dark:bg-[#0B192D]"
             >
-              <img
-                class="my-auto"
-                src="../assets/images/footer-call-mobile.png"
-                alt="تلفن پشتیبانی"
-              />
-              <p>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+              <!-- circle -->
+              <div
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] dark:bg-[#1B293C]"
+              >
+                <!-- light image -->
+                <img
+                  class="h-4 w-4 dark:text-on-primary-dark block dark:hidden"
+                  src="../assets/icons/call-mobile.svg"
+                  alt="تلفن پشتیبانی"
+                />
+                <!-- dark image -->
+                <img
+                  class="h-4 w-4 dark:text-on-primary-dark hidden dark:block"
+                  src="../assets/icons/call-mobile-dark.svg"
+                />
+              </div>
+              <p class="text-[10px] dark:text-on-primary-dark">
+                تلفن پشتیبانی
+                <br />
+                ۴۴۴۴۵۵۶۶ - ۰۲۱
+              </p>
             </div>
             <!-- fax -->
             <div
-              class="row-span-1 flex gap-4 border border-gray-200 rounded-[16px] shadow-[#F5F6F8] p-4 mr-2 mt-2"
+              class="row-span-1 flex justify-center items-center border p-1 border-neutral-light-100 rounded-2xl shadow-cards gap-1 dark:border-0 dark:bg-[#0B192D]"
             >
-              <img
-                class="my-auto"
-                src="../assets/images/footer-fax-mobile.png"
-                alt="شماره فکس"
-              />
-              <p>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+              <!-- circle -->
+              <div
+                class="flex justify-center items-center w-10 h-10 rounded-full bg-[#F5FBFF] dark:bg-[#1B293C]"
+              >
+                <!-- light image -->
+                <img
+                  class="h-4 w-4 block dark:hidden"
+                  src="../assets/icons/fax-mobile.svg"
+                  alt="شماره فکس"
+                />
+                <!-- dark image -->
+                <img
+                  class="h-4 w-4 hidden dark:block"
+                  src="../assets/icons/fax-mobile-dark.svg"
+                />
+              </div>
+              <p class="text-[10px] dark:text-on-primary-dark">
+                فکس
+                <br />
+                ۴۴۴۴۵۵۶۶ - ۰۲۱
+              </p>
             </div>
           </div>
         </div>
       </div>
       <!-- copyright -->
       <div>
-        <p class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749]">
+        <p
+          class="text-center mx-8 pt-8 pb-4 font-yekan text-[#444749] text-[12px] md:text-[14px] dark:text-on-primary-dark"
+        >
           تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
         </p>
       </div>
     </footer>
+
     <!-- Script  -->
     <script>
       //menu button action
@@ -464,6 +631,18 @@
 
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+      });
+
+      // Toggle mode desktop
+      const toggleMode = document.getElementById("toggle-mode");
+      toggleMode.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+
+      // Toggle mode mobile
+      const toggleModeMobile = document.getElementById("toggle-mode-mobile");
+      toggleModeMobile.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
       });
     </script>
   </body>
