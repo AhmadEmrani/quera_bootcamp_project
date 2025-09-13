@@ -1,12 +1,14 @@
-export function deleteTask() {
-  const taskList = document.getElementById("tasks-container");
+export function deleteTask(onDelete) {
+  const tasksList = document.getElementById("tasks-container");
 
-  taskList.addEventListener("click", (event) => {
-    const target = event.target;
+  tasksList.addEventListener("click", (e) => {
+    const deleteBtn = e.target.closest(".delete-btn");
+    if (!deleteBtn) return;
 
-    if (target.closest("button") && target.closest("img[alt='حذف']")) {
-      const id = target.parentElement.dataset.id;
-      // onDelete(id);
-    }
+    const taskCard = deleteBtn.closest(".task-card");
+    if (!taskCard) return;
+
+    const taskId = taskCard.dataset.id;
+    onDelete(taskId);
   });
 }
