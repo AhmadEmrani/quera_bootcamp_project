@@ -1,19 +1,21 @@
-export function editTask() {
-  document.addEventListener("click", (e) => {
-    const element = e.target;
+export function editTask(onEdit) {
+  const tasksList = document.getElementById("tasks-container");
 
-    const moreBtn = element.classList.contains("more-btn")
-      ? element
-      : element.closest(".more-btn");
+  tasksList.addEventListener("click", (e) => {
+    const element = e.target;
+    const moreBtn = element.closest(".more-btn");
 
     if (moreBtn) {
       const taskCard = moreBtn.parentElement;
       const editDeleteBtns = taskCard.querySelector(".edit-delete-container");
+      if (!editDeleteBtns) return;
       editDeleteBtns.classList.toggle("hidden");
 
       const editBtn = editDeleteBtns.querySelector(".edit-btn");
+      if (!editBtn) return;
       editBtn.addEventListener("click", () => {
-        // TODO
+        const taskIndex = Array.from(tasksList.children).indexOf(taskCard);
+        onEdit(taskIndex);
       });
     } else {
       document

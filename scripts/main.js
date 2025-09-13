@@ -3,7 +3,7 @@ import { setDate } from "./utils.js";
 import { toggleTheme } from "./utils.js";
 import { editTask } from "./edit-task.js";
 import { createTask } from "./create-task.js";
-import { renderAllTasks } from "./render-tasks.js";
+import { renderAllTasks, renderEditTask } from "./render-tasks.js";
 import { deleteTask } from "./delete-task.js";
 
 
@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleTheme();
 
   // Edit Task
-  editTask();
+  editTask((index) => {
+    renderEditTask(tasks[index], index);
+  });
 
   // Delete Task
   deleteTask();
