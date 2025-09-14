@@ -110,9 +110,11 @@ export function createTask(tasks) {
     }
   });
 
+
   const todoCount = document.getElementById("todo-tasks-counter");
   todoCount.textContent = parseInt(0);
   function addtodo() {
+    //get title & Desc Data
     const titleInput = document.querySelector("#taskName");
     const descriptionInput = document.querySelector("#description");
 
@@ -132,6 +134,8 @@ export function createTask(tasks) {
     console.log(tasks);
     renderAllTasks(tasks);
     todoCount.textContent = parseInt(todoCount.textContent) + 1;
+
+
   }
 }
 // import { tasks } from "./main.js";
