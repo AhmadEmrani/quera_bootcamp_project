@@ -29,7 +29,7 @@ function selectedPriorityTag(priority) {
   return `
     <div class="priority-tag flex items-center gap-1.5 rounded-[4px] bg-[${priorityColor}] px-2 py-1 text-[${textColor}] font-yekan font-semibold text-sm">
       <img class="cancel-priority-btn w-4 h-4 cursor-pointer md:w-5 md:h-5" 
-          src="../assets/icons/cancel-priority.svg" alt="بستن" />
+           src="../assets/icons/cancel-priority.svg" alt="بستن" />
       ${priorityText}
     </div>
   `;
@@ -67,9 +67,9 @@ export function renderAllTasks(tasks) {
       const li = document.createElement("li");
       li.className =
         "task-card flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative";
+      li.dataset.id = todo.id;
 
       li.innerHTML = `
-        <!-- Edit/Delete buttons -->
         <div class="edit-delete-container hidden flex items-center gap-1.5 px-1.5 py-1 border border-neutral-light-200 rounded-lg bg-background-light absolute left-4 top-10 shadow-edit-buttons md:px-2 md:py-1.5 md:gap-2.5 md:max-w-[724px]">
           <button class="delete-btn">
             <img src="../assets/icons/trash-light.svg" alt="حذف" class="w-4 h-4 md:w-5 md:h-5"/>
@@ -79,8 +79,8 @@ export function renderAllTasks(tasks) {
             <img src="../assets/icons/edit-light.svg" alt="ویرایش" class="w-4 h-4 md:w-5 md:h-5"/>
           </button>
         </div>
-  
-        <div class="relative flex flex-row gap-4 w-screen">
+
+        <div class="relative flex flex-row gap-4">
           <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]"></div>
           <div class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border border-neutral-light-300"></div>
           <div class="flex flex-col gap-4">
@@ -93,52 +93,41 @@ export function renderAllTasks(tasks) {
             <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]">${todo.description}</p>
           </div>
         </div>
-        <button class="more-btn cursor-pointer h-[18px] w-2 ">
-          <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر" class="w-full"/>
-        </button>
+        <figure class="more-btn cursor-pointer">
+          <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر"/>
+        </figure>
       `;
 
-      li.dataset.id = todo.id;
       tasksContainer.appendChild(li);
     }
     if (todo.isCompleted) {
       const li = document.createElement("li");
       li.className =
         "flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]";
+      li.dataset.id = todo.id;
 
       li.innerHTML = `
-      <div class="relative flex flex-row gap-4">
-      <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]"></div>
-      <input
-        id="remember"
-        type="checkbox"
-        checked
-        class="flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 border-neutral-light-300 border-[1px] text-primary-lightt focus:primary-hover-light"
-      />
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-col gap-1">
-          <h3
-            class="text-sm md:text-base font-[600] text-neutral-light-700 line-through"
-          >
-          ${todo.title}
-          </h3>
+        <div class="relative flex flex-row gap-4">
+          <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]"></div>
+          <input type="checkbox" checked class="flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 border-neutral-light-300 text-primary-lightt focus:primary-hover-light"/>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-sm md:text-base font-[600] text-neutral-light-700 line-through">
+                ${todo.title}
+              </h3>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <button class="more-btn cursor-pointer h-[18px] w-2 ">
-      <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر" class="w-full"/>
-    </button>
+        <figure class="more-btn cursor-pointer">
+          <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر"/>
+        </figure>
       `;
-      li.dataset.id = todo.id;
+
       completedTasks.appendChild(li);
     }
   });
 }
-
-export function renderEditTask(taskId, tasks) {
-  const task = tasks.find((task) => task.id === taskId);
-  if (!task) return;
-
+export function renderEditTask(task, tasks) {
   const tasksList = document.getElementById("tasks-container");
   let selectedPriority = task.priority;
 
@@ -184,27 +173,12 @@ export function renderEditTask(taskId, tasks) {
         <div
           class="tags-container hidden items-center gap-4 p-2.5 border border-solid border-neutral-light-200 rounded-lg shadow-app"
         >
-          <span
-            data-priority="low"
-            class="priority-span font-semibold text-xs px-2 py-0.5 rounded-[4px] cursor-pointer bg-[#C3FFF1] text-[#11A483]"
-            }"
-            >پایین</span
-          >
+          <span data-priority="low" class="priority-span font-semibold text-xs px-2 py-0.5 rounded-[4px] cursor-pointer bg-[#C3FFF1] text-[#11A483]">پایین</span>
           <img src="../assets/icons/tags-container-line.svg" alt="خط" />
-          <span
-            data-priority="medium"
-            class="priority-span font-semibold text-xs px-2 py-0.5 rounded-[4px] cursor-pointer bg-[#FFEFD6] text-[#FFAF37]"
-            }"
-            >متوسط</span
-          >
+          <span data-priority="medium" class="priority-span font-semibold text-xs px-2 py-0.5 rounded-[4px] cursor-pointer bg-[#FFEFD6] text-[#FFAF37]">متوسط</span>
           <img src="../assets/icons/tags-container-line.svg" alt="خط" />
-          <span
-            data-priority="important"
-            class="priority-span font-semibold text-xs px-2 py-0.5 rounded-[4px] cursor-pointer bg-[#FFE2DB] text-[#FF5F37]"
-            }"
-            >بالا</span
-          >
-        </div> 
+          <span data-priority="important" class="priority-span font-semibold text-xs px-2 py-0.5 rounded-[4px] cursor-pointer bg-[#FFE2DB] text-[#FF5F37]">بالا</span>
+        </div>
 
         <div class="priority-display mt-2">
           ${selectedPriority ? selectedPriorityTag(selectedPriority) : ""}
@@ -213,30 +187,18 @@ export function renderEditTask(taskId, tasks) {
     </div>
 
     <div class="p-4 flex gap-2.5 justify-end w-full md:pt-5">
-      <button
-        id="cancel-edit"
-        class="rounded-md p-[6px] gap-3 bg-neutral-light-100 cursor-pointer"
-      >
-        <img
-          src="../assets/icons/cancel.svg"
-          alt="بستن"
-          class="w-4 h-4 md:w-5 md:h-5"
-        />
+      <button id="cancel-edit" class="rounded-md p-[6px] gap-3 bg-neutral-light-100 cursor-pointer">
+        <img src="../assets/icons/cancel.svg" alt="بستن" class="w-4 h-4 md:w-5 md:h-5" />
       </button>
 
-      <button
-        id="save-edit"
-        class="font-semibold text-xs text-on-primary-light bg-app-primary-light flex items-center justify-center px-4 py-1.5 cursor-pointer rounded-md md:text-sm"
-      >
+      <button id="save-edit" class="font-semibold text-xs text-on-primary-light bg-app-primary-light flex items-center justify-center px-4 py-1.5 cursor-pointer rounded-md md:text-sm">
         ویرایش تسک
       </button>
     </div>
   `;
 
-  tasksList.insertBefore(
-    editCard,
-    tasksList.querySelector(`.task-card[data-id="${task.id}"]`).nextSibling
-  );
+  const taskCard = tasksList.querySelector(`[data-id="${task.id}"]`);
+  if (taskCard) taskCard.insertAdjacentElement("afterend", editCard);
 
   const tagsContainer = editCard.querySelector(".tags-container");
   const tagsOpener = editCard.querySelector(".tags-opener");
@@ -245,31 +207,37 @@ export function renderEditTask(taskId, tasks) {
 
   tagsOpener.classList.add("hidden");
   tagsOpener.addEventListener("click", () => {
-    tagsContainer.classList.toggle("hidden");
-    tagsContainer.classList.toggle("flex");
-    tagsIconRight.classList.toggle("rotate-90");
-    tagsIconRight.classList.toggle("hidden");
-    tagsIconDown.classList.toggle("hidden");
+    tagsContainer.classList.remove("hidden");
+    tagsContainer.classList.add("flex");
+    tagsIconRight.classList.add("rotate-90", "hidden");
+    tagsIconDown.classList.remove("hidden");
   });
 
-  let priorityDisplay = editCard.querySelector(".priority-display");
-  const cancelPriorityBtn = priorityDisplay.querySelector(
-    ".cancel-priority-btn"
-  );
-  cancelPriorityBtn.addEventListener("click", () => {
-    selectedPriority = "";
-    priorityDisplay.innerHTML = "";
-    tagsOpener.classList.remove("hidden");
-    tagsIconRight.classList.remove("rotate-90");
-    tagsContainer.classList.add("hidden");
-    tagsContainer.classList.remove("flex");
-    tagsIconRight.classList.remove("hidden");
-    tagsIconDown.classList.add("hidden");
-  });
+  const priorityDisplay = editCard.querySelector(".priority-display");
+  const setupCancelBtn = () => {
+    const cancelPriorityBtn = priorityDisplay.querySelector(
+      ".cancel-priority-btn"
+    );
+    if (!cancelPriorityBtn) return;
+    cancelPriorityBtn.addEventListener("click", () => {
+      selectedPriority = "";
+      priorityDisplay.innerHTML = "";
+      tagsOpener.classList.remove("hidden");
+      tagsIconRight.classList.remove("rotate-90");
+      tagsContainer.classList.add("hidden");
+      tagsContainer.classList.remove("flex");
+      tagsIconRight.classList.remove("hidden");
+      tagsIconDown.classList.add("hidden");
+    });
+  };
+
+  setupCancelBtn();
+
   editCard.querySelectorAll(".priority-span").forEach((span) => {
     span.addEventListener("click", () => {
       selectedPriority = span.dataset.priority;
       priorityDisplay.innerHTML = selectedPriorityTag(selectedPriority);
+      setupCancelBtn();
 
       tagsOpener.classList.add("hidden");
       tagsContainer.classList.add("hidden");
@@ -277,28 +245,14 @@ export function renderEditTask(taskId, tasks) {
       tagsIconRight.classList.remove("rotate-90");
       tagsIconRight.classList.remove("hidden");
       tagsIconDown.classList.add("hidden");
-
-      const cancelPriorityBtn = priorityDisplay.querySelector(
-        ".cancel-priority-btn"
-      );
-      cancelPriorityBtn.addEventListener("click", () => {
-        selectedPriority = "";
-        priorityDisplay.innerHTML = "";
-        tagsOpener.classList.remove("hidden");
-        tagsIconRight.classList.remove("rotate-90");
-        tagsContainer.classList.add("hidden");
-        tagsContainer.classList.remove("flex");
-        tagsIconRight.classList.remove("hidden");
-        tagsIconDown.classList.add("hidden");
-      });
     });
   });
 
   editCard.querySelector("#save-edit").addEventListener("click", () => {
-    (task.title = editCard.querySelector("#edit-title").value),
-      (task.description = editCard.querySelector("#task-description").value),
-      (task.priority = selectedPriority),
-      editCard.remove();
+    task.title = editCard.querySelector("#edit-title").value;
+    task.description = editCard.querySelector("#task-description").value;
+    task.priority = selectedPriority;
+    editCard.remove();
     renderAllTasks(tasks);
   });
 
