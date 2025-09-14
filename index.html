@@ -74,7 +74,7 @@
       >
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-2">
-          <nav class="hidden md:flex gap-18 absolute items-center">
+          <nav class="hidden md:flex gap-[72px] absolute items-center">
             <span
               class="font-yekan text-xl font-semibold text-[#141414] dark:text-on-primary-dark"
               >کوئرا لیست</span
@@ -106,23 +106,89 @@
             </button>
           </a>
 
-          <button
-            class="rounded-md bg-background-light p-2 border border-[#e3e3e3] cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-[#2F3132]"
-            id="toggle-mode"
-          >
-            <!-- light image -->
-            <img
-              class="h-6 w-6 block dark:hidden"
-              src="./assets/icons/toggle-theme.svg"
-              alt="حالت سیستم"
-            />
-            <!-- dark image -->
-            <img
-              class="h-6 w-6 hidden dark:block"
-              src="./assets/icons/moon.svg"
-              alt="حالت تاریک"
-            />
-          </button>
+          <div class="relative">
+            <button
+              class="toggle-mode flex items-center justify-center rounded-md bg-background-light p-2 border border-solid border-neutral-light-200 cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-neutral-dark-800"
+            >
+              <img
+                class="toggle-icon h-6 w-6"
+                src="./assets/icons/toggle-theme.svg"
+              />
+            </button>
+
+            <div
+              class="theme-menu font-yekan font-normal text-sm hidden absolute left-0 flex flex-col mt-2 w-60 bg-background-light dark:bg-[#0B192D] border border-solid border-neutral-light-200 dark:border-neutral-dark-800 rounded-lg shadow-cards z-50"
+            >
+              <button
+                class="w-full flex items-center gap-2 p-4 pt-6 hover:bg-neutral-light-100 dark:hover:bg-neutral-dark-700 cursor-pointer"
+                data-theme="light"
+              >
+                <img
+                  src="./assets/icons/sun.svg"
+                  alt="آیکون خورشید"
+                  class="w-6 h-6 dark:hidden"
+                />
+                <img
+                  src="./assets/icons/sun-dark.svg"
+                  alt="آیکون خورشید"
+                  class="w-6 h-6 hidden dark:block"
+                />
+                حالت روشن
+              </button>
+              <img
+                src="./assets/icons/theme-toggle-line.svg"
+                alt=""
+                class="px-6 dark:hidden"
+              />
+              <img
+                src="./assets/icons/theme-toggle-line-dark.svg"
+                alt=""
+                class="px-6 hidden dark:block"
+              />
+              <button
+                class="w-full flex items-center gap-2 p-4 hover:bg-neutral-light-100 dark:hover:bg-neutral-dark-700 cursor-pointer"
+                data-theme="dark"
+              >
+                <img
+                  src="./assets/icons/moon.svg"
+                  alt="آیکون ماه"
+                  class="w-6 h-6 dark:hidden"
+                />
+                <img
+                  src="./assets/icons/moon-dark.svg"
+                  alt="آیکون ماه"
+                  class="w-6 h-6 hidden dark:block"
+                />
+                حالت تاریک
+              </button>
+              <img
+                src="./assets/icons/theme-toggle-line.svg"
+                alt=""
+                class="px-6 dark:hidden"
+              />
+              <img
+                src="./assets/icons/theme-toggle-line-dark.svg"
+                alt=""
+                class="px-6 hidden dark:block"
+              />
+              <button
+                class="w-full flex items-center gap-2 p-4 pb-6 hover:bg-neutral-light-100 dark:hover:bg-neutral-dark-700 cursor-pointer"
+                data-theme="system"
+              >
+                <img
+                  src="./assets/icons/toggle-theme.svg"
+                  alt="آیکون پیروی از دستگاه"
+                  class="w-6 h-6 dark:hidden"
+                />
+                <img
+                  src="./assets/icons/toggle-theme-dark.svg"
+                  alt="آیکون پیروی از دستگاه"
+                  class="w-6 h-6 hidden dark:block"
+                />
+                پیروی از دستگاه
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Mobile Menu -->
@@ -151,7 +217,10 @@
       </div>
 
       <!-- Mobile Menu -hidden by default -->
-      <div id="mobile-menu" class="grid md:hidden flex-col gap-4 px-4 pb-4">
+      <div
+        id="mobile-menu"
+        class="grid md:hidden flex-col gap-4 px-4 py-4 shadow-cards"
+      >
         <a
           href="#"
           class="font-yekan text-sm font-semibold text-primary-light hover:text-primary-hover-light dark:text-primary-dark"
@@ -167,31 +236,97 @@
           class="font-yekan text-sm font-semibold text-[#666666] hover:text-primary-hover-light dark:text-[#CFCFCF]"
           >ارتباط با ما</a
         >
-        <div class="flex w-fit gap-4">
+        <div class="flex w-fit gap-3">
           <a href="./app/dashboard.html" target="_blank">
             <button
-              class="font-yekan text-base font-semibold bg-primary-light hover:bg-primary-hover-light text-on-primary-light px-6 h-10 rounded-md cursor-pointer"
+              class="font-yekan text-sm font-semibold bg-primary-light hover:bg-primary-hover-light text-on-primary-light px-4 h-8 rounded-md cursor-pointer"
             >
               ورود به اپلیکیشن
             </button>
           </a>
-          <button
-            class="rounded-md bg-background-light p-2 border border-[#e3e3e3] cursor-pointer h-10 w-10 dark:bg-background-dark dark:border-[#2F3132]"
-            id="toggle-mode-mobile"
-          >
-            <!-- light image -->
-            <img
-              class="h-6 w-6 block dark:hidden"
-              src="./assets/icons/toggle-theme.svg"
-              alt="حالت سیستم"
-            />
-            <!-- dark image -->
-            <img
-              class="h-6 w-6 hidden dark:block"
-              src="./assets/icons/moon.svg"
-              alt="حالت تاریک"
-            />
-          </button>
+          <div class="relative">
+            <button
+              class="toggle-mode flex items-center justify-center rounded-md bg-background-light p-1 border border-solid border-neutral-light-200 cursor-pointer h-8 w-8 dark:bg-background-dark dark:border-neutral-dark-800"
+            >
+              <img
+                class="toggle-icon h-4 w-4"
+                src="./assets/icons/toggle-theme.svg"
+              />
+            </button>
+
+            <div
+              class="theme-menu font-yekan font-normal text-xs hidden absolute left-0 flex flex-col mt-2 w-40 bg-background-light dark:bg-[#0B192D] border border-solid border-neutral-light-200 dark:border-neutral-dark-800 rounded-md shadow-cards z-50"
+            >
+              <button
+                class="w-full flex items-center gap-2 p-3 pt-4 hover:bg-neutral-light-100 dark:hover:bg-neutral-dark-700 cursor-pointer"
+                data-theme="light"
+              >
+                <img
+                  src="./assets/icons/sun.svg"
+                  alt="آیکون خورشید"
+                  class="w-4 h-4 dark:hidden"
+                />
+                <img
+                  src="./assets/icons/sun-dark.svg"
+                  alt="آیکون خورشید"
+                  class="w-4 h-4 hidden dark:block"
+                />
+                حالت روشن
+              </button>
+              <img
+                src="./assets/icons/theme-toggle-line.svg"
+                alt=""
+                class="px-4 dark:hidden"
+              />
+              <img
+                src="./assets/icons/theme-toggle-line-dark.svg"
+                alt=""
+                class="px-4 hidden dark:block"
+              />
+              <button
+                class="w-full flex items-center gap-2 p-4 hover:bg-neutral-light-100 dark:hover:bg-neutral-dark-700 cursor-pointer"
+                data-theme="dark"
+              >
+                <img
+                  src="./assets/icons/moon.svg"
+                  alt="آیکون ماه"
+                  class="w-4 h-4 dark:hidden"
+                />
+                <img
+                  src="./assets/icons/moon-dark.svg"
+                  alt="آیکون ماه"
+                  class="w-4 h-4 hidden dark:block"
+                />
+                حالت تاریک
+              </button>
+              <img
+                src="./assets/icons/theme-toggle-line.svg"
+                alt=""
+                class="px-4 dark:hidden"
+              />
+              <img
+                src="./assets/icons/theme-toggle-line-dark.svg"
+                alt=""
+                class="px-4 hidden dark:block"
+              />
+              <button
+                class="w-full flex items-center gap-2 p-4 pb-6 hover:bg-neutral-light-100 dark:hover:bg-neutral-dark-700 cursor-pointer"
+                data-theme="system"
+              >
+                <img
+                  src="./assets/icons/toggle-theme.svg"
+                  alt="آیکون پیروی از دستگاه"
+                  class="w-4 h-4 dark:hidden"
+                />
+                <img
+                  src="./assets/icons/toggle-theme-dark.svg"
+                  alt="آیکون پیروی از دستگاه"
+                  class="w-4 h-4 hidden dark:block"
+                />
+                پیروی از دستگاه
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -1083,16 +1218,48 @@
         mobileMenu.classList.toggle("flex");
       });
 
-      // Toggle mode desktop
-      const toggleMode = document.getElementById("toggle-mode");
-      toggleMode.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
+      // Toggle mode
+      const toggleIcon = document.querySelector(".toggle-icon");
+      const root = document.documentElement;
+      const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function updateIcon(theme) {
+        if (theme === "dark") {
+          toggleIcon.src = "./assets/icons/moon-dark.svg";
+        } else if (theme === "system") {
+          toggleIcon.src = media.matches
+            ? "./assets/icons/toggle-theme-dark.svg"
+            : "./assets/icons/toggle-theme.svg";
+        } else {
+          toggleIcon.src = "./assets/icons/sun.svg";
+        }
+      }
+
+      function applyTheme(theme) {
+        const darkMode =
+          theme === "dark" || (theme === "system" && media.matches);
+        root.classList.toggle("dark", darkMode);
+        localStorage.setItem("theme", theme);
+        updateIcon(theme);
+      }
+
+      document.querySelectorAll(".toggle-mode").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const menu = btn.parentElement.querySelector(".theme-menu");
+          if (menu) menu.classList.toggle("hidden");
+        });
       });
 
-      // Toggle mode mobile
-      const toggleModeMobile = document.getElementById("toggle-mode-mobile");
-      toggleModeMobile.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
+      document.querySelectorAll(".theme-menu button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          applyTheme(btn.dataset.theme);
+          btn.closest(".theme-menu").classList.add("hidden");
+        });
+      });
+
+      applyTheme(localStorage.getItem("theme") || "system");
+      media.addEventListener("change", () => {
+        if (localStorage.getItem("theme") === "system") applyTheme("system");
       });
     </script>
   </body>
