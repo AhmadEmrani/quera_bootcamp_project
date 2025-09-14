@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Edit Task
   editTask((taskId) => {
-    renderEditTask(taskId, tasks);
+    const task = tasks.find((t) => t.id === taskId);
+    if (!task) return;
+    renderEditTask(task, tasks);
   });
 
   //isComplete
