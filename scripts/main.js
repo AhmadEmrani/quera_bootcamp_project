@@ -24,9 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderEditTask(task, tasks);
   });
 
-  //isComplete
-  // handleCompleteTask();
-
   // Delete Task
   deleteTask((taskId) => {
     const index = tasks.findIndex((task) => task.id === taskId);
@@ -38,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   completeTask((taskId) => {
     const todo = tasks.find((t) => String(t.id) === String(taskId));
     if (todo) {
-      todo.isCompeleted = !todo.isCompeleted;
+      todo.isCompleted = !todo.isCompleted;
       renderAllTasks(tasks);
     }
   });

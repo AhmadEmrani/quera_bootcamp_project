@@ -1,6 +1,9 @@
 const tasksContainer = document.querySelector("#tasks-container");
 const completedTasks = document.querySelector(".completed-tasks");
 
+const todoCount = document.getElementById("todo-tasks-counter");
+const completeCount = document.getElementById("complete-tasks-counter");
+
 function selectedPriorityTag(priority) {
   let priorityColor, priorityText, textColor;
 
@@ -38,6 +41,8 @@ function selectedPriorityTag(priority) {
 export function renderAllTasks(tasks) {
   tasksContainer.innerHTML = "";
   completedTasks.innerHTML = "";
+  let todoCountNumber = 0;
+  let completeCountNumber = 0;
 
   tasks.forEach((todo) => {
     let priorityColor, priorityText, textColor;
@@ -66,7 +71,7 @@ export function renderAllTasks(tasks) {
     if (!todo.isCompleted) {
       const li = document.createElement("li");
       li.className =
-        "task-card flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative";
+        "task-card flex flex-row justify-between pl-4 py-4 border border-neutral-light-200 rounded-[12px] relative dark:bg-[#091120] dark:border-0";
       li.dataset.id = todo.id;
 
       li.innerHTML = `
@@ -86,23 +91,22 @@ export function renderAllTasks(tasks) {
           </div>
 
         <input
-        id="remember-add"
         type="checkbox"
         ${todo.isCompleted ? "checked" : ""}
         onchange="completeTask('${todo.id}')"
-        class="flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 border-neutral-light-300 border-[1px] text-primary-lightt focus:primary-hover-light"
+        class="remember-add flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 border-neutral-light-300 border-[1px] text-primary-lightt focus:primary-hover-light cursor-pointer dark:appearance-none"
         />
 
           <div class="flex flex-col gap-4">
             <div class="flex flex-col gap-1 md:flex-row">
-              <h3 class="text-14 font-[600] text-neutral-light-700 md:text-[16px]">${
+              <h3 class="text-14 font-[600] text-neutral-light-700 md:text-[16px] dark:text-on-primary-dark">${
                 todo.title
               }</h3>
               <div class="w-fit h-5 rounded-[4px] px-[8px] py-1 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] md:text-[12px] bg-[${priorityColor}] text-[${textColor}]">
                 <p class="text-center">${priorityText}</p>
               </div>
             </div>
-            <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]">${
+            <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px] dark:text-[#848890]">${
               todo.description
             }</p>
           </div>
@@ -113,33 +117,46 @@ export function renderAllTasks(tasks) {
       `;
 
       tasksContainer.appendChild(li);
+      todoCountNumber++;
     }
     if (todo.isCompleted) {
       const li = document.createElement("li");
       li.className =
-        "flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px]";
+        "task-card-complete flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-300 border-[1px] rounded-[12px] dark:bg-[#091120] dark:border-0";
       li.dataset.id = todo.id;
 
       li.innerHTML = `
         <div class="relative flex flex-row gap-4">
           <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]"></div>
-          <input type="checkbox" checked class="flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 border-neutral-light-300 text-primary-lightt focus:primary-hover-light"/>
+           <input
+           type="checkbox"
+           ${todo.isCompleted ? "checked" : ""}
+           onchange="completeTask('${todo.id}')"
+           class="remember-add-done flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 dark:accent-slate-900 border-neutral-light-300 border-[1px] text-primary-lightt focus:primary-hover-light cursor-pointer"
+           />
+          
           <div class="flex flex-col gap-4">
             <div class="flex flex-col gap-1">
-              <h3 class="text-sm md:text-base font-[600] text-neutral-light-700 line-through">
+              <h3 class="text-sm md:text-base font-[600] text-neutral-light-700 line-through dark:text-on-primary-dark">
                 ${todo.title}
               </h3>
             </div>
           </div>
         </div>
-        <figure class="more-btn cursor-pointer">
+       <!-- <figure class="more-btn cursor-pointer">
           <img src="../assets/icons/3dotIcon.svg" alt="نمایش بیشتر"/>
-        </figure>
+        </figure>  -->
       `;
 
       completedTasks.appendChild(li);
+      completeCountNumber++;
     }
   });
+
+  //todo count
+  todoCount.innerHTML = todoCountNumber;
+  //cmpelete count
+  completeCount.innerHTML = completeCountNumber;
   //add to local storage - ToDo tasks
   localStorage.setItem("todoTasksList", JSON.stringify(tasks));
 }

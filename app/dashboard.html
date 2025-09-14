@@ -70,7 +70,7 @@
       @custom-variant dark (&:where(.dark, .dark *));
     </style>
   </head>
-  <body class="px-4 pt-4 bg-background-light">
+  <body class="px-4 pt-4 bg-background-light dark:bg-[#060C18]">
     <!-- Header -->
     <header
       class="flex items-center justify-between p-3 rounded-lg shadow-app md:hidden"
@@ -94,7 +94,7 @@
       <!-- Sidebar -->
       <aside
         id="sidebar"
-        class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500 md:translate-x-0 md:static md:max-h-[905px] md:rounded-2xl md:shadow-app"
+        class="max-w-[274px] px-4 pt-4 flex flex-col gap-8 bg-background-light absolute top-0 right-0 z-20 transform translate-x-full transition-transform duration-500 md:translate-x-0 md:static md:max-h-[905px] md:rounded-2xl md:shadow-app dark:bg-[#091120]"
       >
         <div
           class="font-yekan pr-2 pt-12 pb-10 hidden md:flex items-center justify-start gap-3"
@@ -107,7 +107,9 @@
             />
           </div>
           <div class="flex flex-col items-start gap-1">
-            <h2 class="font-black text-lg text-neutral-light-800">
+            <h2
+              class="font-black text-lg text-neutral-light-800 dark:text-on-primary-dark"
+            >
               سلام، رویا
             </h2>
             <span
@@ -131,51 +133,60 @@
         <nav class="mb-28">
           <ul class="font-yekan flex flex-col justify-center gap-6">
             <li
-              class="px-5 py-3 flex items-center justify-start cursor-pointer bg-app-primary-hover-light rounded-lg"
+              class="px-5 py-3 flex items-center justify-start cursor-pointer bg-app-primary-hover-light rounded-lg dark:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-bold text-base text-app-primary-light"
+                class="flex items-center gap-4 font-bold text-base text-app-primary-light dark:text-on-primary-dark"
               >
                 <img
                   src="../assets/icons/home-2.svg"
                   alt="آیکون خانه"
                   class="w-5 h-5"
                 />
+
                 خانه
               </a>
             </li>
             <li
-              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg dark:hover:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
               >
-                <img src="../assets/icons/task-square.svg" alt="آیکون تسک‌ها" />
+                <img
+                  src="../assets/icons/task-square.svg"
+                  alt="آیکون تسک‌ها"
+                  class="dark:filter dark:brightness-0 dark:invert"
+                />
                 تسک‌ها
               </a>
             </li>
             <li
-              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg dark:hover:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
               >
-                <img src="../assets/icons/calendar.svg" alt="آیکون تقویم" />
+                <img
+                  src="../assets/icons/calendar.svg"
+                  alt="آیکون تقویم"
+                  class="dark:filter dark:brightness-0 dark:invert"
+                />
                 تقویم
               </a>
             </li>
             <li
-              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg dark:hover:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
               >
                 <img
-                  2
+                  class="dark:filter dark:brightness-0 dark:invert"
                   src="../assets/icons/arrange-square-2.svg"
                   alt="آیکون گزارشات"
                 />
@@ -183,38 +194,47 @@
               </a>
             </li>
             <li
-              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg dark:hover:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
               >
-                <img src="../assets/icons/setting.svg" alt="آیکون تنظیمات" />
+                <img
+                  src="../assets/icons/setting.svg"
+                  alt="آیکون تنظیمات"
+                  class="dark:filter dark:brightness-0 dark:invert"
+                />
                 تنظیمات
               </a>
             </li>
             <li
-              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg dark:hover:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
               >
                 <img
                   src="../assets/icons/24-support.svg"
                   alt="آیکون پشتیبانی"
+                  class="dark:filter dark:brightness-0 dark:invert"
                 />
                 پشتیبانی
               </a>
             </li>
             <li
-              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg"
+              class="px-5 py-2 flex items-center justify-start cursor-pointer hover:bg-app-primary-hover-light hover:text-app-primary-light rounded-lg dark:hover:bg-[#041933]"
             >
               <a
                 href="#"
-                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+                class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
               >
-                <img src="../assets/icons/profile.svg" alt="آیکون پروفایل" />
+                <img
+                  src="../assets/icons/profile.svg"
+                  alt="آیکون پروفایل"
+                  class="dark:filter dark:brightness-0 dark:invert"
+                />
                 پروفایل
               </a>
             </li>
@@ -222,37 +242,47 @@
         </nav>
         <div class="flex flex-col items-center gap-6 px-4 mb-9">
           <div
-            class="self-start w-full flex items-center gap-1 font-yekan p-1 bg-neutral-light-100 rounded-lg"
+            class="self-start w-full flex items-center gap-1 font-yekan p-1 bg-neutral-light-100 rounded-lg dark:bg-[#0C1B31]"
           >
             <button
               id="sun-btn"
-              class="cursor-pointer w-full flex items-center gap-3 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 bg-background-light rounded-md"
+              class="cursor-pointer w-full flex items-center gap-3 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 bg-background-light rounded-md dark:bg-[#0C1B31] dark:text-on-primary-dark"
             >
               <img src="../assets/icons/sun.svg" alt="خورشید" class="w-4 h-4" />
               روشن
             </button>
             <button
               id="moon-btn"
-              class="cursor-pointer w-full flex items-center gap-4 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 rounded-md"
+              class="cursor-pointer w-full flex items-center gap-4 py-[6px] pr-4 pl-5 font-semibold text-sm text-neutral-light-600 rounded-md dark:bg-[#002247] dark:text-on-primary-dark"
             >
-              <img src="../assets/icons/moon.svg" alt="ماه" class="w-4 h-4" />
+              <img
+                src="../assets/icons/moon.svg"
+                alt="ماه"
+                class="w-4 h-4 dark:filter dark:brightness-0 dark:invert"
+              />
               تاریک
             </button>
           </div>
-          <div class="w-full h-[1px] bg-neutral-light-200"></div>
-          <div class="self-start w-full px-1 py-2">
+          <div
+            class="w-full h-[1px] bg-neutral-light-200 dark:bg-[#2F3132]"
+          ></div>
+          <div class="self-start w-full px-1 py-2 dark:hover:bg-[#041933]">
             <a
               href=""
-              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600"
+              class="flex items-center gap-4 font-semibold text-sm text-neutral-light-600 dark:text-on-primary-dark"
             >
-              <img src="../assets/icons/logout.svg" alt="آیکون خروج" />
+              <img
+                src="../assets/icons/logout.svg"
+                alt="آیکون خروج"
+                class="dark:filter dark:brightness-0 dark:invert"
+              />
               خروج
             </a>
           </div>
         </div>
       </aside>
 
-      <main class="max-w-[328px] md:max-w-[744px] md:px-[200px] md:pt-16">
+      <main class="mx-auto md:pr-[100px] md:pt-16">
         <section
           class="font-yekan pr-4 py-6 flex items-center justify-start gap-3 border-b border-b-neutral-light-100 mb-8 md:hidden"
         >
@@ -267,7 +297,8 @@
             <h2 class="font-black text-lg text-neutral-light-800">
               سلام، رویا
             </h2>
-            <span class="date font-semibold text-sm text-neutral-light-500"
+            <span
+              class="date font-semibold text-sm text-neutral-light-500 dark:text-[#848890]"
               >امروز،
             </span>
           </div>
@@ -276,16 +307,16 @@
         <!-- todays task Ahmad-->
 
         <section
-          class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[744px] items-start"
+          class="relative max-w-[328px] mx-auto flex flex-col gap-4 md:max-w-[744px]"
         >
           <div class="flex flex-col gap-1 font-yekan ml-auto md:max-w-[744px]">
             <h2
-              class="font-[800] text-[16px] text-right md:font-extrabold md:text-[20px]"
+              class="font-[800] text-[16px] text-right md:font-extrabold md:text-[20px] dark:text-on-primary-dark"
             >
               تسک‌های امروز
             </h2>
             <p
-              class="text-[12px] md:text-[14px] font-[400] text-right text-neutral-light-600"
+              class="text-[12px] md:text-[14px] font-[400] text-right text-neutral-light-600 dark:text-[#848890]"
             >
               <span
                 id="todo-tasks-counter"
@@ -298,10 +329,10 @@
             <!-- add task card -->
             <div
               id="add-task-oppener"
-              class="flex flex-row gap-2 md:gap-[10px] md:w-[744px] p-4 border-dashed border-neutral-light-400 border-[1px] rounded-[10px] md: max-w-[744px] cursor-pointer"
+              class="flex flex-row gap-2 md:gap-[10px] md:w-[744px] p-4 border-dashed border-neutral-light-400 dark:border-[#203E62] border-[1px] rounded-[10px] md: max-w-[744px] cursor-pointer dark:bg-[#091120]"
             >
               <img src="../assets/icons/add.svg" alt="add-button" />
-              <p class="text-[14px] font-[600] text-primary-light">
+              <p class="text-[14px] font-[600] text-primary-light dark:text-[#57A8FF]">
                 افزودن وظیفه جدید
               </p>
             </div>
@@ -447,12 +478,12 @@
                   />
 
                   <p
-                    class="text-center font-extrabold text-base text-neutral-light-500"
+                    class="text-center font-extrabold text-base text-neutral-light-500 dark:text-[#848890]"
                   >
                     چه کارهایی امروز برای انجام داری؟
                   </p>
                   <p
-                    class="text-center font-semibold text-sm text-neutral-light-500"
+                    class="text-center font-semibold text-sm text-neutral-light-500 dark:text-[#848890]"
                   >
                     میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!
                   </p>
@@ -466,7 +497,7 @@
             >
               <!-- task cards 1-->
               <li
-                class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative"
+                class="flex flex-row justify-between pl-4 py-4 border-solid border-neutral-light-200 border-[1px] rounded-[12px] relative dark:bg-[#091120] dark:border-0"
               >
                 <div class="relative flex flex-row gap-4">
                   <div class="w-1 h-auto rounded-l-[8px] bg-[#FF5F37]"></div>
@@ -476,7 +507,7 @@
                   <div class="flex flex-col gap-4">
                     <div class="flex flex-col gap-1 md:flex-row">
                       <h3
-                        class="text-14 font-[600] text-neutral-light-700 md:text-[16px]"
+                        class="text-14 font-[600] text-neutral-light-700 md:text-[16px] dark:text-on-primary-dark"
                       >
                         جلسه با مدیران پروژه
                       </h3>
@@ -487,7 +518,7 @@
                       </div>
                     </div>
                     <p
-                      class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]"
+                      class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px] dark:text-[#848890]"
                     >
                       جلسه با محسن یگانه و مریم جلالی
                     </p>
@@ -502,17 +533,31 @@
         </section>
 
         <!-- hamed - completed tasks -->
-        <section class="relative mx-auto flex flex-col mt-10 font-yekan mb-10">
-          <h2 class="font-extrabold text-base text-right md:text-xl">
+
+        <section
+          class="relative max-w-[328px] mx-auto md:max-w-[744px] flex flex-col mt-10 font-yekan mb-10"
+        >
+          <h2
+            class="font-extrabold text-base text-right md:text-xl dark:text-on-primary-dark"
+          >
             تسک‌های انجام شده
           </h2>
 
           <p
-            class="text-[12px] md:text-[14px] font-[400] text-right text-neutral-light-600"
+            class="text-[12px] md:text-[14px] font-[400] text-right text-neutral-light-600 dark:text-[#848890]"
           >
-            <span class="font-extrabold text-neutral-light-600">0</span> تسک
-            انجام شده است.
+            <span
+              id="complete-tasks-counter"
+              class="font-extrabold text-neutral-light-600"
+              >0</span
+            >
+            تسک انجام شده است.
           </p>
+
+          <p
+            class="text-[12px] md:text-[14px] font-[400] text-right text-neutral-light-600"
+          ></p>
+
           <ul
             id="complete-tasks-container"
             class="completed-tasks max-w-[328px] flex flex-col gap-4 md:max-w-[744px] mt-4"
