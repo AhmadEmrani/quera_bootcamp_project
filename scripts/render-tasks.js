@@ -80,17 +80,31 @@ export function renderAllTasks(tasks) {
           </button>
         </div>
 
+  
         <div class="relative flex flex-row gap-4">
-          <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]"></div>
-          <div class="flex w-5 h-5 p-2.5 gap-[10px] rounded-[5px] border border-neutral-light-300"></div>
+          <div class="w-1 h-auto rounded-l-[8px] bg-[${textColor}]">
+          </div>
+
+        <input
+        id="remember-add"
+        type="checkbox"
+        ${todo.isCompleted ? "checked" : ""}
+        onchange="completeTask('${todo.id}')"
+        class="flex w-6 h-6 p-2.5 gap-[10px] rounded-[5px] border-solid accent-blue-600 border-neutral-light-300 border-[1px] text-primary-lightt focus:primary-hover-light"
+        />
+
           <div class="flex flex-col gap-4">
             <div class="flex flex-col gap-1 md:flex-row">
-              <h3 class="text-14 font-[600] text-neutral-light-700 md:text-[16px]">${todo.title}</h3>
+              <h3 class="text-14 font-[600] text-neutral-light-700 md:text-[16px]">${
+                todo.title
+              }</h3>
               <div class="w-fit h-5 rounded-[4px] px-[8px] py-1 flex flex-col items-center justify-center gap-2 text-center font-yekan font-[600] text-[10px] md:text-[12px] bg-[${priorityColor}] text-[${textColor}]">
                 <p class="text-center">${priorityText}</p>
               </div>
             </div>
-            <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]">${todo.description}</p>
+            <p class="text-[12px] font-[400] text-neutral-light-500 md:text-[14px]">${
+              todo.description
+            }</p>
           </div>
         </div>
         <figure class="more-btn cursor-pointer">
@@ -126,6 +140,8 @@ export function renderAllTasks(tasks) {
       completedTasks.appendChild(li);
     }
   });
+  //add to local storage - ToDo tasks
+  localStorage.setItem("todoTasksList", JSON.stringify(tasks));
 }
 export function renderEditTask(task, tasks) {
   const tasksList = document.getElementById("tasks-container");

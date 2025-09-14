@@ -5,9 +5,12 @@ import { editTask } from "./edit-task.js";
 import { createTask } from "./create-task.js";
 import { renderAllTasks, renderEditTask } from "./render-tasks.js";
 import { deleteTask } from "./delete-task.js";
+import { completeTask } from "./complete-task.js";
 
-let tasks = [];
 document.addEventListener("DOMContentLoaded", () => {
+  //call from local storage
+  let tasks = JSON.parse(localStorage.getItem("todoTasksList")) || [];
+
   // Render Tasks
   renderAllTasks(tasks);
 
@@ -21,11 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
     renderEditTask(task, tasks);
   });
 
+  //isComplete
+  // handleCompleteTask();
+
   // Delete Task
   deleteTask((taskId) => {
     const index = tasks.findIndex((task) => task.id === taskId);
     if (index > -1) tasks.splice(index, 1);
     renderAllTasks(tasks);
+  });
+
+  // Change Complete Task
+  completeTask((taskId) => {
+    const todo = tasks.find((t) => String(t.id) === String(taskId));
+    if (todo) {
+      todo.isCompeleted = !todo.isCompeleted;
+      renderAllTasks(tasks);
+    }
   });
 
   // Set Date
